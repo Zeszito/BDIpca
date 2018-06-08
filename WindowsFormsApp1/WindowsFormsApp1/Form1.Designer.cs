@@ -29,15 +29,17 @@
         private void InitializeComponent()
         {
             this.button1 = new System.Windows.Forms.Button();
-            this.txtID = new System.Windows.Forms.TextBox();
-            this.txtName = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.sidePanel = new System.Windows.Forms.Panel();
+            this.headerPanel = new System.Windows.Forms.Panel();
+            this.logoPanel = new System.Windows.Forms.Panel();
+            this.r = new System.Windows.Forms.Label();
+            this.sidePanel.SuspendLayout();
+            this.logoPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(375, 288);
+            this.button1.Location = new System.Drawing.Point(503, 363);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 0;
@@ -45,63 +47,74 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // txtID
+            // sidePanel
             // 
-            this.txtID.Location = new System.Drawing.Point(253, 120);
-            this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(335, 20);
-            this.txtID.TabIndex = 1;
+            this.sidePanel.BackColor = System.Drawing.Color.White;
+            this.sidePanel.Controls.Add(this.logoPanel);
+            this.sidePanel.Dock = System.Windows.Forms.DockStyle.Left;
+            this.sidePanel.Location = new System.Drawing.Point(0, 0);
+            this.sidePanel.Name = "sidePanel";
+            this.sidePanel.Size = new System.Drawing.Size(200, 450);
+            this.sidePanel.TabIndex = 1;
             // 
-            // txtName
+            // headerPanel
             // 
-            this.txtName.Location = new System.Drawing.Point(253, 195);
-            this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(335, 20);
-            this.txtName.TabIndex = 2;
-            this.txtName.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.headerPanel.BackColor = System.Drawing.Color.Tomato;
+            this.headerPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.headerPanel.Location = new System.Drawing.Point(200, 0);
+            this.headerPanel.Name = "headerPanel";
+            this.headerPanel.Size = new System.Drawing.Size(600, 56);
+            this.headerPanel.TabIndex = 2;
             // 
-            // label1
+            // logoPanel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(172, 127);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(18, 13);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "ID";
+            this.logoPanel.BackColor = System.Drawing.Color.Tomato;
+            this.logoPanel.Controls.Add(this.r);
+            this.logoPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.logoPanel.Location = new System.Drawing.Point(0, 0);
+            this.logoPanel.Name = "logoPanel";
+            this.logoPanel.Size = new System.Drawing.Size(200, 56);
+            this.logoPanel.TabIndex = 0;
             // 
-            // label2
+            // r
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(172, 202);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Name";
+            this.r.AutoSize = true;
+            this.r.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.r.Location = new System.Drawing.Point(47, 18);
+            this.r.Name = "r";
+            this.r.Size = new System.Drawing.Size(62, 20);
+            this.r.TabIndex = 0;
+            this.r.Text = "Quinta";
+            this.r.Click += new System.EventHandler(this.label1_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Gray;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.txtName);
-            this.Controls.Add(this.txtID);
+            this.Controls.Add(this.headerPanel);
+            this.Controls.Add(this.sidePanel);
             this.Controls.Add(this.button1);
+            this.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form1";
             this.Text = "txtID";
+            this.Load += new System.EventHandler(this.Form1_Load);
+            this.sidePanel.ResumeLayout(false);
+            this.logoPanel.ResumeLayout(false);
+            this.logoPanel.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox txtID;
-        private System.Windows.Forms.TextBox txtName;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel sidePanel;
+        private System.Windows.Forms.Panel logoPanel;
+        private System.Windows.Forms.Label r;
+        private System.Windows.Forms.Panel headerPanel;
     }
 }
 

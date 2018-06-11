@@ -18,6 +18,7 @@ namespace WindowsFormsApp1
             InitializeComponent();
         }
 
+        public string selected;
         public string conString = "Data Source= TROLLSDUNGEON;Initial Catalog=Vinicultura;Integrated Security= True";
 
         private void button1_Click(object sender, EventArgs e)
@@ -140,12 +141,13 @@ namespace WindowsFormsApp1
         private void buttonFILL_Click(object sender, EventArgs e)
         {
             FillDataBase();
+            RefreshListClientes();
         }
 
         void FillDataBase()
         {
             SqlConnection con = ConnectDataBase();
-            String query = "insert into Cliente(NomeCliente, DataNascimento, CartaoCidadao) values('Lídia Vilaça', 24 - 01 - 1986, 654345243)";
+            String query = "insert into Cliente(NomeCliente, DataNascimento, CartaoCidadao) values('Carlos Costa', 09 - 04 - 1985, 602754583)";
             SqlCommand cmd = new SqlCommand(query, con);
             cmd.ExecuteNonQuery();
             MessageBox.Show("Data Inserted!");
@@ -160,5 +162,58 @@ namespace WindowsFormsApp1
         {
             this.WindowState = FormWindowState.Minimized;
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+            String selected = listBoxIDClientes.SelectedItem.ToString();
+
+            SqlConnection con = ConnectDataBase();
+            int userval = int.Parse(selected);
+            String query = "delete from cliente where cliente.ClienteID = " + userval + ";";
+            SqlCommand cmd = new SqlCommand(query, con);
+            cmd.ExecuteNonQuery();
+            MessageBox.Show("Cliente Eliminado!");
+            RefreshListClientes();
+        }
+
+
+        void RefreshListClientes()
+        {
+            listBoxNascClientes.Items.Clear();
+            listBoxIDClientes.Items.Clear();
+            listBoxNomeClientes.Items.Clear();
+            listBoxCCClientes.Items.Clear();
+
+
+            SqlConnection con = ConnectDataBase();
+            string query = "Select * from cliente";
+            using (SqlCommand cmd = new SqlCommand(query, con))
+            {
+                using (SqlDataReader reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        listBoxIDClientes.Items.Add(reader["ClienteID"]);
+                        listBoxNomeClientes.Items.Add(reader["NomeCliente"]);
+                        listBoxNascClientes.Items.Add(reader["DataNascimento"]);
+                        listBoxCCClientes.Items.Add(reader["CartaoCidadao"]);
+                    }
+                }
+            }
+        }
+
+        private void buttonAlterar_Click(object sender, EventArgs e)
+        {
+            Form2 f2 = new Form2();
+            selected = listBoxIDClientes.SelectedItem.ToString();
+            f2.ShowDialog();
+            if (f2.Visible == false)
+            {
+                RefreshListClientes();
+            }
+        }
     }
+
+   
 }

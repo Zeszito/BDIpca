@@ -46,7 +46,10 @@
             this.Exit = new System.Windows.Forms.Label();
             this.CurrentWindow = new System.Windows.Forms.Label();
             this.window = new System.Windows.Forms.Panel();
+            this.buttonEliminar = new System.Windows.Forms.Button();
+            this.buttonAlterar = new System.Windows.Forms.Button();
             this.listBoxCCClientes = new System.Windows.Forms.ListBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.labelClientes = new System.Windows.Forms.Label();
             this.textRececaoID = new System.Windows.Forms.TextBox();
             this.labelRececaoID = new System.Windows.Forms.Label();
@@ -59,9 +62,6 @@
             this.listBoxNomeClientes = new System.Windows.Forms.ListBox();
             this.listBoxNascClientes = new System.Windows.Forms.ListBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.sidePanel.SuspendLayout();
             this.logoPanel.SuspendLayout();
             this.headerPanel.SuspendLayout();
@@ -70,7 +70,7 @@
             // 
             // buttonLogIn
             // 
-            this.buttonLogIn.Location = new System.Drawing.Point(68, 415);
+            this.buttonLogIn.Location = new System.Drawing.Point(62, 420);
             this.buttonLogIn.Name = "buttonLogIn";
             this.buttonLogIn.Size = new System.Drawing.Size(75, 23);
             this.buttonLogIn.TabIndex = 0;
@@ -107,7 +107,7 @@
             // 
             this.textID.Location = new System.Drawing.Point(23, 394);
             this.textID.Name = "textID";
-            this.textID.Size = new System.Drawing.Size(45, 20);
+            this.textID.Size = new System.Drawing.Size(52, 20);
             this.textID.TabIndex = 6;
             // 
             // buttonServiços
@@ -271,8 +271,8 @@
             // 
             // window
             // 
-            this.window.Controls.Add(this.button2);
-            this.window.Controls.Add(this.button1);
+            this.window.Controls.Add(this.buttonEliminar);
+            this.window.Controls.Add(this.buttonAlterar);
             this.window.Controls.Add(this.listBoxCCClientes);
             this.window.Controls.Add(this.label1);
             this.window.Controls.Add(this.labelClientes);
@@ -295,6 +295,26 @@
             this.window.MouseMove += new System.Windows.Forms.MouseEventHandler(this.window_MouseMove);
             this.window.MouseUp += new System.Windows.Forms.MouseEventHandler(this.window_MouseUp);
             // 
+            // buttonEliminar
+            // 
+            this.buttonEliminar.Location = new System.Drawing.Point(200, 318);
+            this.buttonEliminar.Name = "buttonEliminar";
+            this.buttonEliminar.Size = new System.Drawing.Size(95, 23);
+            this.buttonEliminar.TabIndex = 13;
+            this.buttonEliminar.Text = "Eliminar Cliente";
+            this.buttonEliminar.UseVisualStyleBackColor = true;
+            this.buttonEliminar.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // buttonAlterar
+            // 
+            this.buttonAlterar.Location = new System.Drawing.Point(66, 318);
+            this.buttonAlterar.Name = "buttonAlterar";
+            this.buttonAlterar.Size = new System.Drawing.Size(89, 23);
+            this.buttonAlterar.TabIndex = 12;
+            this.buttonAlterar.Text = "Alterar Cliente";
+            this.buttonAlterar.UseVisualStyleBackColor = true;
+            this.buttonAlterar.Click += new System.EventHandler(this.buttonAlterar_Click);
+            // 
             // listBoxCCClientes
             // 
             this.listBoxCCClientes.FormattingEnabled = true;
@@ -303,6 +323,17 @@
             this.listBoxCCClientes.Size = new System.Drawing.Size(103, 251);
             this.listBoxCCClientes.TabIndex = 11;
             this.listBoxCCClientes.Visible = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(36, 8);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(66, 20);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "Clientes";
+            this.label1.Visible = false;
             // 
             // labelClientes
             // 
@@ -412,35 +443,6 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(66, 318);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(89, 23);
-            this.button1.TabIndex = 12;
-            this.button1.Text = "Alterar Cliente";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(200, 318);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(95, 23);
-            this.button2.TabIndex = 13;
-            this.button2.Text = "Eliminar Cliente";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(37, 23);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(66, 20);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "Clientes";
-            this.label1.Visible = false;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -500,8 +502,8 @@
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.ListBox listBoxNascClientes;
         private System.Windows.Forms.ListBox listBoxCCClientes;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonEliminar;
+        private System.Windows.Forms.Button buttonAlterar;
         private System.Windows.Forms.Label label1;
     }
 }

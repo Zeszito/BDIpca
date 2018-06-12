@@ -16,6 +16,24 @@ namespace WindowsFormsApp1
         public Form2()
         {
             InitializeComponent();
+
+            int clienteID = int.Parse(Form1.selected);
+
+            SqlConnection con = ConnectDataBase();
+            String query = "Select * from Cliente where ClienteID = " + clienteID + ";";
+
+            using (SqlCommand cmd = new SqlCommand(query, con))
+            {
+                using (SqlDataReader reader = cmd.ExecuteReader())
+                {
+                    labelClienteID.Text = clienteID.ToString();
+
+                    textBoxNome.Text = reader.GetString(reader.GetOrdinal("NomeCliente"));
+                    textBoxNome.AppendText(reader["CartaoCidadao"].ToString());
+                    //dateTimeData.Text = reader["DataNascimento"].ToString();
+                    textBoxCartaoCidadao.Text = reader["CartaoCidado"].ToString();
+                }
+            }
         }
 
         public string conString = "Data Source= TROLLSDUNGEON;Initial Catalog=Vinicultura;Integrated Security= True";
@@ -30,23 +48,15 @@ namespace WindowsFormsApp1
 
         private void buttonEliminarE_Click(object sender, EventArgs e)
         {
-
-            Form1 f1 = new Form1();
-            int clienteID = int.Parse(f1.selected);
-
-            SqlConnection con = ConnectDataBase();
-            int userval = int.Parse(textBoxID.Text);
-            int userval1 = int.Parse(textBoxCartaoCidadao.Text);
+            int userval = int.Parse(Form1.selected);
+            int userval1 = int.Parse((textBoxCartaoCidadao.Text).ToString());
             int userval2 = int.Parse(textBoxNome.Text);
             int userval3 = int.Parse(dateTimeData.Text);
 
-            String query = "Select* from Cliente where Cliente.ClienteID = "+  + ";";
+            SqlConnection con = ConnectDataBase();
+            String query = "insert into Cliente (ClienteID, NomeCliente, DataNascimento, CartaoCidadao) values (" + userval + "," + userval2 + "," + dateTimeData + textBoxCartaoCidadao + ");";
+            SqlCommand cmd2 = new SqlCommand(query, con);
 
-            textBoxID.Text = 
-
-            "insert into Cliente (ClienteID, NomeCliente, DataNascimento, CartaoCidadao) values (" + userval + "," + userval2 + "," + dateTimeData + textBoxCartaoCidadao +");";
-            SqlCommand cmd = new SqlCommand(query, con);
-            cmd.ExecuteNonQuery();
             MessageBox.Show("Cliente Alterado!");
         }
 

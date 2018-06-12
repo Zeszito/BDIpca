@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.labelClienteID = new System.Windows.Forms.Label();
-            this.textBoxID = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.buttonAlterarE = new System.Windows.Forms.Button();
             this.LabelClienteName = new System.Windows.Forms.Label();
@@ -43,18 +42,11 @@
             // labelClienteID
             // 
             this.labelClienteID.AutoSize = true;
-            this.labelClienteID.Location = new System.Drawing.Point(31, 32);
+            this.labelClienteID.Location = new System.Drawing.Point(123, 29);
             this.labelClienteID.Name = "labelClienteID";
             this.labelClienteID.Size = new System.Drawing.Size(18, 13);
             this.labelClienteID.TabIndex = 0;
             this.labelClienteID.Text = "ID";
-            // 
-            // textBoxID
-            // 
-            this.textBoxID.Location = new System.Drawing.Point(126, 29);
-            this.textBoxID.Name = "textBoxID";
-            this.textBoxID.Size = new System.Drawing.Size(135, 20);
-            this.textBoxID.TabIndex = 1;
             // 
             // label1
             // 
@@ -127,7 +119,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(297, 291);
+            this.ClientSize = new System.Drawing.Size(302, 291);
             this.Controls.Add(this.dateTimeData);
             this.Controls.Add(this.textBoxCartaoCidadao);
             this.Controls.Add(this.labelCartaoCidadao);
@@ -136,10 +128,9 @@
             this.Controls.Add(this.LabelClienteName);
             this.Controls.Add(this.buttonAlterarE);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBoxID);
             this.Controls.Add(this.labelClienteID);
             this.Name = "Form2";
-            this.Text = "Form2";
+            this.Text = "Alterar";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -148,7 +139,6 @@
         #endregion
 
         private System.Windows.Forms.Label labelClienteID;
-        private System.Windows.Forms.TextBox textBoxID;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button buttonAlterarE;
         private System.Windows.Forms.Label LabelClienteName;

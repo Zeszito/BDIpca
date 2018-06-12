@@ -33,11 +33,11 @@
             this.sidePanel = new System.Windows.Forms.Panel();
             this.textName = new System.Windows.Forms.TextBox();
             this.textID = new System.Windows.Forms.TextBox();
-            this.buttonServiços = new System.Windows.Forms.Button();
-            this.buttonVinicultura = new System.Windows.Forms.Button();
-            this.buttonStaff = new System.Windows.Forms.Button();
-            this.buttonClientes = new System.Windows.Forms.Button();
-            this.buttonReservas = new System.Windows.Forms.Button();
+            this.btnServiços = new System.Windows.Forms.Button();
+            this.btnVinicultura = new System.Windows.Forms.Button();
+            this.btnStaff = new System.Windows.Forms.Button();
+            this.btnClientes = new System.Windows.Forms.Button();
+            this.btnReservas = new System.Windows.Forms.Button();
             this.logoPanel = new System.Windows.Forms.Panel();
             this.r = new System.Windows.Forms.Label();
             this.headerPanel = new System.Windows.Forms.Panel();
@@ -45,27 +45,48 @@
             this.Minimize = new System.Windows.Forms.Label();
             this.Exit = new System.Windows.Forms.Label();
             this.CurrentWindow = new System.Windows.Forms.Label();
-            this.window = new System.Windows.Forms.Panel();
-            this.buttonEliminar = new System.Windows.Forms.Button();
-            this.buttonAlterar = new System.Windows.Forms.Button();
-            this.listBoxCCClientes = new System.Windows.Forms.ListBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.labelClientes = new System.Windows.Forms.Label();
-            this.textRececaoID = new System.Windows.Forms.TextBox();
-            this.labelRececaoID = new System.Windows.Forms.Label();
-            this.buttonReservar = new System.Windows.Forms.Button();
-            this.textServicoID = new System.Windows.Forms.TextBox();
-            this.labelServicoID = new System.Windows.Forms.Label();
-            this.labelClienteID = new System.Windows.Forms.Label();
-            this.textClienteID = new System.Windows.Forms.TextBox();
-            this.listBoxIDClientes = new System.Windows.Forms.ListBox();
-            this.listBoxNomeClientes = new System.Windows.Forms.ListBox();
-            this.listBoxNascClientes = new System.Windows.Forms.ListBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.viniculturaDataSet = new WindowsFormsApp1.ViniculturaDataSet();
+            this.clienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.clienteTableAdapter = new WindowsFormsApp1.ViniculturaDataSetTableAdapters.ClienteTableAdapter();
+            this.btnEliminarCliente = new System.Windows.Forms.Button();
+            this.btnAlterarCliente = new System.Windows.Forms.Button();
+            this.btnCriarCliente = new System.Windows.Forms.Button();
+            this.dgvClientes = new System.Windows.Forms.DataGridView();
+            this.clienteIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nomeClienteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataNascimentoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cartaoCidadaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvReservas = new System.Windows.Forms.DataGridView();
+            this.ReservaID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ServicoID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DataEntrada = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.reservaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.reservaTableAdapter = new WindowsFormsApp1.ViniculturaDataSetTableAdapters.ReservaTableAdapter();
+            this.btnCriarReserva = new System.Windows.Forms.Button();
+            this.btnAlterarReserva = new System.Windows.Forms.Button();
+            this.btnEliminarReserva = new System.Windows.Forms.Button();
+            this.dgvStaff = new System.Windows.Forms.DataGridView();
+            this.trabalhadorIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nomeTrabalhadorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.horaEntradaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.horaSaidaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.trabalhadorBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.trabalhadorTableAdapter = new WindowsFormsApp1.ViniculturaDataSetTableAdapters.TrabalhadorTableAdapter();
+            this.btnCriarStaff = new System.Windows.Forms.Button();
+            this.btnAlterarStaff = new System.Windows.Forms.Button();
+            this.btnEliminarStaff = new System.Windows.Forms.Button();
             this.sidePanel.SuspendLayout();
             this.logoPanel.SuspendLayout();
             this.headerPanel.SuspendLayout();
-            this.window.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.viniculturaDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvReservas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.reservaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvStaff)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trabalhadorBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonLogIn
@@ -76,19 +97,19 @@
             this.buttonLogIn.TabIndex = 0;
             this.buttonLogIn.Text = "Log In";
             this.buttonLogIn.UseVisualStyleBackColor = true;
-            this.buttonLogIn.Click += new System.EventHandler(this.button1_Click);
+            this.buttonLogIn.Click += new System.EventHandler(this.buttonLogIn_Click);
             // 
             // sidePanel
             // 
             this.sidePanel.BackColor = System.Drawing.Color.Gray;
             this.sidePanel.Controls.Add(this.textName);
             this.sidePanel.Controls.Add(this.textID);
-            this.sidePanel.Controls.Add(this.buttonServiços);
-            this.sidePanel.Controls.Add(this.buttonVinicultura);
-            this.sidePanel.Controls.Add(this.buttonStaff);
+            this.sidePanel.Controls.Add(this.btnServiços);
+            this.sidePanel.Controls.Add(this.btnVinicultura);
+            this.sidePanel.Controls.Add(this.btnStaff);
             this.sidePanel.Controls.Add(this.buttonLogIn);
-            this.sidePanel.Controls.Add(this.buttonClientes);
-            this.sidePanel.Controls.Add(this.buttonReservas);
+            this.sidePanel.Controls.Add(this.btnClientes);
+            this.sidePanel.Controls.Add(this.btnReservas);
             this.sidePanel.Controls.Add(this.logoPanel);
             this.sidePanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.sidePanel.Location = new System.Drawing.Point(0, 0);
@@ -110,82 +131,69 @@
             this.textID.Size = new System.Drawing.Size(52, 20);
             this.textID.TabIndex = 6;
             // 
-            // buttonServiços
+            // btnServiços
             // 
-            this.buttonServiços.BackColor = System.Drawing.Color.Gray;
-            this.buttonServiços.Dock = System.Windows.Forms.DockStyle.Top;
-            this.buttonServiços.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonServiços.Location = new System.Drawing.Point(0, 316);
-            this.buttonServiços.Name = "buttonServiços";
-            this.buttonServiços.Size = new System.Drawing.Size(200, 65);
-            this.buttonServiços.TabIndex = 5;
-            this.buttonServiços.Text = "Serviços";
-            this.buttonServiços.UseVisualStyleBackColor = false;
-            this.buttonServiços.MouseDown += new System.Windows.Forms.MouseEventHandler(this.window_MouseDown);
-            this.buttonServiços.MouseMove += new System.Windows.Forms.MouseEventHandler(this.window_MouseMove);
-            this.buttonServiços.MouseUp += new System.Windows.Forms.MouseEventHandler(this.window_MouseUp);
+            this.btnServiços.BackColor = System.Drawing.Color.Gray;
+            this.btnServiços.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnServiços.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnServiços.Location = new System.Drawing.Point(0, 316);
+            this.btnServiços.Name = "btnServiços";
+            this.btnServiços.Size = new System.Drawing.Size(200, 65);
+            this.btnServiços.TabIndex = 5;
+            this.btnServiços.Text = "Serviços";
+            this.btnServiços.UseVisualStyleBackColor = false;
+            this.btnServiços.Click += new System.EventHandler(this.btnServiços_Click);
             // 
-            // buttonVinicultura
+            // btnVinicultura
             // 
-            this.buttonVinicultura.BackColor = System.Drawing.Color.Gray;
-            this.buttonVinicultura.Dock = System.Windows.Forms.DockStyle.Top;
-            this.buttonVinicultura.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonVinicultura.Location = new System.Drawing.Point(0, 251);
-            this.buttonVinicultura.Name = "buttonVinicultura";
-            this.buttonVinicultura.Size = new System.Drawing.Size(200, 65);
-            this.buttonVinicultura.TabIndex = 4;
-            this.buttonVinicultura.Text = "Vinicultura";
-            this.buttonVinicultura.UseVisualStyleBackColor = false;
-            this.buttonVinicultura.MouseDown += new System.Windows.Forms.MouseEventHandler(this.window_MouseDown);
-            this.buttonVinicultura.MouseMove += new System.Windows.Forms.MouseEventHandler(this.window_MouseMove);
-            this.buttonVinicultura.MouseUp += new System.Windows.Forms.MouseEventHandler(this.window_MouseUp);
+            this.btnVinicultura.BackColor = System.Drawing.Color.Gray;
+            this.btnVinicultura.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnVinicultura.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVinicultura.Location = new System.Drawing.Point(0, 251);
+            this.btnVinicultura.Name = "btnVinicultura";
+            this.btnVinicultura.Size = new System.Drawing.Size(200, 65);
+            this.btnVinicultura.TabIndex = 4;
+            this.btnVinicultura.Text = "Vinicultura";
+            this.btnVinicultura.UseVisualStyleBackColor = false;
             // 
-            // buttonStaff
+            // btnStaff
             // 
-            this.buttonStaff.BackColor = System.Drawing.Color.Gray;
-            this.buttonStaff.Dock = System.Windows.Forms.DockStyle.Top;
-            this.buttonStaff.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonStaff.Location = new System.Drawing.Point(0, 186);
-            this.buttonStaff.Name = "buttonStaff";
-            this.buttonStaff.Size = new System.Drawing.Size(200, 65);
-            this.buttonStaff.TabIndex = 3;
-            this.buttonStaff.Text = "Staff";
-            this.buttonStaff.UseVisualStyleBackColor = false;
-            this.buttonStaff.MouseDown += new System.Windows.Forms.MouseEventHandler(this.window_MouseDown);
-            this.buttonStaff.MouseMove += new System.Windows.Forms.MouseEventHandler(this.window_MouseMove);
-            this.buttonStaff.MouseUp += new System.Windows.Forms.MouseEventHandler(this.window_MouseUp);
+            this.btnStaff.BackColor = System.Drawing.Color.Gray;
+            this.btnStaff.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnStaff.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStaff.Location = new System.Drawing.Point(0, 186);
+            this.btnStaff.Name = "btnStaff";
+            this.btnStaff.Size = new System.Drawing.Size(200, 65);
+            this.btnStaff.TabIndex = 3;
+            this.btnStaff.Text = "Staff";
+            this.btnStaff.UseVisualStyleBackColor = false;
+            this.btnStaff.Click += new System.EventHandler(this.btnStaff_Click);
             // 
-            // buttonClientes
+            // btnClientes
             // 
-            this.buttonClientes.BackColor = System.Drawing.Color.Gray;
-            this.buttonClientes.Dock = System.Windows.Forms.DockStyle.Top;
-            this.buttonClientes.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonClientes.Location = new System.Drawing.Point(0, 121);
-            this.buttonClientes.Name = "buttonClientes";
-            this.buttonClientes.Size = new System.Drawing.Size(200, 65);
-            this.buttonClientes.TabIndex = 2;
-            this.buttonClientes.Text = "Clientes";
-            this.buttonClientes.UseVisualStyleBackColor = false;
-            this.buttonClientes.Click += new System.EventHandler(this.buttonClientes_Click);
-            this.buttonClientes.MouseDown += new System.Windows.Forms.MouseEventHandler(this.window_MouseDown);
-            this.buttonClientes.MouseMove += new System.Windows.Forms.MouseEventHandler(this.window_MouseMove);
-            this.buttonClientes.MouseUp += new System.Windows.Forms.MouseEventHandler(this.window_MouseUp);
+            this.btnClientes.BackColor = System.Drawing.Color.Gray;
+            this.btnClientes.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnClientes.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClientes.Location = new System.Drawing.Point(0, 121);
+            this.btnClientes.Name = "btnClientes";
+            this.btnClientes.Size = new System.Drawing.Size(200, 65);
+            this.btnClientes.TabIndex = 2;
+            this.btnClientes.Text = "Clientes";
+            this.btnClientes.UseVisualStyleBackColor = false;
+            this.btnClientes.Click += new System.EventHandler(this.btnClientes_Click);
             // 
-            // buttonReservas
+            // btnReservas
             // 
-            this.buttonReservas.BackColor = System.Drawing.Color.Gray;
-            this.buttonReservas.Dock = System.Windows.Forms.DockStyle.Top;
-            this.buttonReservas.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonReservas.Location = new System.Drawing.Point(0, 56);
-            this.buttonReservas.Name = "buttonReservas";
-            this.buttonReservas.Size = new System.Drawing.Size(200, 65);
-            this.buttonReservas.TabIndex = 1;
-            this.buttonReservas.Text = "Reservas";
-            this.buttonReservas.UseVisualStyleBackColor = false;
-            this.buttonReservas.Click += new System.EventHandler(this.buttonReservas_Click);
-            this.buttonReservas.MouseDown += new System.Windows.Forms.MouseEventHandler(this.window_MouseDown);
-            this.buttonReservas.MouseMove += new System.Windows.Forms.MouseEventHandler(this.window_MouseMove);
-            this.buttonReservas.MouseUp += new System.Windows.Forms.MouseEventHandler(this.window_MouseUp);
+            this.btnReservas.BackColor = System.Drawing.Color.Gray;
+            this.btnReservas.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnReservas.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReservas.Location = new System.Drawing.Point(0, 56);
+            this.btnReservas.Name = "btnReservas";
+            this.btnReservas.Size = new System.Drawing.Size(200, 65);
+            this.btnReservas.TabIndex = 1;
+            this.btnReservas.Text = "Reservas";
+            this.btnReservas.UseVisualStyleBackColor = false;
+            this.btnReservas.Click += new System.EventHandler(this.btnReservas_Click);
             // 
             // logoPanel
             // 
@@ -207,7 +215,6 @@
             this.r.Size = new System.Drawing.Size(62, 20);
             this.r.TabIndex = 0;
             this.r.Text = "Quinta";
-            this.r.Click += new System.EventHandler(this.label1_Click);
             // 
             // headerPanel
             // 
@@ -219,14 +226,14 @@
             this.headerPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.headerPanel.Location = new System.Drawing.Point(200, 0);
             this.headerPanel.Name = "headerPanel";
-            this.headerPanel.Size = new System.Drawing.Size(600, 56);
+            this.headerPanel.Size = new System.Drawing.Size(655, 56);
             this.headerPanel.TabIndex = 2;
             // 
             // buttonFILL
             // 
-            this.buttonFILL.Location = new System.Drawing.Point(302, 18);
+            this.buttonFILL.Location = new System.Drawing.Point(356, 18);
             this.buttonFILL.Name = "buttonFILL";
-            this.buttonFILL.Size = new System.Drawing.Size(75, 23);
+            this.buttonFILL.Size = new System.Drawing.Size(102, 23);
             this.buttonFILL.TabIndex = 8;
             this.buttonFILL.Text = "FILL";
             this.buttonFILL.UseVisualStyleBackColor = true;
@@ -238,7 +245,7 @@
             this.Minimize.BackColor = System.Drawing.Color.Gray;
             this.Minimize.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Minimize.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.Minimize.Location = new System.Drawing.Point(549, 9);
+            this.Minimize.Location = new System.Drawing.Point(589, 9);
             this.Minimize.Name = "Minimize";
             this.Minimize.Size = new System.Drawing.Size(15, 20);
             this.Minimize.TabIndex = 2;
@@ -251,7 +258,7 @@
             this.Exit.BackColor = System.Drawing.Color.Gray;
             this.Exit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Exit.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.Exit.Location = new System.Drawing.Point(570, 9);
+            this.Exit.Location = new System.Drawing.Point(622, 9);
             this.Exit.Name = "Exit";
             this.Exit.Size = new System.Drawing.Size(21, 20);
             this.Exit.TabIndex = 2;
@@ -269,189 +276,286 @@
             this.CurrentWindow.TabIndex = 1;
             this.CurrentWindow.Text = "Quinta";
             // 
-            // window
-            // 
-            this.window.Controls.Add(this.buttonEliminar);
-            this.window.Controls.Add(this.buttonAlterar);
-            this.window.Controls.Add(this.listBoxCCClientes);
-            this.window.Controls.Add(this.label1);
-            this.window.Controls.Add(this.labelClientes);
-            this.window.Controls.Add(this.textRececaoID);
-            this.window.Controls.Add(this.labelRececaoID);
-            this.window.Controls.Add(this.buttonReservar);
-            this.window.Controls.Add(this.textServicoID);
-            this.window.Controls.Add(this.labelServicoID);
-            this.window.Controls.Add(this.labelClienteID);
-            this.window.Controls.Add(this.textClienteID);
-            this.window.Controls.Add(this.listBoxIDClientes);
-            this.window.Controls.Add(this.listBoxNomeClientes);
-            this.window.Controls.Add(this.listBoxNascClientes);
-            this.window.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.window.Location = new System.Drawing.Point(200, 56);
-            this.window.Name = "window";
-            this.window.Size = new System.Drawing.Size(600, 394);
-            this.window.TabIndex = 3;
-            this.window.MouseDown += new System.Windows.Forms.MouseEventHandler(this.window_MouseDown);
-            this.window.MouseMove += new System.Windows.Forms.MouseEventHandler(this.window_MouseMove);
-            this.window.MouseUp += new System.Windows.Forms.MouseEventHandler(this.window_MouseUp);
-            // 
-            // buttonEliminar
-            // 
-            this.buttonEliminar.Location = new System.Drawing.Point(200, 318);
-            this.buttonEliminar.Name = "buttonEliminar";
-            this.buttonEliminar.Size = new System.Drawing.Size(95, 23);
-            this.buttonEliminar.TabIndex = 13;
-            this.buttonEliminar.Text = "Eliminar Cliente";
-            this.buttonEliminar.UseVisualStyleBackColor = true;
-            this.buttonEliminar.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // buttonAlterar
-            // 
-            this.buttonAlterar.Location = new System.Drawing.Point(66, 318);
-            this.buttonAlterar.Name = "buttonAlterar";
-            this.buttonAlterar.Size = new System.Drawing.Size(89, 23);
-            this.buttonAlterar.TabIndex = 12;
-            this.buttonAlterar.Text = "Alterar Cliente";
-            this.buttonAlterar.UseVisualStyleBackColor = true;
-            this.buttonAlterar.Click += new System.EventHandler(this.buttonAlterar_Click);
-            // 
-            // listBoxCCClientes
-            // 
-            this.listBoxCCClientes.FormattingEnabled = true;
-            this.listBoxCCClientes.Location = new System.Drawing.Point(374, 47);
-            this.listBoxCCClientes.Name = "listBoxCCClientes";
-            this.listBoxCCClientes.Size = new System.Drawing.Size(103, 251);
-            this.listBoxCCClientes.TabIndex = 11;
-            this.listBoxCCClientes.Visible = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(36, 8);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(66, 20);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "Clientes";
-            this.label1.Visible = false;
-            // 
-            // labelClientes
-            // 
-            this.labelClientes.AutoSize = true;
-            this.labelClientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelClientes.Location = new System.Drawing.Point(37, 28);
-            this.labelClientes.Name = "labelClientes";
-            this.labelClientes.Size = new System.Drawing.Size(66, 20);
-            this.labelClientes.TabIndex = 8;
-            this.labelClientes.Text = "Clientes";
-            this.labelClientes.Visible = false;
-            // 
-            // textRececaoID
-            // 
-            this.textRececaoID.Location = new System.Drawing.Point(148, 138);
-            this.textRececaoID.Name = "textRececaoID";
-            this.textRececaoID.Size = new System.Drawing.Size(100, 20);
-            this.textRececaoID.TabIndex = 6;
-            this.textRececaoID.Visible = false;
-            // 
-            // labelRececaoID
-            // 
-            this.labelRececaoID.AutoSize = true;
-            this.labelRececaoID.Location = new System.Drawing.Point(63, 141);
-            this.labelRececaoID.Name = "labelRececaoID";
-            this.labelRececaoID.Size = new System.Drawing.Size(62, 13);
-            this.labelRececaoID.TabIndex = 5;
-            this.labelRececaoID.Text = "ReceçãoID";
-            this.labelRececaoID.Visible = false;
-            // 
-            // buttonReservar
-            // 
-            this.buttonReservar.Location = new System.Drawing.Point(184, 229);
-            this.buttonReservar.Name = "buttonReservar";
-            this.buttonReservar.Size = new System.Drawing.Size(75, 23);
-            this.buttonReservar.TabIndex = 4;
-            this.buttonReservar.Text = "Reservar";
-            this.buttonReservar.UseVisualStyleBackColor = true;
-            this.buttonReservar.Visible = false;
-            this.buttonReservar.Click += new System.EventHandler(this.buttonReservar_Click);
-            // 
-            // textServicoID
-            // 
-            this.textServicoID.Location = new System.Drawing.Point(148, 93);
-            this.textServicoID.Name = "textServicoID";
-            this.textServicoID.Size = new System.Drawing.Size(100, 20);
-            this.textServicoID.TabIndex = 3;
-            this.textServicoID.Visible = false;
-            // 
-            // labelServicoID
-            // 
-            this.labelServicoID.AutoSize = true;
-            this.labelServicoID.Location = new System.Drawing.Point(63, 93);
-            this.labelServicoID.Name = "labelServicoID";
-            this.labelServicoID.Size = new System.Drawing.Size(54, 13);
-            this.labelServicoID.TabIndex = 2;
-            this.labelServicoID.Text = "ServiçoID";
-            this.labelServicoID.Visible = false;
-            // 
-            // labelClienteID
-            // 
-            this.labelClienteID.AutoSize = true;
-            this.labelClienteID.Location = new System.Drawing.Point(63, 47);
-            this.labelClienteID.Name = "labelClienteID";
-            this.labelClienteID.Size = new System.Drawing.Size(50, 13);
-            this.labelClienteID.TabIndex = 1;
-            this.labelClienteID.Text = "ClienteID";
-            this.labelClienteID.Visible = false;
-            // 
-            // textClienteID
-            // 
-            this.textClienteID.Location = new System.Drawing.Point(148, 44);
-            this.textClienteID.Name = "textClienteID";
-            this.textClienteID.Size = new System.Drawing.Size(100, 20);
-            this.textClienteID.TabIndex = 0;
-            this.textClienteID.Visible = false;
-            // 
-            // listBoxIDClientes
-            // 
-            this.listBoxIDClientes.FormattingEnabled = true;
-            this.listBoxIDClientes.Location = new System.Drawing.Point(40, 47);
-            this.listBoxIDClientes.Name = "listBoxIDClientes";
-            this.listBoxIDClientes.Size = new System.Drawing.Size(102, 251);
-            this.listBoxIDClientes.TabIndex = 7;
-            this.listBoxIDClientes.Visible = false;
-            // 
-            // listBoxNomeClientes
-            // 
-            this.listBoxNomeClientes.FormattingEnabled = true;
-            this.listBoxNomeClientes.Location = new System.Drawing.Point(140, 47);
-            this.listBoxNomeClientes.Name = "listBoxNomeClientes";
-            this.listBoxNomeClientes.Size = new System.Drawing.Size(135, 251);
-            this.listBoxNomeClientes.TabIndex = 9;
-            this.listBoxNomeClientes.Visible = false;
-            // 
-            // listBoxNascClientes
-            // 
-            this.listBoxNascClientes.FormattingEnabled = true;
-            this.listBoxNascClientes.Location = new System.Drawing.Point(274, 47);
-            this.listBoxNascClientes.Name = "listBoxNascClientes";
-            this.listBoxNascClientes.Size = new System.Drawing.Size(103, 251);
-            this.listBoxNascClientes.TabIndex = 10;
-            this.listBoxNascClientes.Visible = false;
-            // 
             // contextMenuStrip1
             // 
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            // 
+            // viniculturaDataSet
+            // 
+            this.viniculturaDataSet.DataSetName = "ViniculturaDataSet";
+            this.viniculturaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // clienteBindingSource
+            // 
+            this.clienteBindingSource.DataMember = "Cliente";
+            this.clienteBindingSource.DataSource = this.viniculturaDataSet;
+            // 
+            // clienteTableAdapter
+            // 
+            this.clienteTableAdapter.ClearBeforeFill = true;
+            // 
+            // btnEliminarCliente
+            // 
+            this.btnEliminarCliente.Location = new System.Drawing.Point(607, 356);
+            this.btnEliminarCliente.Name = "btnEliminarCliente";
+            this.btnEliminarCliente.Size = new System.Drawing.Size(138, 38);
+            this.btnEliminarCliente.TabIndex = 15;
+            this.btnEliminarCliente.Text = "Eliminar Cliente";
+            this.btnEliminarCliente.UseVisualStyleBackColor = true;
+            this.btnEliminarCliente.Visible = false;
+            this.btnEliminarCliente.Click += new System.EventHandler(this.btnEliminarCliente_Click);
+            // 
+            // btnAlterarCliente
+            // 
+            this.btnAlterarCliente.Location = new System.Drawing.Point(454, 356);
+            this.btnAlterarCliente.Name = "btnAlterarCliente";
+            this.btnAlterarCliente.Size = new System.Drawing.Size(138, 38);
+            this.btnAlterarCliente.TabIndex = 14;
+            this.btnAlterarCliente.Text = "Alterar Cliente";
+            this.btnAlterarCliente.UseVisualStyleBackColor = true;
+            this.btnAlterarCliente.Visible = false;
+            this.btnAlterarCliente.Click += new System.EventHandler(this.btnAlterarCliente_Click);
+            // 
+            // btnCriarCliente
+            // 
+            this.btnCriarCliente.Location = new System.Drawing.Point(302, 356);
+            this.btnCriarCliente.Name = "btnCriarCliente";
+            this.btnCriarCliente.Size = new System.Drawing.Size(138, 38);
+            this.btnCriarCliente.TabIndex = 13;
+            this.btnCriarCliente.Text = "Adicionar Cliente";
+            this.btnCriarCliente.UseVisualStyleBackColor = true;
+            this.btnCriarCliente.Visible = false;
+            this.btnCriarCliente.Click += new System.EventHandler(this.btnCriarCliente_Click);
+            // 
+            // dgvClientes
+            // 
+            this.dgvClientes.AutoGenerateColumns = false;
+            this.dgvClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvClientes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.clienteIDDataGridViewTextBoxColumn,
+            this.nomeClienteDataGridViewTextBoxColumn,
+            this.dataNascimentoDataGridViewTextBoxColumn,
+            this.cartaoCidadaoDataGridViewTextBoxColumn});
+            this.dgvClientes.DataSource = this.clienteBindingSource;
+            this.dgvClientes.Location = new System.Drawing.Point(302, 84);
+            this.dgvClientes.Name = "dgvClientes";
+            this.dgvClientes.Size = new System.Drawing.Size(443, 232);
+            this.dgvClientes.TabIndex = 9;
+            this.dgvClientes.Visible = false;
+            // 
+            // clienteIDDataGridViewTextBoxColumn
+            // 
+            this.clienteIDDataGridViewTextBoxColumn.DataPropertyName = "ClienteID";
+            this.clienteIDDataGridViewTextBoxColumn.HeaderText = "ClienteID";
+            this.clienteIDDataGridViewTextBoxColumn.Name = "clienteIDDataGridViewTextBoxColumn";
+            this.clienteIDDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nomeClienteDataGridViewTextBoxColumn
+            // 
+            this.nomeClienteDataGridViewTextBoxColumn.DataPropertyName = "NomeCliente";
+            this.nomeClienteDataGridViewTextBoxColumn.HeaderText = "NomeCliente";
+            this.nomeClienteDataGridViewTextBoxColumn.Name = "nomeClienteDataGridViewTextBoxColumn";
+            // 
+            // dataNascimentoDataGridViewTextBoxColumn
+            // 
+            this.dataNascimentoDataGridViewTextBoxColumn.DataPropertyName = "DataNascimento";
+            this.dataNascimentoDataGridViewTextBoxColumn.HeaderText = "DataNascimento";
+            this.dataNascimentoDataGridViewTextBoxColumn.Name = "dataNascimentoDataGridViewTextBoxColumn";
+            // 
+            // cartaoCidadaoDataGridViewTextBoxColumn
+            // 
+            this.cartaoCidadaoDataGridViewTextBoxColumn.DataPropertyName = "CartaoCidadao";
+            this.cartaoCidadaoDataGridViewTextBoxColumn.HeaderText = "CartaoCidadao";
+            this.cartaoCidadaoDataGridViewTextBoxColumn.Name = "cartaoCidadaoDataGridViewTextBoxColumn";
+            // 
+            // dgvReservas
+            // 
+            this.dgvReservas.AutoGenerateColumns = false;
+            this.dgvReservas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvReservas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ReservaID,
+            this.dataGridViewTextBoxColumn1,
+            this.ServicoID,
+            this.DataEntrada});
+            this.dgvReservas.DataSource = this.reservaBindingSource;
+            this.dgvReservas.Location = new System.Drawing.Point(302, 84);
+            this.dgvReservas.Name = "dgvReservas";
+            this.dgvReservas.Size = new System.Drawing.Size(443, 232);
+            this.dgvReservas.TabIndex = 16;
+            this.dgvReservas.Visible = false;
+            // 
+            // ReservaID
+            // 
+            this.ReservaID.DataPropertyName = "ReservaID";
+            this.ReservaID.HeaderText = "ReservaID";
+            this.ReservaID.Name = "ReservaID";
+            this.ReservaID.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "ClienteID";
+            this.dataGridViewTextBoxColumn1.HeaderText = "ClienteID";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // ServicoID
+            // 
+            this.ServicoID.DataPropertyName = "ServicoID";
+            this.ServicoID.HeaderText = "ServicoID";
+            this.ServicoID.Name = "ServicoID";
+            // 
+            // DataEntrada
+            // 
+            this.DataEntrada.DataPropertyName = "DataEntrada";
+            this.DataEntrada.HeaderText = "DataEntrada";
+            this.DataEntrada.Name = "DataEntrada";
+            // 
+            // reservaBindingSource
+            // 
+            this.reservaBindingSource.DataMember = "Reserva";
+            this.reservaBindingSource.DataSource = this.viniculturaDataSet;
+            // 
+            // reservaTableAdapter
+            // 
+            this.reservaTableAdapter.ClearBeforeFill = true;
+            // 
+            // btnCriarReserva
+            // 
+            this.btnCriarReserva.Location = new System.Drawing.Point(302, 356);
+            this.btnCriarReserva.Name = "btnCriarReserva";
+            this.btnCriarReserva.Size = new System.Drawing.Size(138, 38);
+            this.btnCriarReserva.TabIndex = 17;
+            this.btnCriarReserva.Text = "Adicionar Reserva";
+            this.btnCriarReserva.UseVisualStyleBackColor = true;
+            this.btnCriarReserva.Visible = false;
+            this.btnCriarReserva.Click += new System.EventHandler(this.btnCriarReserva_Click);
+            // 
+            // btnAlterarReserva
+            // 
+            this.btnAlterarReserva.Location = new System.Drawing.Point(454, 356);
+            this.btnAlterarReserva.Name = "btnAlterarReserva";
+            this.btnAlterarReserva.Size = new System.Drawing.Size(138, 38);
+            this.btnAlterarReserva.TabIndex = 18;
+            this.btnAlterarReserva.Text = "Alterar Reserva";
+            this.btnAlterarReserva.UseVisualStyleBackColor = true;
+            this.btnAlterarReserva.Visible = false;
+            this.btnAlterarReserva.Click += new System.EventHandler(this.btnAlterarReserva_Click);
+            // 
+            // btnEliminarReserva
+            // 
+            this.btnEliminarReserva.Location = new System.Drawing.Point(607, 356);
+            this.btnEliminarReserva.Name = "btnEliminarReserva";
+            this.btnEliminarReserva.Size = new System.Drawing.Size(138, 38);
+            this.btnEliminarReserva.TabIndex = 19;
+            this.btnEliminarReserva.Text = "Eliminar Reserva";
+            this.btnEliminarReserva.UseVisualStyleBackColor = true;
+            this.btnEliminarReserva.Visible = false;
+            this.btnEliminarReserva.Click += new System.EventHandler(this.btnEliminarReserva_Click);
+            // 
+            // dgvStaff
+            // 
+            this.dgvStaff.AutoGenerateColumns = false;
+            this.dgvStaff.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvStaff.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.trabalhadorIDDataGridViewTextBoxColumn,
+            this.nomeTrabalhadorDataGridViewTextBoxColumn,
+            this.horaEntradaDataGridViewTextBoxColumn,
+            this.horaSaidaDataGridViewTextBoxColumn});
+            this.dgvStaff.DataSource = this.trabalhadorBindingSource;
+            this.dgvStaff.Location = new System.Drawing.Point(302, 84);
+            this.dgvStaff.Name = "dgvStaff";
+            this.dgvStaff.Size = new System.Drawing.Size(443, 232);
+            this.dgvStaff.TabIndex = 20;
+            this.dgvStaff.Visible = false;
+            // 
+            // trabalhadorIDDataGridViewTextBoxColumn
+            // 
+            this.trabalhadorIDDataGridViewTextBoxColumn.DataPropertyName = "TrabalhadorID";
+            this.trabalhadorIDDataGridViewTextBoxColumn.HeaderText = "TrabalhadorID";
+            this.trabalhadorIDDataGridViewTextBoxColumn.Name = "trabalhadorIDDataGridViewTextBoxColumn";
+            this.trabalhadorIDDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nomeTrabalhadorDataGridViewTextBoxColumn
+            // 
+            this.nomeTrabalhadorDataGridViewTextBoxColumn.DataPropertyName = "NomeTrabalhador";
+            this.nomeTrabalhadorDataGridViewTextBoxColumn.HeaderText = "NomeTrabalhador";
+            this.nomeTrabalhadorDataGridViewTextBoxColumn.Name = "nomeTrabalhadorDataGridViewTextBoxColumn";
+            // 
+            // horaEntradaDataGridViewTextBoxColumn
+            // 
+            this.horaEntradaDataGridViewTextBoxColumn.DataPropertyName = "HoraEntrada";
+            this.horaEntradaDataGridViewTextBoxColumn.HeaderText = "HoraEntrada";
+            this.horaEntradaDataGridViewTextBoxColumn.Name = "horaEntradaDataGridViewTextBoxColumn";
+            // 
+            // horaSaidaDataGridViewTextBoxColumn
+            // 
+            this.horaSaidaDataGridViewTextBoxColumn.DataPropertyName = "HoraSaida";
+            this.horaSaidaDataGridViewTextBoxColumn.HeaderText = "HoraSaida";
+            this.horaSaidaDataGridViewTextBoxColumn.Name = "horaSaidaDataGridViewTextBoxColumn";
+            // 
+            // trabalhadorBindingSource
+            // 
+            this.trabalhadorBindingSource.DataMember = "Trabalhador";
+            this.trabalhadorBindingSource.DataSource = this.viniculturaDataSet;
+            // 
+            // trabalhadorTableAdapter
+            // 
+            this.trabalhadorTableAdapter.ClearBeforeFill = true;
+            // 
+            // btnCriarStaff
+            // 
+            this.btnCriarStaff.Location = new System.Drawing.Point(302, 356);
+            this.btnCriarStaff.Name = "btnCriarStaff";
+            this.btnCriarStaff.Size = new System.Drawing.Size(138, 38);
+            this.btnCriarStaff.TabIndex = 21;
+            this.btnCriarStaff.Text = "Adicionar Trabalhador";
+            this.btnCriarStaff.UseVisualStyleBackColor = true;
+            this.btnCriarStaff.Visible = false;
+            this.btnCriarStaff.Click += new System.EventHandler(this.btnCriarStaff_Click);
+            // 
+            // btnAlterarStaff
+            // 
+            this.btnAlterarStaff.Location = new System.Drawing.Point(454, 356);
+            this.btnAlterarStaff.Name = "btnAlterarStaff";
+            this.btnAlterarStaff.Size = new System.Drawing.Size(138, 38);
+            this.btnAlterarStaff.TabIndex = 22;
+            this.btnAlterarStaff.Text = "Alterar Trabalhador";
+            this.btnAlterarStaff.UseVisualStyleBackColor = true;
+            this.btnAlterarStaff.Visible = false;
+            this.btnAlterarStaff.Click += new System.EventHandler(this.btnAlterarStaff_Click);
+            // 
+            // btnEliminarStaff
+            // 
+            this.btnEliminarStaff.Location = new System.Drawing.Point(607, 356);
+            this.btnEliminarStaff.Name = "btnEliminarStaff";
+            this.btnEliminarStaff.Size = new System.Drawing.Size(138, 38);
+            this.btnEliminarStaff.TabIndex = 23;
+            this.btnEliminarStaff.Text = "Eliminar Trabalhador";
+            this.btnEliminarStaff.UseVisualStyleBackColor = true;
+            this.btnEliminarStaff.Visible = false;
+            this.btnEliminarStaff.Click += new System.EventHandler(this.btnEliminarStaff_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.window);
+            this.ClientSize = new System.Drawing.Size(855, 450);
             this.Controls.Add(this.headerPanel);
             this.Controls.Add(this.sidePanel);
+            this.Controls.Add(this.dgvClientes);
+            this.Controls.Add(this.btnCriarCliente);
+            this.Controls.Add(this.btnAlterarCliente);
+            this.Controls.Add(this.btnEliminarCliente);
+            this.Controls.Add(this.btnCriarReserva);
+            this.Controls.Add(this.btnAlterarReserva);
+            this.Controls.Add(this.btnEliminarReserva);
+            this.Controls.Add(this.btnCriarStaff);
+            this.Controls.Add(this.btnAlterarStaff);
+            this.Controls.Add(this.btnEliminarStaff);
+            this.Controls.Add(this.dgvReservas);
+            this.Controls.Add(this.dgvStaff);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form1";
@@ -463,8 +567,13 @@
             this.logoPanel.PerformLayout();
             this.headerPanel.ResumeLayout(false);
             this.headerPanel.PerformLayout();
-            this.window.ResumeLayout(false);
-            this.window.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.viniculturaDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvReservas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.reservaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvStaff)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trabalhadorBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -476,35 +585,49 @@
         private System.Windows.Forms.Panel logoPanel;
         private System.Windows.Forms.Label r;
         private System.Windows.Forms.Panel headerPanel;
-        private System.Windows.Forms.Button buttonServiços;
-        private System.Windows.Forms.Button buttonVinicultura;
-        private System.Windows.Forms.Button buttonStaff;
-        private System.Windows.Forms.Button buttonClientes;
-        private System.Windows.Forms.Button buttonReservas;
+        private System.Windows.Forms.Button btnServiços;
+        private System.Windows.Forms.Button btnVinicultura;
+        private System.Windows.Forms.Button btnStaff;
+        private System.Windows.Forms.Button btnClientes;
+        private System.Windows.Forms.Button btnReservas;
         private System.Windows.Forms.Label Minimize;
         private System.Windows.Forms.Label Exit;
         private System.Windows.Forms.Label CurrentWindow;
-        private System.Windows.Forms.Panel window;
         private System.Windows.Forms.TextBox textID;
         private System.Windows.Forms.TextBox textName;
-        private System.Windows.Forms.Button buttonReservar;
-        private System.Windows.Forms.TextBox textServicoID;
-        private System.Windows.Forms.Label labelServicoID;
-        private System.Windows.Forms.Label labelClienteID;
-        private System.Windows.Forms.TextBox textClienteID;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-        private System.Windows.Forms.TextBox textRececaoID;
-        private System.Windows.Forms.Label labelRececaoID;
-        private System.Windows.Forms.Label labelClientes;
-        private System.Windows.Forms.ListBox listBoxIDClientes;
         private System.Windows.Forms.Button buttonFILL;
-        private System.Windows.Forms.ListBox listBoxNomeClientes;
-        private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.ListBox listBoxNascClientes;
-        private System.Windows.Forms.ListBox listBoxCCClientes;
-        private System.Windows.Forms.Button buttonEliminar;
-        private System.Windows.Forms.Button buttonAlterar;
-        private System.Windows.Forms.Label label1;
+        private ViniculturaDataSet viniculturaDataSet;
+        private System.Windows.Forms.BindingSource clienteBindingSource;
+        private ViniculturaDataSetTableAdapters.ClienteTableAdapter clienteTableAdapter;
+        private System.Windows.Forms.Button btnEliminarCliente;
+        private System.Windows.Forms.Button btnAlterarCliente;
+        private System.Windows.Forms.Button btnCriarCliente;
+        private System.Windows.Forms.DataGridView dgvClientes;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clienteIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nomeClienteDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataNascimentoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cartaoCidadaoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridView dgvReservas;
+        private System.Windows.Forms.BindingSource reservaBindingSource;
+        private ViniculturaDataSetTableAdapters.ReservaTableAdapter reservaTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ReservaID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ServicoID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DataEntrada;
+        private System.Windows.Forms.Button btnCriarReserva;
+        private System.Windows.Forms.Button btnAlterarReserva;
+        private System.Windows.Forms.Button btnEliminarReserva;
+        private System.Windows.Forms.DataGridView dgvStaff;
+        private System.Windows.Forms.BindingSource trabalhadorBindingSource;
+        private ViniculturaDataSetTableAdapters.TrabalhadorTableAdapter trabalhadorTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn trabalhadorIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nomeTrabalhadorDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn horaEntradaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn horaSaidaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button btnCriarStaff;
+        private System.Windows.Forms.Button btnAlterarStaff;
+        private System.Windows.Forms.Button btnEliminarStaff;
     }
 }
 

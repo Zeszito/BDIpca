@@ -24,7 +24,7 @@ namespace WindowsFormsApp1
             Cliente,
             Staff
         }
-        Create create;
+        public static Create create;
 
         public enum Change
         {
@@ -32,9 +32,11 @@ namespace WindowsFormsApp1
             Cliente,
             Staff
         }
-        Change change;
+        public static Change change;
 
-        public static string selected;
+        public static int reservaSelecionada;
+        public static int clienteSelecionado;
+        public static int staffSelecionado;
         public string conString = "Data Source= TROLLSDUNGEON;Initial Catalog=Vinicultura;Integrated Security= True";
 
         private void buttonLogIn_Click(object sender, EventArgs e)
@@ -131,40 +133,39 @@ namespace WindowsFormsApp1
 
         private void btnCriarReserva_Click(object sender, EventArgs e)
         {
-            create = Create.Cliente;
-            Form2 f2 = new Form2();
-            f2.ShowDialog();
-            /*if (f2.Visible == false)
+            create = Create.Reserva;
+            Form3 f3 = new Form3();
+            f3.ShowDialog();
+            if (f3.Visible == false)
             {
-                RefreshListClientes();
-            }*/
-
-            /*SqlConnection con = ConnectDataBase();
-            int userval = int.Parse(textClienteID.Text);
-            int userval1 = int.Parse(textServicoID.Text);
-            int userval2 = int.Parse(textRececaoID.Text);
-            String query = "insert into Reserva (Cliente.clienteID, Servico.ServicoID, RececaoRecepID) values (" + userval + "," + userval1 + "," + userval2 + ");";
-            SqlCommand cmd = new SqlCommand(query, con);
-            cmd.ExecuteNonQuery();
-            MessageBox.Show("Succecss!");*/
+                dgvReservas.Update();
+            }
         }
 
         private void btnAlterarReserva_Click(object sender, EventArgs e)
         {
+            int RowIndex = dgvReservas.CurrentCell.RowIndex;
+            reservaSelecionada = int.Parse(dgvReservas.Rows[RowIndex].Cells[0].FormattedValue.ToString());
 
+            change = Change.Reserva;
+            Form2 f2 = new Form2();
+            f2.ShowDialog();
+            if (f2.Visible == false)
+            {
+                dgvReservas.Update();
+            }
         }
 
         private void btnEliminarReserva_Click(object sender, EventArgs e)
         {
-            int selected = dgvReservas.SelectedCells[0].RowIndex;
+            int RowIndex = dgvReservas.CurrentCell.RowIndex;
+            int selected = int.Parse(dgvReservas.Rows[RowIndex].Cells[0].FormattedValue.ToString());
 
             SqlConnection con = ConnectDataBase();
             String query = "delete from Reserva where Reserva.ReservaID = " + selected + ";";
             SqlCommand cmd = new SqlCommand(query, con);
             cmd.ExecuteNonQuery();
-            dgvReservas.Rows.RemoveAt(selected);
             MessageBox.Show("Reserva Eliminada!");
-            dgvReservas.Update();
         }
         #endregion
 
@@ -190,28 +191,42 @@ namespace WindowsFormsApp1
             dgvClientes.DataSource = ds.Tables[0];
         }
 
-
         private void btnCriarCliente_Click(object sender, EventArgs e)
         {
-
+            create = Create.Cliente;
+            Form3 f3 = new Form3();
+            f3.ShowDialog();
+            if (f3.Visible == false)
+            {
+                dgvClientes.Update();
+            }
         }
 
         private void btnAlterarCliente_Click(object sender, EventArgs e)
         {
+            //if (dgvClientes.SelectedCells.Count > 0)
+            int RowIndex = dgvClientes.CurrentCell.RowIndex;
+            clienteSelecionado = int.Parse(dgvClientes.Rows[RowIndex].Cells[0].FormattedValue.ToString());
 
+            change = Change.Cliente;
+            Form2 f2 = new Form2();
+            f2.ShowDialog();
+            if (f2.Visible == false)
+            {
+                dgvClientes.Update();
+            }
         }
 
         private void btnEliminarCliente_Click(object sender, EventArgs e)
         {
-            int selected = dgvClientes.SelectedCells[0].RowIndex;
+            int RowIndex = dgvClientes.CurrentCell.RowIndex;
+            int selected = int.Parse(dgvClientes.Rows[RowIndex].Cells[0].FormattedValue.ToString());
 
             SqlConnection con = ConnectDataBase();
             String query = "delete from cliente where cliente.ClienteID = " + selected + ";";
             SqlCommand cmd = new SqlCommand(query, con);
             cmd.ExecuteNonQuery();
-            dgvClientes.Rows.RemoveAt(selected);
             MessageBox.Show("Cliente Eliminado!");
-            dgvClientes.Update();
         }
 
         #endregion
@@ -240,25 +255,39 @@ namespace WindowsFormsApp1
 
         private void btnCriarStaff_Click(object sender, EventArgs e)
         {
-
+            create = Create.Staff;
+            Form3 f3 = new Form3();
+            f3.ShowDialog();
+            if (f3.Visible == false)
+            {
+                dgvStaff.Update();
+            }
         }
 
         private void btnAlterarStaff_Click(object sender, EventArgs e)
         {
+            int RowIndex = dgvStaff.CurrentCell.RowIndex;
+            staffSelecionado = int.Parse(dgvStaff.Rows[RowIndex].Cells[0].FormattedValue.ToString());
 
+            change = Change.Staff;
+            Form2 f2 = new Form2();
+            f2.ShowDialog();
+            if (f2.Visible == false)
+            {
+                dgvStaff.Update();
+            }
         }
 
         private void btnEliminarStaff_Click(object sender, EventArgs e)
         {
-            int selected = dgvStaff.SelectedCells[0].RowIndex;
+            int RowIndex = dgvClientes.CurrentCell.RowIndex;
+            int selected = int.Parse(dgvClientes.Rows[RowIndex].Cells[0].FormattedValue.ToString());
 
             SqlConnection con = ConnectDataBase();
             String query = "delete from Trabalhador where Trabalhador.TrabalhadorID = " + selected + ";";
             SqlCommand cmd = new SqlCommand(query, con);
             cmd.ExecuteNonQuery();
-            dgvStaff.Rows.RemoveAt(selected);
             MessageBox.Show("Trabalhador Eliminado!");
-            dgvStaff.Update();
         }
 
         #endregion

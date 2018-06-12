@@ -22,10 +22,42 @@ namespace WindowsFormsApp1
 
         private void Form3_Load(object sender, EventArgs e)
         {
-            if(Form1.Create. == Form1.Create.Reserva)
+            if(Form1.create == Form1.Create.Reserva)
+            {
+                labelReserva.Visible = true;
+                btnCriar.Visible = true;
+                labelClienteID.Visible = true;
+                labelServicoID.Visible = true;
+                labelRececaoID.Visible = true;
+                textBoxNomeStaff.Visible = true;
+                textBoxServicoID.Visible = true;
+                textBoxRececaoID.Visible = true;
+            }
+            if (Form1.create == Form1.Create.Cliente)
+            {
+                labelCliente.Visible = true;
+                btnCriar.Visible = true;
+                LabelNomeCliente.Visible = true;
+                labelDataNascimento.Visible = true;
+                labelCartaoCidadao.Visible = true;
+                textBoxNome.Visible = true;
+                dateTimeData.Visible = true;
+                textBoxCartaoCidadao.Visible = true;
+            }
+            if (Form1.create == Form1.Create.Staff)
+            {
+                labelStaff.Visible = true;
+                btnCriar.Visible = true;
+                labelNomeStaff.Visible = true;
+                labelHoraEStaff.Visible = true;
+                labelHoraSStaff.Visible = true;
+                textBoxNomeStaff.Visible = true;
+                textBoxHoraE.Visible = true;
+                textBoxHoraS.Visible = true;
+            }
         }
 
-        //----------------------------------------
+        // ----------------------------------FUNÇOES UTILITARIAS -----------------------------------------------------
 
         public SqlConnection ConnectDataBase()
         {
@@ -35,27 +67,41 @@ namespace WindowsFormsApp1
             return con;
         }
 
-        private void btnCriarCliente_Click(object sender, EventArgs e)
+        //-----------------------------------FUNÇOES DATABASE---------------------------------------------------------
+
+        private void btnCriar_Click(object sender, EventArgs e)
         {
-            int clienteID = int.Parse(Form1.selected);
-
             SqlConnection con = ConnectDataBase();
-            String query = "Select * from Cliente where ClienteID = " + clienteID + ";";
 
-            /*int userval = int.Parse(textClienteID.Text);
-            int userval1 = int.Parse(textServicoID.Text);
-            int userval2 = int.Parse(textRececaoID.Text);
-            String query = "insert into Reserva (Cliente.clienteID, Servico.ServicoID, RececaoRecepID) values (" + userval + "," + userval1 + "," + userval2 + ");";
-            SqlCommand cmd = new SqlCommand(query, con);
-            cmd.ExecuteNonQuery();
-            MessageBox.Show("Succecss!"); */
+            if(Form1.create == Form1.Create.Reserva)
+            {
+                int userval = int.Parse(textBoxClienteID.Text.ToString());
+                int userval1 = int.Parse(textBoxServicoID.Text.ToString());
+                int userval2 = int.Parse(textBoxRececaoID.Text.ToString());
+                String query = "insert into Reserva (Cliente.clienteID, Servico.ServicoID, RececaoRecepID) values (" + userval + "," + userval1 + "," + userval2 + ");";
+                SqlCommand cmd = new SqlCommand(query, con);
+                cmd.ExecuteNonQuery();
+
+            }
+            if (Form1.create == Form1.Create.Cliente)
+            {
+                String nome = textBoxNome.Text.ToString();
+                String data = (dateTimeData.Text.ToString());
+                int CC = int.Parse(textBoxCartaoCidadao.Text.ToString());
+                String query = "insert into Cliente(NomeCliente, DataNascimento, CartaoCidadao) values('" + nome + "', " + data + ", " + CC + ");";
+                SqlCommand cmd = new SqlCommand(query, con);
+                cmd.ExecuteNonQuery();
+            }
+            if (Form1.create == Form1.Create.Staff)
+            {
+                int userval = int.Parse(textBoxNomeStaff.Text.ToString());
+                int userval1 = int.Parse(textBoxHoraE.Text.ToString());
+                int userval2 = int.Parse(textBoxHoraS.Text.ToString());
+                String query = "insert into Trabalhador(NomeTrabalhador, HoraEntrada, HoraSaida) values('" + userval + "', " + userval1 +","+ userval2 +");";
+                SqlCommand cmd = new SqlCommand(query, con);
+                cmd.ExecuteNonQuery();
+            }
+            MessageBox.Show("Succecss!");
         }
-
-
-        /*int userval = int.Parse(textClienteID.Text);
-            int userval1 = int.Parse(textServicoID.Text);
-            int userval2 = int.Parse(textRececaoID.Text);
-            String query = "insert into Reserva (Cliente.clienteID, Servico.ServicoID, RececaoRecepID) values (" + userval + "," + userval1 + "," + userval2 + ");";
-            */
     }
 }

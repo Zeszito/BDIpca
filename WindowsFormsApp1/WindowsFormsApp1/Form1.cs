@@ -13,11 +13,6 @@ namespace WindowsFormsApp1
 {
     public partial class Form1 : Form
     {
-        public Form1()
-        {
-            InitializeComponent();
-        }
-
         public enum Create
         {
             Reserva,
@@ -39,16 +34,9 @@ namespace WindowsFormsApp1
         public static int staffSelecionado;
         public string conString = "Data Source= TROLLSDUNGEON;Initial Catalog=Vinicultura;Integrated Security= True";
 
-        private void buttonLogIn_Click(object sender, EventArgs e)
+        public Form1()
         {
-            SqlConnection con = ConnectDataBase();
-            if(con.State==System.Data.ConnectionState.Open)
-            {
-                string q= "Select * from cliente";
-                SqlCommand cmd = new SqlCommand(q, con);
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Connection made  Successfuly..!");
-            }
+            InitializeComponent();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -249,8 +237,8 @@ namespace WindowsFormsApp1
             var commandBuilder = new SqlCommandBuilder(dataAdapter);
             var ds = new DataSet();
             dataAdapter.Fill(ds);
-            dgvClientes.ReadOnly = true;
-            dgvClientes.DataSource = ds.Tables[0];
+            dgvStaff.ReadOnly = true;
+            dgvStaff.DataSource = ds.Tables[0];
         }
 
         private void btnCriarStaff_Click(object sender, EventArgs e)

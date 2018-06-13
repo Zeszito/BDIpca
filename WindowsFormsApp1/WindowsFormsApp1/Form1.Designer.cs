@@ -29,10 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.buttonLogIn = new System.Windows.Forms.Button();
             this.sidePanel = new System.Windows.Forms.Panel();
-            this.textName = new System.Windows.Forms.TextBox();
-            this.textID = new System.Windows.Forms.TextBox();
             this.btnServiços = new System.Windows.Forms.Button();
             this.btnVinicultura = new System.Windows.Forms.Button();
             this.btnStaff = new System.Windows.Forms.Button();
@@ -53,10 +50,6 @@
             this.btnAlterarCliente = new System.Windows.Forms.Button();
             this.btnCriarCliente = new System.Windows.Forms.Button();
             this.dgvClientes = new System.Windows.Forms.DataGridView();
-            this.clienteIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nomeClienteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataNascimentoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cartaoCidadaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvReservas = new System.Windows.Forms.DataGridView();
             this.ReservaID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -77,6 +70,11 @@
             this.btnCriarStaff = new System.Windows.Forms.Button();
             this.btnAlterarStaff = new System.Windows.Forms.Button();
             this.btnEliminarStaff = new System.Windows.Forms.Button();
+            this.trabalhadorBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.trabalhadorIDDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nomeTrabalhadorDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.horaEntradaDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.horaSaidaDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sidePanel.SuspendLayout();
             this.logoPanel.SuspendLayout();
             this.headerPanel.SuspendLayout();
@@ -87,27 +85,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.reservaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStaff)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trabalhadorBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trabalhadorBindingSource1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // buttonLogIn
-            // 
-            this.buttonLogIn.Location = new System.Drawing.Point(62, 420);
-            this.buttonLogIn.Name = "buttonLogIn";
-            this.buttonLogIn.Size = new System.Drawing.Size(75, 23);
-            this.buttonLogIn.TabIndex = 0;
-            this.buttonLogIn.Text = "Log In";
-            this.buttonLogIn.UseVisualStyleBackColor = true;
-            this.buttonLogIn.Click += new System.EventHandler(this.buttonLogIn_Click);
             // 
             // sidePanel
             // 
             this.sidePanel.BackColor = System.Drawing.Color.Gray;
-            this.sidePanel.Controls.Add(this.textName);
-            this.sidePanel.Controls.Add(this.textID);
             this.sidePanel.Controls.Add(this.btnServiços);
             this.sidePanel.Controls.Add(this.btnVinicultura);
             this.sidePanel.Controls.Add(this.btnStaff);
-            this.sidePanel.Controls.Add(this.buttonLogIn);
             this.sidePanel.Controls.Add(this.btnClientes);
             this.sidePanel.Controls.Add(this.btnReservas);
             this.sidePanel.Controls.Add(this.logoPanel);
@@ -116,20 +102,6 @@
             this.sidePanel.Name = "sidePanel";
             this.sidePanel.Size = new System.Drawing.Size(200, 450);
             this.sidePanel.TabIndex = 1;
-            // 
-            // textName
-            // 
-            this.textName.Location = new System.Drawing.Point(112, 393);
-            this.textName.Name = "textName";
-            this.textName.Size = new System.Drawing.Size(53, 20);
-            this.textName.TabIndex = 7;
-            // 
-            // textID
-            // 
-            this.textID.Location = new System.Drawing.Point(23, 394);
-            this.textID.Name = "textID";
-            this.textID.Size = new System.Drawing.Size(52, 20);
-            this.textID.TabIndex = 6;
             // 
             // btnServiços
             // 
@@ -333,41 +305,16 @@
             this.dgvClientes.AutoGenerateColumns = false;
             this.dgvClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvClientes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.clienteIDDataGridViewTextBoxColumn,
-            this.nomeClienteDataGridViewTextBoxColumn,
-            this.dataNascimentoDataGridViewTextBoxColumn,
-            this.cartaoCidadaoDataGridViewTextBoxColumn});
-            this.dgvClientes.DataSource = this.clienteBindingSource;
+            this.trabalhadorIDDataGridViewTextBoxColumn1,
+            this.nomeTrabalhadorDataGridViewTextBoxColumn1,
+            this.horaEntradaDataGridViewTextBoxColumn1,
+            this.horaSaidaDataGridViewTextBoxColumn1});
+            this.dgvClientes.DataSource = this.trabalhadorBindingSource1;
             this.dgvClientes.Location = new System.Drawing.Point(302, 84);
             this.dgvClientes.Name = "dgvClientes";
             this.dgvClientes.Size = new System.Drawing.Size(443, 232);
             this.dgvClientes.TabIndex = 9;
             this.dgvClientes.Visible = false;
-            // 
-            // clienteIDDataGridViewTextBoxColumn
-            // 
-            this.clienteIDDataGridViewTextBoxColumn.DataPropertyName = "ClienteID";
-            this.clienteIDDataGridViewTextBoxColumn.HeaderText = "ClienteID";
-            this.clienteIDDataGridViewTextBoxColumn.Name = "clienteIDDataGridViewTextBoxColumn";
-            this.clienteIDDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // nomeClienteDataGridViewTextBoxColumn
-            // 
-            this.nomeClienteDataGridViewTextBoxColumn.DataPropertyName = "NomeCliente";
-            this.nomeClienteDataGridViewTextBoxColumn.HeaderText = "NomeCliente";
-            this.nomeClienteDataGridViewTextBoxColumn.Name = "nomeClienteDataGridViewTextBoxColumn";
-            // 
-            // dataNascimentoDataGridViewTextBoxColumn
-            // 
-            this.dataNascimentoDataGridViewTextBoxColumn.DataPropertyName = "DataNascimento";
-            this.dataNascimentoDataGridViewTextBoxColumn.HeaderText = "DataNascimento";
-            this.dataNascimentoDataGridViewTextBoxColumn.Name = "dataNascimentoDataGridViewTextBoxColumn";
-            // 
-            // cartaoCidadaoDataGridViewTextBoxColumn
-            // 
-            this.cartaoCidadaoDataGridViewTextBoxColumn.DataPropertyName = "CartaoCidadao";
-            this.cartaoCidadaoDataGridViewTextBoxColumn.HeaderText = "CartaoCidadao";
-            this.cartaoCidadaoDataGridViewTextBoxColumn.Name = "cartaoCidadaoDataGridViewTextBoxColumn";
             // 
             // dgvReservas
             // 
@@ -536,6 +483,36 @@
             this.btnEliminarStaff.Visible = false;
             this.btnEliminarStaff.Click += new System.EventHandler(this.btnEliminarStaff_Click);
             // 
+            // trabalhadorBindingSource1
+            // 
+            this.trabalhadorBindingSource1.DataMember = "Trabalhador";
+            this.trabalhadorBindingSource1.DataSource = this.viniculturaDataSet;
+            // 
+            // trabalhadorIDDataGridViewTextBoxColumn1
+            // 
+            this.trabalhadorIDDataGridViewTextBoxColumn1.DataPropertyName = "TrabalhadorID";
+            this.trabalhadorIDDataGridViewTextBoxColumn1.HeaderText = "TrabalhadorID";
+            this.trabalhadorIDDataGridViewTextBoxColumn1.Name = "trabalhadorIDDataGridViewTextBoxColumn1";
+            this.trabalhadorIDDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // nomeTrabalhadorDataGridViewTextBoxColumn1
+            // 
+            this.nomeTrabalhadorDataGridViewTextBoxColumn1.DataPropertyName = "NomeTrabalhador";
+            this.nomeTrabalhadorDataGridViewTextBoxColumn1.HeaderText = "NomeTrabalhador";
+            this.nomeTrabalhadorDataGridViewTextBoxColumn1.Name = "nomeTrabalhadorDataGridViewTextBoxColumn1";
+            // 
+            // horaEntradaDataGridViewTextBoxColumn1
+            // 
+            this.horaEntradaDataGridViewTextBoxColumn1.DataPropertyName = "HoraEntrada";
+            this.horaEntradaDataGridViewTextBoxColumn1.HeaderText = "HoraEntrada";
+            this.horaEntradaDataGridViewTextBoxColumn1.Name = "horaEntradaDataGridViewTextBoxColumn1";
+            // 
+            // horaSaidaDataGridViewTextBoxColumn1
+            // 
+            this.horaSaidaDataGridViewTextBoxColumn1.DataPropertyName = "HoraSaida";
+            this.horaSaidaDataGridViewTextBoxColumn1.HeaderText = "HoraSaida";
+            this.horaSaidaDataGridViewTextBoxColumn1.Name = "horaSaidaDataGridViewTextBoxColumn1";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -562,7 +539,6 @@
             this.Text = "txtID";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.sidePanel.ResumeLayout(false);
-            this.sidePanel.PerformLayout();
             this.logoPanel.ResumeLayout(false);
             this.logoPanel.PerformLayout();
             this.headerPanel.ResumeLayout(false);
@@ -574,13 +550,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.reservaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStaff)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trabalhadorBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trabalhadorBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button buttonLogIn;
         private System.Windows.Forms.Panel sidePanel;
         private System.Windows.Forms.Panel logoPanel;
         private System.Windows.Forms.Label r;
@@ -593,8 +568,6 @@
         private System.Windows.Forms.Label Minimize;
         private System.Windows.Forms.Label Exit;
         private System.Windows.Forms.Label CurrentWindow;
-        private System.Windows.Forms.TextBox textID;
-        private System.Windows.Forms.TextBox textName;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.Button buttonFILL;
         private ViniculturaDataSet viniculturaDataSet;
@@ -604,10 +577,6 @@
         private System.Windows.Forms.Button btnAlterarCliente;
         private System.Windows.Forms.Button btnCriarCliente;
         private System.Windows.Forms.DataGridView dgvClientes;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clienteIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nomeClienteDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataNascimentoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cartaoCidadaoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridView dgvReservas;
         private System.Windows.Forms.BindingSource reservaBindingSource;
         private ViniculturaDataSetTableAdapters.ReservaTableAdapter reservaTableAdapter;
@@ -628,6 +597,11 @@
         private System.Windows.Forms.Button btnCriarStaff;
         private System.Windows.Forms.Button btnAlterarStaff;
         private System.Windows.Forms.Button btnEliminarStaff;
+        private System.Windows.Forms.DataGridViewTextBoxColumn trabalhadorIDDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nomeTrabalhadorDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn horaEntradaDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn horaSaidaDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.BindingSource trabalhadorBindingSource1;
     }
 }
 

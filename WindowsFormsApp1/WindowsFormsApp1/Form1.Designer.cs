@@ -31,7 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.sidePanel = new System.Windows.Forms.Panel();
             this.btnServiços = new System.Windows.Forms.Button();
-            this.btnVinicultura = new System.Windows.Forms.Button();
+            this.btnVinhos = new System.Windows.Forms.Button();
             this.btnStaff = new System.Windows.Forms.Button();
             this.btnClientes = new System.Windows.Forms.Button();
             this.btnReservas = new System.Windows.Forms.Button();
@@ -77,6 +77,25 @@
             this.btnEliminarStaff = new System.Windows.Forms.Button();
             this.viniculturaDataSet1 = new WindowsFormsApp1.ViniculturaDataSet();
             this.reservaBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.vinhoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.viniculturaDataSet2 = new WindowsFormsApp1.ViniculturaDataSet();
+            this.btnCriarVinho = new System.Windows.Forms.Button();
+            this.vinhoTableAdapter = new WindowsFormsApp1.ViniculturaDataSetTableAdapters.VinhoTableAdapter();
+            this.viniculturaDataSet3 = new WindowsFormsApp1.ViniculturaDataSet();
+            this.vinhoBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.btnQuery = new System.Windows.Forms.Button();
+            this.vindimaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.vindimaTableAdapter = new WindowsFormsApp1.ViniculturaDataSetTableAdapters.VindimaTableAdapter();
+            this.dgvVinhos = new System.Windows.Forms.DataGridView();
+            this.vinhoIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nomeVinhoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.valorUnitarioVinhoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.anoProducaoVinhoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.numeroGarrafasDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.producaoVinhoIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvVindima = new System.Windows.Forms.DataGridView();
+            this.vindimaIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.diaVindimaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sidePanel.SuspendLayout();
             this.logoPanel.SuspendLayout();
             this.headerPanel.SuspendLayout();
@@ -90,13 +109,20 @@
             ((System.ComponentModel.ISupportInitialize)(this.trabalhadorBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.viniculturaDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.reservaBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vinhoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.viniculturaDataSet2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.viniculturaDataSet3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vinhoBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vindimaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvVinhos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvVindima)).BeginInit();
             this.SuspendLayout();
             // 
             // sidePanel
             // 
             this.sidePanel.BackColor = System.Drawing.Color.Gray;
             this.sidePanel.Controls.Add(this.btnServiços);
-            this.sidePanel.Controls.Add(this.btnVinicultura);
+            this.sidePanel.Controls.Add(this.btnVinhos);
             this.sidePanel.Controls.Add(this.btnStaff);
             this.sidePanel.Controls.Add(this.btnClientes);
             this.sidePanel.Controls.Add(this.btnReservas);
@@ -118,19 +144,19 @@
             this.btnServiços.TabIndex = 5;
             this.btnServiços.Text = "Serviços";
             this.btnServiços.UseVisualStyleBackColor = false;
-            this.btnServiços.Click += new System.EventHandler(this.btnServiços_Click);
             // 
-            // btnVinicultura
+            // btnVinhos
             // 
-            this.btnVinicultura.BackColor = System.Drawing.Color.Gray;
-            this.btnVinicultura.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnVinicultura.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVinicultura.Location = new System.Drawing.Point(0, 251);
-            this.btnVinicultura.Name = "btnVinicultura";
-            this.btnVinicultura.Size = new System.Drawing.Size(200, 65);
-            this.btnVinicultura.TabIndex = 4;
-            this.btnVinicultura.Text = "Vinicultura";
-            this.btnVinicultura.UseVisualStyleBackColor = false;
+            this.btnVinhos.BackColor = System.Drawing.Color.Gray;
+            this.btnVinhos.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnVinhos.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVinhos.Location = new System.Drawing.Point(0, 251);
+            this.btnVinhos.Name = "btnVinhos";
+            this.btnVinhos.Size = new System.Drawing.Size(200, 65);
+            this.btnVinhos.TabIndex = 4;
+            this.btnVinhos.Text = "Vinhos";
+            this.btnVinhos.UseVisualStyleBackColor = false;
+            this.btnVinhos.Click += new System.EventHandler(this.btnVinhos_Click);
             // 
             // btnStaff
             // 
@@ -527,12 +553,152 @@
             this.reservaBindingSource1.DataMember = "Reserva";
             this.reservaBindingSource1.DataSource = this.viniculturaDataSet;
             // 
+            // vinhoBindingSource
+            // 
+            this.vinhoBindingSource.DataMember = "Vinho";
+            this.vinhoBindingSource.DataSource = this.viniculturaDataSet2;
+            // 
+            // viniculturaDataSet2
+            // 
+            this.viniculturaDataSet2.DataSetName = "ViniculturaDataSet";
+            this.viniculturaDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // btnCriarVinho
+            // 
+            this.btnCriarVinho.Location = new System.Drawing.Point(252, 386);
+            this.btnCriarVinho.Name = "btnCriarVinho";
+            this.btnCriarVinho.Size = new System.Drawing.Size(138, 38);
+            this.btnCriarVinho.TabIndex = 25;
+            this.btnCriarVinho.Text = "Adicionar Vinho";
+            this.btnCriarVinho.UseVisualStyleBackColor = true;
+            this.btnCriarVinho.Visible = false;
+            this.btnCriarVinho.Click += new System.EventHandler(this.btnCriarVinho_Click);
+            // 
+            // vinhoTableAdapter
+            // 
+            this.vinhoTableAdapter.ClearBeforeFill = true;
+            // 
+            // viniculturaDataSet3
+            // 
+            this.viniculturaDataSet3.DataSetName = "ViniculturaDataSet";
+            this.viniculturaDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // vinhoBindingSource1
+            // 
+            this.vinhoBindingSource1.DataMember = "Vinho";
+            this.vinhoBindingSource1.DataSource = this.viniculturaDataSet3;
+            // 
+            // btnQuery
+            // 
+            this.btnQuery.Location = new System.Drawing.Point(302, 201);
+            this.btnQuery.Name = "btnQuery";
+            this.btnQuery.Size = new System.Drawing.Size(138, 38);
+            this.btnQuery.TabIndex = 27;
+            this.btnQuery.Text = "Query";
+            this.btnQuery.UseVisualStyleBackColor = true;
+            this.btnQuery.Visible = false;
+            // 
+            // vindimaBindingSource
+            // 
+            this.vindimaBindingSource.DataMember = "Vindima";
+            this.vindimaBindingSource.DataSource = this.viniculturaDataSet;
+            // 
+            // vindimaTableAdapter
+            // 
+            this.vindimaTableAdapter.ClearBeforeFill = true;
+            // 
+            // dgvVinhos
+            // 
+            this.dgvVinhos.AutoGenerateColumns = false;
+            this.dgvVinhos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvVinhos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.vinhoIDDataGridViewTextBoxColumn,
+            this.nomeVinhoDataGridViewTextBoxColumn,
+            this.valorUnitarioVinhoDataGridViewTextBoxColumn,
+            this.anoProducaoVinhoDataGridViewTextBoxColumn,
+            this.numeroGarrafasDataGridViewTextBoxColumn,
+            this.producaoVinhoIDDataGridViewTextBoxColumn});
+            this.dgvVinhos.DataSource = this.vinhoBindingSource;
+            this.dgvVinhos.Location = new System.Drawing.Point(217, 62);
+            this.dgvVinhos.Name = "dgvVinhos";
+            this.dgvVinhos.Size = new System.Drawing.Size(342, 303);
+            this.dgvVinhos.TabIndex = 28;
+            this.dgvVinhos.Visible = false;
+            // 
+            // vinhoIDDataGridViewTextBoxColumn
+            // 
+            this.vinhoIDDataGridViewTextBoxColumn.DataPropertyName = "VinhoID";
+            this.vinhoIDDataGridViewTextBoxColumn.HeaderText = "VinhoID";
+            this.vinhoIDDataGridViewTextBoxColumn.Name = "vinhoIDDataGridViewTextBoxColumn";
+            this.vinhoIDDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nomeVinhoDataGridViewTextBoxColumn
+            // 
+            this.nomeVinhoDataGridViewTextBoxColumn.DataPropertyName = "NomeVinho";
+            this.nomeVinhoDataGridViewTextBoxColumn.HeaderText = "NomeVinho";
+            this.nomeVinhoDataGridViewTextBoxColumn.Name = "nomeVinhoDataGridViewTextBoxColumn";
+            // 
+            // valorUnitarioVinhoDataGridViewTextBoxColumn
+            // 
+            this.valorUnitarioVinhoDataGridViewTextBoxColumn.DataPropertyName = "ValorUnitarioVinho";
+            this.valorUnitarioVinhoDataGridViewTextBoxColumn.HeaderText = "ValorUnitarioVinho";
+            this.valorUnitarioVinhoDataGridViewTextBoxColumn.Name = "valorUnitarioVinhoDataGridViewTextBoxColumn";
+            // 
+            // anoProducaoVinhoDataGridViewTextBoxColumn
+            // 
+            this.anoProducaoVinhoDataGridViewTextBoxColumn.DataPropertyName = "AnoProducaoVinho";
+            this.anoProducaoVinhoDataGridViewTextBoxColumn.HeaderText = "AnoProducaoVinho";
+            this.anoProducaoVinhoDataGridViewTextBoxColumn.Name = "anoProducaoVinhoDataGridViewTextBoxColumn";
+            // 
+            // numeroGarrafasDataGridViewTextBoxColumn
+            // 
+            this.numeroGarrafasDataGridViewTextBoxColumn.DataPropertyName = "NumeroGarrafas";
+            this.numeroGarrafasDataGridViewTextBoxColumn.HeaderText = "NumeroGarrafas";
+            this.numeroGarrafasDataGridViewTextBoxColumn.Name = "numeroGarrafasDataGridViewTextBoxColumn";
+            // 
+            // producaoVinhoIDDataGridViewTextBoxColumn
+            // 
+            this.producaoVinhoIDDataGridViewTextBoxColumn.DataPropertyName = "ProducaoVinhoID";
+            this.producaoVinhoIDDataGridViewTextBoxColumn.HeaderText = "ProducaoVinhoID";
+            this.producaoVinhoIDDataGridViewTextBoxColumn.Name = "producaoVinhoIDDataGridViewTextBoxColumn";
+            // 
+            // dgvVindima
+            // 
+            this.dgvVindima.AutoGenerateColumns = false;
+            this.dgvVindima.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvVindima.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.vindimaIDDataGridViewTextBoxColumn,
+            this.diaVindimaDataGridViewTextBoxColumn});
+            this.dgvVindima.DataSource = this.vindimaBindingSource;
+            this.dgvVindima.Location = new System.Drawing.Point(598, 63);
+            this.dgvVindima.Name = "dgvVindima";
+            this.dgvVindima.Size = new System.Drawing.Size(242, 302);
+            this.dgvVindima.TabIndex = 29;
+            this.dgvVindima.Visible = false;
+            // 
+            // vindimaIDDataGridViewTextBoxColumn
+            // 
+            this.vindimaIDDataGridViewTextBoxColumn.DataPropertyName = "VindimaID";
+            this.vindimaIDDataGridViewTextBoxColumn.HeaderText = "VindimaID";
+            this.vindimaIDDataGridViewTextBoxColumn.Name = "vindimaIDDataGridViewTextBoxColumn";
+            this.vindimaIDDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // diaVindimaDataGridViewTextBoxColumn
+            // 
+            this.diaVindimaDataGridViewTextBoxColumn.DataPropertyName = "DiaVindima";
+            this.diaVindimaDataGridViewTextBoxColumn.HeaderText = "DiaVindima";
+            this.diaVindimaDataGridViewTextBoxColumn.Name = "diaVindimaDataGridViewTextBoxColumn";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(855, 450);
+            this.Controls.Add(this.dgvVindima);
+            this.Controls.Add(this.dgvVinhos);
+            this.Controls.Add(this.btnQuery);
+            this.Controls.Add(this.btnCriarVinho);
             this.Controls.Add(this.headerPanel);
             this.Controls.Add(this.sidePanel);
             this.Controls.Add(this.btnCriarCliente);
@@ -567,6 +733,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.trabalhadorBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.viniculturaDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.reservaBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vinhoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.viniculturaDataSet2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.viniculturaDataSet3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vinhoBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vindimaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvVinhos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvVindima)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -577,7 +750,7 @@
         private System.Windows.Forms.Label r;
         private System.Windows.Forms.Panel headerPanel;
         private System.Windows.Forms.Button btnServiços;
-        private System.Windows.Forms.Button btnVinicultura;
+        private System.Windows.Forms.Button btnVinhos;
         private System.Windows.Forms.Button btnStaff;
         private System.Windows.Forms.Button btnClientes;
         private System.Windows.Forms.Button btnReservas;
@@ -620,6 +793,25 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataNascimentoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn cartaoCidadaoDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource reservaBindingSource1;
+        private System.Windows.Forms.Button btnCriarVinho;
+        private ViniculturaDataSet viniculturaDataSet2;
+        private System.Windows.Forms.BindingSource vinhoBindingSource;
+        private ViniculturaDataSetTableAdapters.VinhoTableAdapter vinhoTableAdapter;
+        private ViniculturaDataSet viniculturaDataSet3;
+        private System.Windows.Forms.BindingSource vinhoBindingSource1;
+        private System.Windows.Forms.Button btnQuery;
+        private System.Windows.Forms.BindingSource vindimaBindingSource;
+        private ViniculturaDataSetTableAdapters.VindimaTableAdapter vindimaTableAdapter;
+        private System.Windows.Forms.DataGridView dgvVinhos;
+        private System.Windows.Forms.DataGridViewTextBoxColumn vinhoIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nomeVinhoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn valorUnitarioVinhoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn anoProducaoVinhoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn numeroGarrafasDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn producaoVinhoIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridView dgvVindima;
+        private System.Windows.Forms.DataGridViewTextBoxColumn vindimaIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn diaVindimaDataGridViewTextBoxColumn;
     }
 }
 

@@ -51,6 +51,10 @@ namespace WindowsFormsApp1
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'viniculturaDataSet.Vindima' table. You can move, or remove it, as needed.
+            this.vindimaTableAdapter.Fill(this.viniculturaDataSet.Vindima);
+            // TODO: This line of code loads data into the 'viniculturaDataSet2.Vinho' table. You can move, or remove it, as needed.
+            this.vinhoTableAdapter.Fill(this.viniculturaDataSet2.Vinho);
             // TODO: This line of code loads data into the 'viniculturaDataSet.Trabalhador' table. You can move, or remove it, as needed.
             this.trabalhadorTableAdapter.Fill(this.viniculturaDataSet.Trabalhador);
             // TODO: This line of code loads data into the 'viniculturaDataSet.Reserva' table. You can move, or remove it, as needed.
@@ -82,6 +86,9 @@ namespace WindowsFormsApp1
             btnAlterarStaff.Visible = false;
             btnEliminarStaff.Visible = false;
             btnCriarStaff.Visible = false;
+            dgvVinhos.Visible = false;
+            btnCriarVinho.Visible = false;
+            btnQuery.Visible = false;
         }
 
         void FillDataBase()
@@ -295,48 +302,47 @@ namespace WindowsFormsApp1
 
         #endregion
 
-        #region SERVIÇOS
+        #region VINHOS
 
-        private void btnServiços_Click(object sender, EventArgs e)
+        private void btnVinhos_Click(object sender, EventArgs e)
         {
             HideAll();
-            btnAlterarStaff.Visible = true;
-            btnEliminarStaff.Visible = true;
-            dgvStaff.Visible = true;
-            btnCriarStaff.Visible = true;
+            dgvVinhos.Visible = true;
+            btnCriarVinho.Visible = true;
 
-            SqlConnection con = ConnectDataBase();
-            string query = "Select * from Trabalhador";
+            int RowIndex = dgvStaff.CurrentCell.RowIndex;
+            int VinhoID = int.Parse(dgvStaff.Rows[RowIndex].Cells[0].FormattedValue.ToString());
 
-            var dataAdapter = new SqlDataAdapter(query, con);
+            if ( VinhoID != -1)
+            {
+                dgvVindima.Visible = true;
 
-            var commandBuilder = new SqlCommandBuilder(dataAdapter);
-            var ds = new DataSet();
-            dataAdapter.Fill(ds);
-            dgvClientes.ReadOnly = true;
-            dgvClientes.DataSource = ds.Tables[0];
+                SqlConnection con = ConnectDataBase();
+                string query = "Select * from Vindima  join Plantacao on Plantacao.VindimaID = Vindima.VindimaID join Plantacao_ProducaoVinho on Plantacao.PlantacaoID = Plantacao_ProducaoVinho.PlantacaoID join ProducaoVinho on Plantacao_ProducaoVinho.ProducaoVinhoID = ProducaoVinho.ProducaoVinhoID join vinho on Vinho.ProducaoVinhoID = ProducaoVinho.ProducaoVinhoID where Vinho.VinhoID = " + VinhoID + "; "; 
+
+                var dataAdapter = new SqlDataAdapter(query, con);
+                var commandBuilder = new SqlCommandBuilder(dataAdapter);
+                var ds = new DataSet();
+                dataAdapter.Fill(ds);
+                dgvVindima.ReadOnly = true;
+                dgvVindima.DataSource = ds.Tables[0];
+            }
         }
-        #endregion
 
+        #endregion
 
         private void buttonFILL_Click(object sender, EventArgs e)
         {
             FillDataBase();
         }
 
-        private void buttonAlterar_Click(object sender, EventArgs e)
+        private void btnCriarVinho_Click(object sender, EventArgs e)
         {
-            /*selected = listBoxIDClientes.SelectedItem.ToString();
-            selected1 = listBoxIDClientes.SelectedItem.ToString();
-            selected2 = listBoxIDClientes.SelectedItem.ToString();
-            selected3 = listBoxIDClientes.SelectedItem.ToString();*/
-
-            Form2 f2 = new Form2();
-            f2.ShowDialog();
-            /*if (f2.Visible == false)
-            {
-                RefreshListClientes();
-            }*/
+            /* SqlConnection con = ConnectDataBase();
+ SqlCommand cmd = new SqlCommand("Create_Vinho", con);
+ cmd.CommandType = System.Data.CommandType.StoredProcedure;
+ cmd.Parameters.AddWithValue("@XmlStr", XmlStrVariable);
+ cmd.ExecuteNonQuery();*/
         }
     }
 }

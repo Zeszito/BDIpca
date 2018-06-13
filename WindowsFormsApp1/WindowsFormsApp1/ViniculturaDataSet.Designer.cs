@@ -1054,8 +1054,8 @@ namespace WindowsFormsApp1 {
                         this.tableReserva.ClienteIDColumn}, false);
             this.Relations.Add(this.relationFK__Reserva__Cliente__03F0984C);
             this.relationFK__Reserva__Rececao__01142BA1 = new global::System.Data.DataRelation("FK__Reserva__Rececao__01142BA1", new global::System.Data.DataColumn[] {
-                        this.tableRececao.RecepIDColumn}, new global::System.Data.DataColumn[] {
-                        this.tableReserva.RececaoRecepIDColumn}, false);
+                        this.tableRececao.RececaoIDColumn}, new global::System.Data.DataColumn[] {
+                        this.tableReserva.RececaoIDColumn}, false);
             this.Relations.Add(this.relationFK__Reserva__Rececao__01142BA1);
             this.relationFK__Reserva__Servico__02084FDA = new global::System.Data.DataRelation("FK__Reserva__Servico__02084FDA", new global::System.Data.DataColumn[] {
                         this.tableServico.ServicoIDColumn}, new global::System.Data.DataColumn[] {
@@ -5021,7 +5021,7 @@ namespace WindowsFormsApp1 {
             
             private global::System.Data.DataColumn columnTaxaPenalizacao;
             
-            private global::System.Data.DataColumn columnRecepID;
+            private global::System.Data.DataColumn columnRececaoID;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
@@ -5066,9 +5066,9 @@ namespace WindowsFormsApp1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn RecepIDColumn {
+            public global::System.Data.DataColumn RececaoIDColumn {
                 get {
-                    return this.columnRecepID;
+                    return this.columnRececaoID;
                 }
             }
             
@@ -5121,9 +5121,9 @@ namespace WindowsFormsApp1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public RececaoRow FindByRecepID(int RecepID) {
+            public RececaoRow FindByRececaoID(int RececaoID) {
                 return ((RececaoRow)(this.Rows.Find(new object[] {
-                            RecepID})));
+                            RececaoID})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5144,7 +5144,7 @@ namespace WindowsFormsApp1 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             internal void InitVars() {
                 this.columnTaxaPenalizacao = base.Columns["TaxaPenalizacao"];
-                this.columnRecepID = base.Columns["RecepID"];
+                this.columnRececaoID = base.Columns["RececaoID"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5152,16 +5152,16 @@ namespace WindowsFormsApp1 {
             private void InitClass() {
                 this.columnTaxaPenalizacao = new global::System.Data.DataColumn("TaxaPenalizacao", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnTaxaPenalizacao);
-                this.columnRecepID = new global::System.Data.DataColumn("RecepID", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnRecepID);
+                this.columnRececaoID = new global::System.Data.DataColumn("RececaoID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnRececaoID);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnRecepID}, true));
-                this.columnRecepID.AutoIncrement = true;
-                this.columnRecepID.AutoIncrementSeed = -1;
-                this.columnRecepID.AutoIncrementStep = -1;
-                this.columnRecepID.AllowDBNull = false;
-                this.columnRecepID.ReadOnly = true;
-                this.columnRecepID.Unique = true;
+                                this.columnRececaoID}, true));
+                this.columnRececaoID.AutoIncrement = true;
+                this.columnRececaoID.AutoIncrementSeed = -1;
+                this.columnRececaoID.AutoIncrementStep = -1;
+                this.columnRececaoID.AllowDBNull = false;
+                this.columnRececaoID.ReadOnly = true;
+                this.columnRececaoID.Unique = true;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5611,17 +5611,13 @@ namespace WindowsFormsApp1 {
             
             private global::System.Data.DataColumn columnServicoID;
             
-            private global::System.Data.DataColumn columnRececaoReserva;
-            
             private global::System.Data.DataColumn columnDataEntrada;
             
             private global::System.Data.DataColumn columnDataSaida;
             
             private global::System.Data.DataColumn columnClienteID;
             
-            private global::System.Data.DataColumn columnFieldColumn;
-            
-            private global::System.Data.DataColumn columnRececaoRecepID;
+            private global::System.Data.DataColumn columnRececaoID;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
@@ -5690,14 +5686,6 @@ namespace WindowsFormsApp1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn RececaoReservaColumn {
-                get {
-                    return this.columnRececaoReserva;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public global::System.Data.DataColumn DataEntradaColumn {
                 get {
                     return this.columnDataEntrada;
@@ -5722,17 +5710,9 @@ namespace WindowsFormsApp1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn ColumnColumn {
+            public global::System.Data.DataColumn RececaoIDColumn {
                 get {
-                    return this.columnFieldColumn;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn RececaoRecepIDColumn {
-                get {
-                    return this.columnRececaoRecepID;
+                    return this.columnRececaoID;
                 }
             }
             
@@ -5773,27 +5753,25 @@ namespace WindowsFormsApp1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public ReservaRow AddReservaRow(string Estado, int FaturaID, ServicoRow parentServicoRowByFK__Reserva__Servico__02084FDA, int RececaoReserva, System.DateTime DataEntrada, System.DateTime DataSaida, ClienteRow parentClienteRowByFK__Reserva__Cliente__03F0984C, int Column, RececaoRow parentRececaoRowByFK__Reserva__Rececao__01142BA1) {
+            public ReservaRow AddReservaRow(string Estado, int FaturaID, ServicoRow parentServicoRowByFK__Reserva__Servico__02084FDA, System.DateTime DataEntrada, System.DateTime DataSaida, ClienteRow parentClienteRowByFK__Reserva__Cliente__03F0984C, RececaoRow parentRececaoRowByFK__Reserva__Rececao__01142BA1) {
                 ReservaRow rowReservaRow = ((ReservaRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         Estado,
                         FaturaID,
                         null,
-                        RececaoReserva,
                         DataEntrada,
                         DataSaida,
                         null,
-                        Column,
                         null};
                 if ((parentServicoRowByFK__Reserva__Servico__02084FDA != null)) {
                     columnValuesArray[3] = parentServicoRowByFK__Reserva__Servico__02084FDA[0];
                 }
                 if ((parentClienteRowByFK__Reserva__Cliente__03F0984C != null)) {
-                    columnValuesArray[7] = parentClienteRowByFK__Reserva__Cliente__03F0984C[0];
+                    columnValuesArray[6] = parentClienteRowByFK__Reserva__Cliente__03F0984C[0];
                 }
                 if ((parentRececaoRowByFK__Reserva__Rececao__01142BA1 != null)) {
-                    columnValuesArray[9] = parentRececaoRowByFK__Reserva__Rececao__01142BA1[1];
+                    columnValuesArray[7] = parentRececaoRowByFK__Reserva__Rececao__01142BA1[1];
                 }
                 rowReservaRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowReservaRow);
@@ -5828,12 +5806,10 @@ namespace WindowsFormsApp1 {
                 this.columnEstado = base.Columns["Estado"];
                 this.columnFaturaID = base.Columns["FaturaID"];
                 this.columnServicoID = base.Columns["ServicoID"];
-                this.columnRececaoReserva = base.Columns["RececaoReserva"];
                 this.columnDataEntrada = base.Columns["DataEntrada"];
                 this.columnDataSaida = base.Columns["DataSaida"];
                 this.columnClienteID = base.Columns["ClienteID"];
-                this.columnFieldColumn = base.Columns["Column"];
-                this.columnRececaoRecepID = base.Columns["RececaoRecepID"];
+                this.columnRececaoID = base.Columns["RececaoID"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5847,18 +5823,14 @@ namespace WindowsFormsApp1 {
                 base.Columns.Add(this.columnFaturaID);
                 this.columnServicoID = new global::System.Data.DataColumn("ServicoID", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnServicoID);
-                this.columnRececaoReserva = new global::System.Data.DataColumn("RececaoReserva", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnRececaoReserva);
                 this.columnDataEntrada = new global::System.Data.DataColumn("DataEntrada", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnDataEntrada);
                 this.columnDataSaida = new global::System.Data.DataColumn("DataSaida", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnDataSaida);
                 this.columnClienteID = new global::System.Data.DataColumn("ClienteID", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnClienteID);
-                this.columnFieldColumn = new global::System.Data.DataColumn("Column", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnFieldColumn);
-                this.columnRececaoRecepID = new global::System.Data.DataColumn("RececaoRecepID", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnRececaoRecepID);
+                this.columnRececaoID = new global::System.Data.DataColumn("RececaoID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnRececaoID);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnReservaID}, true));
                 this.columnReservaID.AutoIncrement = true;
@@ -5869,9 +5841,8 @@ namespace WindowsFormsApp1 {
                 this.columnReservaID.Unique = true;
                 this.columnEstado.MaxLength = 50;
                 this.columnServicoID.AllowDBNull = false;
-                this.columnRececaoReserva.AllowDBNull = false;
                 this.columnClienteID.AllowDBNull = false;
-                this.columnRececaoRecepID.AllowDBNull = false;
+                this.columnRececaoID.AllowDBNull = false;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -10956,12 +10927,12 @@ namespace WindowsFormsApp1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public int RecepID {
+            public int RececaoID {
                 get {
-                    return ((int)(this[this.tableRececao.RecepIDColumn]));
+                    return ((int)(this[this.tableRececao.RececaoIDColumn]));
                 }
                 set {
-                    this[this.tableRececao.RecepIDColumn] = value;
+                    this[this.tableRececao.RececaoIDColumn] = value;
                 }
             }
             
@@ -11163,17 +11134,6 @@ namespace WindowsFormsApp1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public int RececaoReserva {
-                get {
-                    return ((int)(this[this.tableReserva.RececaoReservaColumn]));
-                }
-                set {
-                    this[this.tableReserva.RececaoReservaColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public System.DateTime DataEntrada {
                 get {
                     try {
@@ -11217,28 +11177,12 @@ namespace WindowsFormsApp1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public int Column {
+            public int RececaoID {
                 get {
-                    try {
-                        return ((int)(this[this.tableReserva.ColumnColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Column\' in table \'Reserva\' is DBNull.", e);
-                    }
+                    return ((int)(this[this.tableReserva.RececaoIDColumn]));
                 }
                 set {
-                    this[this.tableReserva.ColumnColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public int RececaoRecepID {
-                get {
-                    return ((int)(this[this.tableReserva.RececaoRecepIDColumn]));
-                }
-                set {
-                    this[this.tableReserva.RececaoRecepIDColumn] = value;
+                    this[this.tableReserva.RececaoIDColumn] = value;
                 }
             }
             
@@ -11321,18 +11265,6 @@ namespace WindowsFormsApp1 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetDataSaidaNull() {
                 this[this.tableReserva.DataSaidaColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsColumnNull() {
-                return this.IsNull(this.tableReserva.ColumnColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetColumnNull() {
-                this[this.tableReserva.ColumnColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -17718,33 +17650,33 @@ SELECT NumeroQuarto, NumeroCamas, ServicoID, TipoQuartoID FROM Quarto WHERE (Num
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "Rececao";
             tableMapping.ColumnMappings.Add("TaxaPenalizacao", "TaxaPenalizacao");
-            tableMapping.ColumnMappings.Add("RecepID", "RecepID");
+            tableMapping.ColumnMappings.Add("RececaoID", "RececaoID");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
             this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Rececao] WHERE (((@IsNull_TaxaPenalizacao = 1 AND [TaxaPenaliz" +
-                "acao] IS NULL) OR ([TaxaPenalizacao] = @Original_TaxaPenalizacao)) AND ([RecepID" +
-                "] = @Original_RecepID))";
+                "acao] IS NULL) OR ([TaxaPenalizacao] = @Original_TaxaPenalizacao)) AND ([Rececao" +
+                "ID] = @Original_RececaoID))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_TaxaPenalizacao", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TaxaPenalizacao", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_TaxaPenalizacao", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TaxaPenalizacao", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_RecepID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RecepID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_RececaoID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RececaoID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
             this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Rececao] ([TaxaPenalizacao]) VALUES (@TaxaPenalizacao);\r\nSELEC" +
-                "T TaxaPenalizacao, RecepID FROM Rececao WHERE (RecepID = SCOPE_IDENTITY())";
+                "T TaxaPenalizacao, RececaoID FROM Rececao WHERE (RececaoID = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TaxaPenalizacao", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TaxaPenalizacao", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Rececao] SET [TaxaPenalizacao] = @TaxaPenalizacao WHERE (((@IsNull_TaxaPenalizacao = 1 AND [TaxaPenalizacao] IS NULL) OR ([TaxaPenalizacao] = @Original_TaxaPenalizacao)) AND ([RecepID] = @Original_RecepID));
-SELECT TaxaPenalizacao, RecepID FROM Rececao WHERE (RecepID = @RecepID)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Rececao] SET [TaxaPenalizacao] = @TaxaPenalizacao WHERE (((@IsNull_TaxaPenalizacao = 1 AND [TaxaPenalizacao] IS NULL) OR ([TaxaPenalizacao] = @Original_TaxaPenalizacao)) AND ([RececaoID] = @Original_RececaoID));
+SELECT TaxaPenalizacao, RececaoID FROM Rececao WHERE (RececaoID = @RececaoID)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TaxaPenalizacao", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TaxaPenalizacao", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_TaxaPenalizacao", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TaxaPenalizacao", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_TaxaPenalizacao", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TaxaPenalizacao", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_RecepID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RecepID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RecepID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "RecepID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_RececaoID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RececaoID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RececaoID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "RececaoID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -17760,7 +17692,7 @@ SELECT TaxaPenalizacao, RecepID FROM Rececao WHERE (RecepID = @RecepID)";
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT TaxaPenalizacao, RecepID FROM dbo.Rececao";
+            this._commandCollection[0].CommandText = "SELECT TaxaPenalizacao, RececaoID FROM dbo.Rececao";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -17821,7 +17753,7 @@ SELECT TaxaPenalizacao, RecepID FROM Rececao WHERE (RecepID = @RecepID)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(global::System.Nullable<int> Original_TaxaPenalizacao, int Original_RecepID) {
+        public virtual int Delete(global::System.Nullable<int> Original_TaxaPenalizacao, int Original_RececaoID) {
             if ((Original_TaxaPenalizacao.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[0].Value = ((object)(0));
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((int)(Original_TaxaPenalizacao.Value));
@@ -17830,7 +17762,7 @@ SELECT TaxaPenalizacao, RecepID FROM Rececao WHERE (RecepID = @RecepID)";
                 this.Adapter.DeleteCommand.Parameters[0].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
-            this.Adapter.DeleteCommand.Parameters[2].Value = ((int)(Original_RecepID));
+            this.Adapter.DeleteCommand.Parameters[2].Value = ((int)(Original_RececaoID));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -17878,7 +17810,7 @@ SELECT TaxaPenalizacao, RecepID FROM Rececao WHERE (RecepID = @RecepID)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(global::System.Nullable<int> TaxaPenalizacao, global::System.Nullable<int> Original_TaxaPenalizacao, int Original_RecepID, int RecepID) {
+        public virtual int Update(global::System.Nullable<int> TaxaPenalizacao, global::System.Nullable<int> Original_TaxaPenalizacao, int Original_RececaoID, int RececaoID) {
             if ((TaxaPenalizacao.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(TaxaPenalizacao.Value));
             }
@@ -17893,8 +17825,8 @@ SELECT TaxaPenalizacao, RecepID FROM Rececao WHERE (RecepID = @RecepID)";
                 this.Adapter.UpdateCommand.Parameters[1].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(Original_RecepID));
-            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(RecepID));
+            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(Original_RececaoID));
+            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(RececaoID));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -17915,8 +17847,8 @@ SELECT TaxaPenalizacao, RecepID FROM Rececao WHERE (RecepID = @RecepID)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(global::System.Nullable<int> TaxaPenalizacao, global::System.Nullable<int> Original_TaxaPenalizacao, int Original_RecepID) {
-            return this.Update(TaxaPenalizacao, Original_TaxaPenalizacao, Original_RecepID, Original_RecepID);
+        public virtual int Update(global::System.Nullable<int> TaxaPenalizacao, global::System.Nullable<int> Original_TaxaPenalizacao, int Original_RececaoID) {
+            return this.Update(TaxaPenalizacao, Original_TaxaPenalizacao, Original_RececaoID, Original_RececaoID);
         }
     }
     
@@ -18412,16 +18344,14 @@ SELECT ReciboID, DataRecibo, ValorRecibo, FaturaID FROM Recibo WHERE (ReciboID =
             tableMapping.ColumnMappings.Add("Estado", "Estado");
             tableMapping.ColumnMappings.Add("FaturaID", "FaturaID");
             tableMapping.ColumnMappings.Add("ServicoID", "ServicoID");
-            tableMapping.ColumnMappings.Add("RececaoReserva", "RececaoReserva");
             tableMapping.ColumnMappings.Add("DataEntrada", "DataEntrada");
             tableMapping.ColumnMappings.Add("DataSaida", "DataSaida");
             tableMapping.ColumnMappings.Add("ClienteID", "ClienteID");
-            tableMapping.ColumnMappings.Add("Column", "Column");
-            tableMapping.ColumnMappings.Add("RececaoRecepID", "RececaoRecepID");
+            tableMapping.ColumnMappings.Add("RececaoID", "RececaoID");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Reserva] WHERE (([ReservaID] = @Original_ReservaID) AND ((@IsNull_Estado = 1 AND [Estado] IS NULL) OR ([Estado] = @Original_Estado)) AND ((@IsNull_FaturaID = 1 AND [FaturaID] IS NULL) OR ([FaturaID] = @Original_FaturaID)) AND ([ServicoID] = @Original_ServicoID) AND ([RececaoReserva] = @Original_RececaoReserva) AND ((@IsNull_DataEntrada = 1 AND [DataEntrada] IS NULL) OR ([DataEntrada] = @Original_DataEntrada)) AND ((@IsNull_DataSaida = 1 AND [DataSaida] IS NULL) OR ([DataSaida] = @Original_DataSaida)) AND ([ClienteID] = @Original_ClienteID) AND ((@IsNull_Column = 1 AND [Column] IS NULL) OR ([Column] = @Original_Column)) AND ([RececaoRecepID] = @Original_RececaoRecepID))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Reserva] WHERE (([ReservaID] = @Original_ReservaID) AND ((@IsNull_Estado = 1 AND [Estado] IS NULL) OR ([Estado] = @Original_Estado)) AND ((@IsNull_FaturaID = 1 AND [FaturaID] IS NULL) OR ([FaturaID] = @Original_FaturaID)) AND ([ServicoID] = @Original_ServicoID) AND ((@IsNull_DataEntrada = 1 AND [DataEntrada] IS NULL) OR ([DataEntrada] = @Original_DataEntrada)) AND ((@IsNull_DataSaida = 1 AND [DataSaida] IS NULL) OR ([DataSaida] = @Original_DataSaida)) AND ([ClienteID] = @Original_ClienteID) AND ([RececaoID] = @Original_RececaoID))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ReservaID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ReservaID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Estado", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Estado", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -18429,58 +18359,48 @@ SELECT ReciboID, DataRecibo, ValorRecibo, FaturaID FROM Recibo WHERE (ReciboID =
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_FaturaID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FaturaID", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_FaturaID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FaturaID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ServicoID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ServicoID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_RececaoReserva", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RececaoReserva", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_DataEntrada", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DataEntrada", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DataEntrada", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DataEntrada", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_DataSaida", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DataSaida", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DataSaida", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DataSaida", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ClienteID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ClienteID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Column", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Column", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Column", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Column", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_RececaoRecepID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RececaoRecepID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_RececaoID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RececaoID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Reserva] ([Estado], [FaturaID], [ServicoID], [RececaoReserva], [DataEntrada], [DataSaida], [ClienteID], [Column], [RececaoRecepID]) VALUES (@Estado, @FaturaID, @ServicoID, @RececaoReserva, @DataEntrada, @DataSaida, @ClienteID, @Column, @RececaoRecepID);
-SELECT ReservaID, Estado, FaturaID, ServicoID, RececaoReserva, DataEntrada, DataSaida, ClienteID, [Column], RececaoRecepID FROM Reserva WHERE (ReservaID = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Reserva] ([Estado], [FaturaID], [ServicoID], [DataEntrada], [DataSaida], [ClienteID], [RececaoID]) VALUES (@Estado, @FaturaID, @ServicoID, @DataEntrada, @DataSaida, @ClienteID, @RececaoID);
+SELECT ReservaID, Estado, FaturaID, ServicoID, DataEntrada, DataSaida, ClienteID, RececaoID FROM Reserva WHERE (ReservaID = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Estado", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Estado", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FaturaID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FaturaID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ServicoID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ServicoID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RececaoReserva", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RececaoReserva", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DataEntrada", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DataEntrada", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DataSaida", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DataSaida", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ClienteID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ClienteID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Column", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Column", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RececaoRecepID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RececaoRecepID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RececaoID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RececaoID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Reserva] SET [Estado] = @Estado, [FaturaID] = @FaturaID, [ServicoID] = @ServicoID, [RececaoReserva] = @RececaoReserva, [DataEntrada] = @DataEntrada, [DataSaida] = @DataSaida, [ClienteID] = @ClienteID, [Column] = @Column, [RececaoRecepID] = @RececaoRecepID WHERE (([ReservaID] = @Original_ReservaID) AND ((@IsNull_Estado = 1 AND [Estado] IS NULL) OR ([Estado] = @Original_Estado)) AND ((@IsNull_FaturaID = 1 AND [FaturaID] IS NULL) OR ([FaturaID] = @Original_FaturaID)) AND ([ServicoID] = @Original_ServicoID) AND ([RececaoReserva] = @Original_RececaoReserva) AND ((@IsNull_DataEntrada = 1 AND [DataEntrada] IS NULL) OR ([DataEntrada] = @Original_DataEntrada)) AND ((@IsNull_DataSaida = 1 AND [DataSaida] IS NULL) OR ([DataSaida] = @Original_DataSaida)) AND ([ClienteID] = @Original_ClienteID) AND ((@IsNull_Column = 1 AND [Column] IS NULL) OR ([Column] = @Original_Column)) AND ([RececaoRecepID] = @Original_RececaoRecepID));
-SELECT ReservaID, Estado, FaturaID, ServicoID, RececaoReserva, DataEntrada, DataSaida, ClienteID, [Column], RececaoRecepID FROM Reserva WHERE (ReservaID = @ReservaID)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Reserva] SET [Estado] = @Estado, [FaturaID] = @FaturaID, [ServicoID] = @ServicoID, [DataEntrada] = @DataEntrada, [DataSaida] = @DataSaida, [ClienteID] = @ClienteID, [RececaoID] = @RececaoID WHERE (([ReservaID] = @Original_ReservaID) AND ((@IsNull_Estado = 1 AND [Estado] IS NULL) OR ([Estado] = @Original_Estado)) AND ((@IsNull_FaturaID = 1 AND [FaturaID] IS NULL) OR ([FaturaID] = @Original_FaturaID)) AND ([ServicoID] = @Original_ServicoID) AND ((@IsNull_DataEntrada = 1 AND [DataEntrada] IS NULL) OR ([DataEntrada] = @Original_DataEntrada)) AND ((@IsNull_DataSaida = 1 AND [DataSaida] IS NULL) OR ([DataSaida] = @Original_DataSaida)) AND ([ClienteID] = @Original_ClienteID) AND ([RececaoID] = @Original_RececaoID));
+SELECT ReservaID, Estado, FaturaID, ServicoID, DataEntrada, DataSaida, ClienteID, RececaoID FROM Reserva WHERE (ReservaID = @ReservaID)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Estado", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Estado", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FaturaID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FaturaID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ServicoID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ServicoID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RececaoReserva", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RececaoReserva", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DataEntrada", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DataEntrada", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DataSaida", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DataSaida", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ClienteID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ClienteID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Column", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Column", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RececaoRecepID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RececaoRecepID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RececaoID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RececaoID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ReservaID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ReservaID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Estado", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Estado", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Estado", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Estado", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_FaturaID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FaturaID", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_FaturaID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FaturaID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ServicoID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ServicoID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_RececaoReserva", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RececaoReserva", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_DataEntrada", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DataEntrada", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DataEntrada", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DataEntrada", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_DataSaida", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DataSaida", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DataSaida", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DataSaida", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ClienteID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ClienteID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Column", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Column", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Column", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Column", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_RececaoRecepID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RececaoRecepID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_RececaoID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RececaoID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ReservaID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "ReservaID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
@@ -18497,8 +18417,8 @@ SELECT ReservaID, Estado, FaturaID, ServicoID, RececaoReserva, DataEntrada, Data
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT ReservaID, Estado, FaturaID, ServicoID, RececaoReserva, DataEntrada, DataS" +
-                "aida, ClienteID, [Column], RececaoRecepID FROM dbo.Reserva";
+            this._commandCollection[0].CommandText = "SELECT ReservaID, Estado, FaturaID, ServicoID, DataEntrada, DataSaida, ClienteID," +
+                " RececaoID FROM dbo.Reserva";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -18559,7 +18479,7 @@ SELECT ReservaID, Estado, FaturaID, ServicoID, RececaoReserva, DataEntrada, Data
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_ReservaID, string Original_Estado, global::System.Nullable<int> Original_FaturaID, int Original_ServicoID, int Original_RececaoReserva, global::System.Nullable<global::System.DateTime> Original_DataEntrada, global::System.Nullable<global::System.DateTime> Original_DataSaida, int Original_ClienteID, global::System.Nullable<int> Original_Column, int Original_RececaoRecepID) {
+        public virtual int Delete(int Original_ReservaID, string Original_Estado, global::System.Nullable<int> Original_FaturaID, int Original_ServicoID, global::System.Nullable<global::System.DateTime> Original_DataEntrada, global::System.Nullable<global::System.DateTime> Original_DataSaida, int Original_ClienteID, int Original_RececaoID) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_ReservaID));
             if ((Original_Estado == null)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
@@ -18578,33 +18498,24 @@ SELECT ReservaID, Estado, FaturaID, ServicoID, RececaoReserva, DataEntrada, Data
                 this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
             this.Adapter.DeleteCommand.Parameters[5].Value = ((int)(Original_ServicoID));
-            this.Adapter.DeleteCommand.Parameters[6].Value = ((int)(Original_RececaoReserva));
             if ((Original_DataEntrada.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[8].Value = ((System.DateTime)(Original_DataEntrada.Value));
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((System.DateTime)(Original_DataEntrada.Value));
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[8].Value = global::System.DBNull.Value;
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[7].Value = global::System.DBNull.Value;
             }
             if ((Original_DataSaida.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[10].Value = ((System.DateTime)(Original_DataSaida.Value));
+                this.Adapter.DeleteCommand.Parameters[8].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[9].Value = ((System.DateTime)(Original_DataSaida.Value));
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[10].Value = global::System.DBNull.Value;
+                this.Adapter.DeleteCommand.Parameters[8].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[9].Value = global::System.DBNull.Value;
             }
-            this.Adapter.DeleteCommand.Parameters[11].Value = ((int)(Original_ClienteID));
-            if ((Original_Column.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[12].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[13].Value = ((int)(Original_Column.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[12].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[13].Value = global::System.DBNull.Value;
-            }
-            this.Adapter.DeleteCommand.Parameters[14].Value = ((int)(Original_RececaoRecepID));
+            this.Adapter.DeleteCommand.Parameters[10].Value = ((int)(Original_ClienteID));
+            this.Adapter.DeleteCommand.Parameters[11].Value = ((int)(Original_RececaoID));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -18625,7 +18536,7 @@ SELECT ReservaID, Estado, FaturaID, ServicoID, RececaoReserva, DataEntrada, Data
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string Estado, global::System.Nullable<int> FaturaID, int ServicoID, int RececaoReserva, global::System.Nullable<global::System.DateTime> DataEntrada, global::System.Nullable<global::System.DateTime> DataSaida, int ClienteID, global::System.Nullable<int> Column, int RececaoRecepID) {
+        public virtual int Insert(string Estado, global::System.Nullable<int> FaturaID, int ServicoID, global::System.Nullable<global::System.DateTime> DataEntrada, global::System.Nullable<global::System.DateTime> DataSaida, int ClienteID, int RececaoID) {
             if ((Estado == null)) {
                 this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -18639,27 +18550,20 @@ SELECT ReservaID, Estado, FaturaID, ServicoID, RececaoReserva, DataEntrada, Data
                 this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
             this.Adapter.InsertCommand.Parameters[2].Value = ((int)(ServicoID));
-            this.Adapter.InsertCommand.Parameters[3].Value = ((int)(RececaoReserva));
             if ((DataEntrada.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[4].Value = ((System.DateTime)(DataEntrada.Value));
+                this.Adapter.InsertCommand.Parameters[3].Value = ((System.DateTime)(DataEntrada.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            if ((DataSaida.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[4].Value = ((System.DateTime)(DataSaida.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
-            if ((DataSaida.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[5].Value = ((System.DateTime)(DataSaida.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
-            }
-            this.Adapter.InsertCommand.Parameters[6].Value = ((int)(ClienteID));
-            if ((Column.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[7].Value = ((int)(Column.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[7].Value = global::System.DBNull.Value;
-            }
-            this.Adapter.InsertCommand.Parameters[8].Value = ((int)(RececaoRecepID));
+            this.Adapter.InsertCommand.Parameters[5].Value = ((int)(ClienteID));
+            this.Adapter.InsertCommand.Parameters[6].Value = ((int)(RececaoID));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -18684,22 +18588,18 @@ SELECT ReservaID, Estado, FaturaID, ServicoID, RececaoReserva, DataEntrada, Data
                     string Estado, 
                     global::System.Nullable<int> FaturaID, 
                     int ServicoID, 
-                    int RececaoReserva, 
                     global::System.Nullable<global::System.DateTime> DataEntrada, 
                     global::System.Nullable<global::System.DateTime> DataSaida, 
                     int ClienteID, 
-                    global::System.Nullable<int> Column, 
-                    int RececaoRecepID, 
+                    int RececaoID, 
                     int Original_ReservaID, 
                     string Original_Estado, 
                     global::System.Nullable<int> Original_FaturaID, 
                     int Original_ServicoID, 
-                    int Original_RececaoReserva, 
                     global::System.Nullable<global::System.DateTime> Original_DataEntrada, 
                     global::System.Nullable<global::System.DateTime> Original_DataSaida, 
                     int Original_ClienteID, 
-                    global::System.Nullable<int> Original_Column, 
-                    int Original_RececaoRecepID, 
+                    int Original_RececaoID, 
                     int ReservaID) {
             if ((Estado == null)) {
                 this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
@@ -18714,73 +18614,57 @@ SELECT ReservaID, Estado, FaturaID, ServicoID, RececaoReserva, DataEntrada, Data
                 this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
             this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(ServicoID));
-            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(RececaoReserva));
             if ((DataEntrada.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((System.DateTime)(DataEntrada.Value));
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((System.DateTime)(DataEntrada.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            if ((DataSaida.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((System.DateTime)(DataSaida.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
-            if ((DataSaida.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((System.DateTime)(DataSaida.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
-            }
-            this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(ClienteID));
-            if ((Column.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(Column.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
-            }
-            this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(RececaoRecepID));
-            this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(Original_ReservaID));
+            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(ClienteID));
+            this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(RececaoID));
+            this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(Original_ReservaID));
             if ((Original_Estado == null)) {
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(Original_Estado));
+            }
+            if ((Original_FaturaID.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((int)(Original_FaturaID.Value));
+            }
+            else {
                 this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
             }
-            else {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(Original_Estado));
-            }
-            if ((Original_FaturaID.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((int)(Original_FaturaID.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
-            }
-            this.Adapter.UpdateCommand.Parameters[14].Value = ((int)(Original_ServicoID));
-            this.Adapter.UpdateCommand.Parameters[15].Value = ((int)(Original_RececaoReserva));
+            this.Adapter.UpdateCommand.Parameters[12].Value = ((int)(Original_ServicoID));
             if ((Original_DataEntrada.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[17].Value = ((System.DateTime)(Original_DataEntrada.Value));
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((System.DateTime)(Original_DataEntrada.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[17].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[14].Value = global::System.DBNull.Value;
             }
             if ((Original_DataSaida.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[19].Value = ((System.DateTime)(Original_DataSaida.Value));
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((System.DateTime)(Original_DataSaida.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[19].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[16].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[20].Value = ((int)(Original_ClienteID));
-            if ((Original_Column.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[22].Value = ((int)(Original_Column.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[22].Value = global::System.DBNull.Value;
-            }
-            this.Adapter.UpdateCommand.Parameters[23].Value = ((int)(Original_RececaoRecepID));
-            this.Adapter.UpdateCommand.Parameters[24].Value = ((int)(ReservaID));
+            this.Adapter.UpdateCommand.Parameters[17].Value = ((int)(Original_ClienteID));
+            this.Adapter.UpdateCommand.Parameters[18].Value = ((int)(Original_RececaoID));
+            this.Adapter.UpdateCommand.Parameters[19].Value = ((int)(ReservaID));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -18801,27 +18685,8 @@ SELECT ReservaID, Estado, FaturaID, ServicoID, RececaoReserva, DataEntrada, Data
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(
-                    string Estado, 
-                    global::System.Nullable<int> FaturaID, 
-                    int ServicoID, 
-                    int RececaoReserva, 
-                    global::System.Nullable<global::System.DateTime> DataEntrada, 
-                    global::System.Nullable<global::System.DateTime> DataSaida, 
-                    int ClienteID, 
-                    global::System.Nullable<int> Column, 
-                    int RececaoRecepID, 
-                    int Original_ReservaID, 
-                    string Original_Estado, 
-                    global::System.Nullable<int> Original_FaturaID, 
-                    int Original_ServicoID, 
-                    int Original_RececaoReserva, 
-                    global::System.Nullable<global::System.DateTime> Original_DataEntrada, 
-                    global::System.Nullable<global::System.DateTime> Original_DataSaida, 
-                    int Original_ClienteID, 
-                    global::System.Nullable<int> Original_Column, 
-                    int Original_RececaoRecepID) {
-            return this.Update(Estado, FaturaID, ServicoID, RececaoReserva, DataEntrada, DataSaida, ClienteID, Column, RececaoRecepID, Original_ReservaID, Original_Estado, Original_FaturaID, Original_ServicoID, Original_RececaoReserva, Original_DataEntrada, Original_DataSaida, Original_ClienteID, Original_Column, Original_RececaoRecepID, Original_ReservaID);
+        public virtual int Update(string Estado, global::System.Nullable<int> FaturaID, int ServicoID, global::System.Nullable<global::System.DateTime> DataEntrada, global::System.Nullable<global::System.DateTime> DataSaida, int ClienteID, int RececaoID, int Original_ReservaID, string Original_Estado, global::System.Nullable<int> Original_FaturaID, int Original_ServicoID, global::System.Nullable<global::System.DateTime> Original_DataEntrada, global::System.Nullable<global::System.DateTime> Original_DataSaida, int Original_ClienteID, int Original_RececaoID) {
+            return this.Update(Estado, FaturaID, ServicoID, DataEntrada, DataSaida, ClienteID, RececaoID, Original_ReservaID, Original_Estado, Original_FaturaID, Original_ServicoID, Original_DataEntrada, Original_DataSaida, Original_ClienteID, Original_RececaoID, Original_ReservaID);
         }
     }
     

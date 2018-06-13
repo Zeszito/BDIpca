@@ -47,7 +47,7 @@ namespace WindowsFormsApp1
                 dateTimeData.Visible = true;
                 textBoxCartaoCidadao.Visible = true;
 
-                int clienteID = Form1.clienteSelecionado;
+                int clienteID = Form1.clienteID;
                 labelCliente.Text = "Informação do Cliente " + clienteID + "";
 
                 /*SqlConnection con = ConnectDataBase();
@@ -103,7 +103,7 @@ namespace WindowsFormsApp1
                 int reservaID = Form1.reservaSelecionada;
 
                 String dateE = (dateTimeData.Text.ToString());
-                String dateS = (dateTimeData.Text.ToString());
+                DateTime dateS = (dateTimeData.Value);
                 int recepID = int.Parse(textBoxRececaoID.Text.ToString());
                 String query = "Update Reserva set DataEntrada = " + dateE + ",  DataSaida = " + dateS + ", RececaoRecepID = " + recepID + " where ReservaID = " + reservaID + ";";
                 SqlCommand cmd = new SqlCommand(query, con);
@@ -111,7 +111,7 @@ namespace WindowsFormsApp1
             }
             if (Form1.change == Form1.Change.Cliente)
             {
-                int clienteID = Form1.clienteSelecionado;
+                int clienteID = Form1.clienteID;
 
                 String nome = textBoxNome.Text.ToString();
                 String data = (dateTimeData.Text.ToString());

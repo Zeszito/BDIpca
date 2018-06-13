@@ -50,6 +50,11 @@
             this.btnAlterarCliente = new System.Windows.Forms.Button();
             this.btnCriarCliente = new System.Windows.Forms.Button();
             this.dgvClientes = new System.Windows.Forms.DataGridView();
+            this.clienteIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nomeClienteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataNascimentoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cartaoCidadaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.trabalhadorBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.dgvReservas = new System.Windows.Forms.DataGridView();
             this.ReservaID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -70,22 +75,21 @@
             this.btnCriarStaff = new System.Windows.Forms.Button();
             this.btnAlterarStaff = new System.Windows.Forms.Button();
             this.btnEliminarStaff = new System.Windows.Forms.Button();
-            this.trabalhadorBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.trabalhadorIDDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nomeTrabalhadorDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.horaEntradaDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.horaSaidaDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.viniculturaDataSet1 = new WindowsFormsApp1.ViniculturaDataSet();
+            this.reservaBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.sidePanel.SuspendLayout();
             this.logoPanel.SuspendLayout();
             this.headerPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.viniculturaDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trabalhadorBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReservas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.reservaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStaff)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trabalhadorBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trabalhadorBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.viniculturaDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.reservaBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // sidePanel
@@ -305,16 +309,46 @@
             this.dgvClientes.AutoGenerateColumns = false;
             this.dgvClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvClientes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.trabalhadorIDDataGridViewTextBoxColumn1,
-            this.nomeTrabalhadorDataGridViewTextBoxColumn1,
-            this.horaEntradaDataGridViewTextBoxColumn1,
-            this.horaSaidaDataGridViewTextBoxColumn1});
-            this.dgvClientes.DataSource = this.trabalhadorBindingSource1;
+            this.clienteIDDataGridViewTextBoxColumn,
+            this.nomeClienteDataGridViewTextBoxColumn,
+            this.dataNascimentoDataGridViewTextBoxColumn,
+            this.cartaoCidadaoDataGridViewTextBoxColumn});
+            this.dgvClientes.DataSource = this.clienteBindingSource;
             this.dgvClientes.Location = new System.Drawing.Point(302, 84);
             this.dgvClientes.Name = "dgvClientes";
             this.dgvClientes.Size = new System.Drawing.Size(443, 232);
             this.dgvClientes.TabIndex = 9;
             this.dgvClientes.Visible = false;
+            // 
+            // clienteIDDataGridViewTextBoxColumn
+            // 
+            this.clienteIDDataGridViewTextBoxColumn.DataPropertyName = "ClienteID";
+            this.clienteIDDataGridViewTextBoxColumn.HeaderText = "ClienteID";
+            this.clienteIDDataGridViewTextBoxColumn.Name = "clienteIDDataGridViewTextBoxColumn";
+            this.clienteIDDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nomeClienteDataGridViewTextBoxColumn
+            // 
+            this.nomeClienteDataGridViewTextBoxColumn.DataPropertyName = "NomeCliente";
+            this.nomeClienteDataGridViewTextBoxColumn.HeaderText = "NomeCliente";
+            this.nomeClienteDataGridViewTextBoxColumn.Name = "nomeClienteDataGridViewTextBoxColumn";
+            // 
+            // dataNascimentoDataGridViewTextBoxColumn
+            // 
+            this.dataNascimentoDataGridViewTextBoxColumn.DataPropertyName = "DataNascimento";
+            this.dataNascimentoDataGridViewTextBoxColumn.HeaderText = "DataNascimento";
+            this.dataNascimentoDataGridViewTextBoxColumn.Name = "dataNascimentoDataGridViewTextBoxColumn";
+            // 
+            // cartaoCidadaoDataGridViewTextBoxColumn
+            // 
+            this.cartaoCidadaoDataGridViewTextBoxColumn.DataPropertyName = "CartaoCidadao";
+            this.cartaoCidadaoDataGridViewTextBoxColumn.HeaderText = "CartaoCidadao";
+            this.cartaoCidadaoDataGridViewTextBoxColumn.Name = "cartaoCidadaoDataGridViewTextBoxColumn";
+            // 
+            // trabalhadorBindingSource1
+            // 
+            this.trabalhadorBindingSource1.DataMember = "Trabalhador";
+            this.trabalhadorBindingSource1.DataSource = this.viniculturaDataSet;
             // 
             // dgvReservas
             // 
@@ -483,35 +517,15 @@
             this.btnEliminarStaff.Visible = false;
             this.btnEliminarStaff.Click += new System.EventHandler(this.btnEliminarStaff_Click);
             // 
-            // trabalhadorBindingSource1
+            // viniculturaDataSet1
             // 
-            this.trabalhadorBindingSource1.DataMember = "Trabalhador";
-            this.trabalhadorBindingSource1.DataSource = this.viniculturaDataSet;
+            this.viniculturaDataSet1.DataSetName = "ViniculturaDataSet";
+            this.viniculturaDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // trabalhadorIDDataGridViewTextBoxColumn1
+            // reservaBindingSource1
             // 
-            this.trabalhadorIDDataGridViewTextBoxColumn1.DataPropertyName = "TrabalhadorID";
-            this.trabalhadorIDDataGridViewTextBoxColumn1.HeaderText = "TrabalhadorID";
-            this.trabalhadorIDDataGridViewTextBoxColumn1.Name = "trabalhadorIDDataGridViewTextBoxColumn1";
-            this.trabalhadorIDDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // nomeTrabalhadorDataGridViewTextBoxColumn1
-            // 
-            this.nomeTrabalhadorDataGridViewTextBoxColumn1.DataPropertyName = "NomeTrabalhador";
-            this.nomeTrabalhadorDataGridViewTextBoxColumn1.HeaderText = "NomeTrabalhador";
-            this.nomeTrabalhadorDataGridViewTextBoxColumn1.Name = "nomeTrabalhadorDataGridViewTextBoxColumn1";
-            // 
-            // horaEntradaDataGridViewTextBoxColumn1
-            // 
-            this.horaEntradaDataGridViewTextBoxColumn1.DataPropertyName = "HoraEntrada";
-            this.horaEntradaDataGridViewTextBoxColumn1.HeaderText = "HoraEntrada";
-            this.horaEntradaDataGridViewTextBoxColumn1.Name = "horaEntradaDataGridViewTextBoxColumn1";
-            // 
-            // horaSaidaDataGridViewTextBoxColumn1
-            // 
-            this.horaSaidaDataGridViewTextBoxColumn1.DataPropertyName = "HoraSaida";
-            this.horaSaidaDataGridViewTextBoxColumn1.HeaderText = "HoraSaida";
-            this.horaSaidaDataGridViewTextBoxColumn1.Name = "horaSaidaDataGridViewTextBoxColumn1";
+            this.reservaBindingSource1.DataMember = "Reserva";
+            this.reservaBindingSource1.DataSource = this.viniculturaDataSet;
             // 
             // Form1
             // 
@@ -521,7 +535,6 @@
             this.ClientSize = new System.Drawing.Size(855, 450);
             this.Controls.Add(this.headerPanel);
             this.Controls.Add(this.sidePanel);
-            this.Controls.Add(this.dgvClientes);
             this.Controls.Add(this.btnCriarCliente);
             this.Controls.Add(this.btnAlterarCliente);
             this.Controls.Add(this.btnEliminarCliente);
@@ -531,8 +544,9 @@
             this.Controls.Add(this.btnCriarStaff);
             this.Controls.Add(this.btnAlterarStaff);
             this.Controls.Add(this.btnEliminarStaff);
-            this.Controls.Add(this.dgvReservas);
             this.Controls.Add(this.dgvStaff);
+            this.Controls.Add(this.dgvClientes);
+            this.Controls.Add(this.dgvReservas);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form1";
@@ -546,11 +560,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.viniculturaDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trabalhadorBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReservas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.reservaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStaff)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trabalhadorBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trabalhadorBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.viniculturaDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.reservaBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -597,11 +613,13 @@
         private System.Windows.Forms.Button btnCriarStaff;
         private System.Windows.Forms.Button btnAlterarStaff;
         private System.Windows.Forms.Button btnEliminarStaff;
-        private System.Windows.Forms.DataGridViewTextBoxColumn trabalhadorIDDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nomeTrabalhadorDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn horaEntradaDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn horaSaidaDataGridViewTextBoxColumn1;
         private System.Windows.Forms.BindingSource trabalhadorBindingSource1;
+        private ViniculturaDataSet viniculturaDataSet1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clienteIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nomeClienteDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataNascimentoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cartaoCidadaoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource reservaBindingSource1;
     }
 }
 

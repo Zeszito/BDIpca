@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -68,7 +69,7 @@ namespace WindowsFormsApp1
         }
 
         //-----------------------------------FUNÇOES DATABASE---------------------------------------------------------
-
+            
         private void btnCriar_Click(object sender, EventArgs e)
         {
             SqlConnection con = ConnectDataBase();
@@ -86,7 +87,10 @@ namespace WindowsFormsApp1
             if (Form1.create == Form1.Create.Cliente)
             {
                 String nome = textBoxNome.Text.ToString();
-                String data = (dateTimeData.Text.ToString());
+                DateTime data = (dateTimeData.Value);
+
+                data = DateTime.ParseExact(data.ToString(), "M/d/yyyy h:mm:ss tt", CultureInfo.InvariantCulture);
+
                 int CC = int.Parse(textBoxCartaoCidadao.Text.ToString());
                 String query = "insert into Cliente(NomeCliente, DataNascimento, CartaoCidadao) values('" + nome + "', " + data + ", " + CC + ");";
                 SqlCommand cmd = new SqlCommand(query, con);

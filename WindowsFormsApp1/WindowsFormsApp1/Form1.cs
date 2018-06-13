@@ -30,7 +30,13 @@ namespace WindowsFormsApp1
         public static Change change;
 
         public static int reservaSelecionada;
-        public static int clienteSelecionado;
+        public static string reserva;
+        //cliente
+        public static int clienteID;
+        public static string clienteNome;
+        public static int clienteNasc;
+        public static int clienteCC;
+        //staff
         public static int staffSelecionado;
         public string conString = "Data Source= TROLLSDUNGEON;Initial Catalog=Vinicultura;Integrated Security= True";
 
@@ -47,7 +53,6 @@ namespace WindowsFormsApp1
             this.reservaTableAdapter.Fill(this.viniculturaDataSet.Reserva);
             // TODO: This line of code loads data into the 'viniculturaDataSet.Cliente' table. You can move, or remove it, as needed.
             this.clienteTableAdapter.Fill(this.viniculturaDataSet.Cliente);
-
         }
 
         // ----------------------------------FUNÇOES UTILITARIAS -----------------------------------------------------
@@ -61,7 +66,7 @@ namespace WindowsFormsApp1
 
         void HideAll()
         {
-            dgvReservas.Visible = true;
+            dgvReservas.Visible = false;
             dgvClientes.Visible = false;
             dgvStaff.Visible = false;
             btnAlterarReserva.Visible = false;
@@ -168,7 +173,7 @@ namespace WindowsFormsApp1
             btnCriarCliente.Visible = true;
 
             SqlConnection con = ConnectDataBase();
-            string query = "Select * from cliente";
+            string query = "Select * from Cliente";
 
             var dataAdapter = new SqlDataAdapter(query, con);
 
@@ -194,7 +199,9 @@ namespace WindowsFormsApp1
         {
             //if (dgvClientes.SelectedCells.Count > 0)
             int RowIndex = dgvClientes.CurrentCell.RowIndex;
-            clienteSelecionado = int.Parse(dgvClientes.Rows[RowIndex].Cells[0].FormattedValue.ToString());
+            clienteID = int.Parse(dgvClientes.Rows[RowIndex].Cells[0].FormattedValue.ToString());
+            clienteNome = dgvClientes.Rows[RowIndex].Cells[1].FormattedValue.ToString();
+            clienteID = int.Parse(dgvClientes.Rows[RowIndex].Cells[0].FormattedValue.ToString());
 
             change = Change.Cliente;
             Form2 f2 = new Form2();

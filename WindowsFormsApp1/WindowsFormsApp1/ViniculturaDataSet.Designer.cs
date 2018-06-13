@@ -80,59 +80,59 @@ namespace WindowsFormsApp1 {
         
         private VinhoDataTable tableVinho;
         
-        private global::System.Data.DataRelation relationFK__Contacto__TipoCo__72C60C4A;
+        private global::System.Data.DataRelation relationFK__Contacto__TipoCo__6B24EA82;
         
-        private global::System.Data.DataRelation relationFK__Contacto__Trabal__74AE54BC;
+        private global::System.Data.DataRelation relationFK__Contacto__Trabal__6C190EBB;
         
-        private global::System.Data.DataRelation relationFK__Contrato__TipoCo__71D1E811;
+        private global::System.Data.DataRelation relationFK__Contrato__TipoCo__6D0D32F4;
         
-        private global::System.Data.DataRelation relationFK__Contrato__Trabal__73BA3083;
+        private global::System.Data.DataRelation relationFK__Contrato__Trabal__6E01572D;
         
-        private global::System.Data.DataRelation relationFK__Familiar__Client__6C190EBB;
+        private global::System.Data.DataRelation relationFK__Familiar__Client__6EF57B66;
         
-        private global::System.Data.DataRelation relationFK__LinhaFatu__Fatur__70DDC3D8;
+        private global::System.Data.DataRelation relationFK__LinhaFatu__Fatur__6FE99F9F;
         
-        private global::System.Data.DataRelation relationFK__LinhaFatu__Servi__6FE99F9F;
+        private global::System.Data.DataRelation relationFK__LinhaFatu__Servi__70DDC3D8;
         
-        private global::System.Data.DataRelation relationFK__Pagamento__Reser__02FC7413;
+        private global::System.Data.DataRelation relationFK__Pagamento__Reser__71D1E811;
         
-        private global::System.Data.DataRelation relationFK__Pagamento__TipoP__00200768;
+        private global::System.Data.DataRelation relationFK__Pagamento__TipoP__72C60C4A;
         
-        private global::System.Data.DataRelation relationFK__Plantacao__Vindi__7C4F7684;
+        private global::System.Data.DataRelation relationFK__Plantacao__Vindi__73BA3083;
         
-        private global::System.Data.DataRelation relationFK__Plantacao__Plant__7D439ABD;
+        private global::System.Data.DataRelation relationFK__Plantacao__Plant__74AE54BC;
         
-        private global::System.Data.DataRelation relationFK__Plantacao__Produ__7E37BEF6;
+        private global::System.Data.DataRelation relationFK__Plantacao__Produ__75A278F5;
         
-        private global::System.Data.DataRelation relationFK__Quarto__ServicoI__778AC167;
+        private global::System.Data.DataRelation relationFK__Quarto__ServicoI__76969D2E;
         
-        private global::System.Data.DataRelation relationFK__Quarto__TipoQuar__787EE5A0;
+        private global::System.Data.DataRelation relationFK__Quarto__TipoQuar__778AC167;
         
-        private global::System.Data.DataRelation relationFK__Recibo__FaturaID__7F2BE32F;
+        private global::System.Data.DataRelation relationFK__Recibo__FaturaID__787EE5A0;
         
-        private global::System.Data.DataRelation relationFK__Reserva__Cliente__03F0984C;
+        private global::System.Data.DataRelation relationFK__Reserva__Cliente__797309D9;
         
-        private global::System.Data.DataRelation relationFK__Reserva__Rececao__01142BA1;
+        private global::System.Data.DataRelation relationFK__Reserva__Rececao__7A672E12;
         
-        private global::System.Data.DataRelation relationFK__Reserva__Servico__02084FDA;
+        private global::System.Data.DataRelation relationFK__Reserva__Servico__7B5B524B;
         
-        private global::System.Data.DataRelation relationFK__Salao__ServicoID__75A278F5;
+        private global::System.Data.DataRelation relationFK__Salao__ServicoID__7C4F7684;
         
-        private global::System.Data.DataRelation relationFK__Servico__MesaNum__6E01572D;
+        private global::System.Data.DataRelation relationFK__Servico__MesaNum__7D439ABD;
         
-        private global::System.Data.DataRelation relationFK__Servico__TipoSer__6D0D32F4;
+        private global::System.Data.DataRelation relationFK__Servico__TipoSer__7E37BEF6;
         
         private global::System.Data.DataRelation relationFK_Servico_Trabalhador;
         
-        private global::System.Data.DataRelation relationFK__SubSetor__SetorI__6B24EA82;
+        private global::System.Data.DataRelation relationFK__SubSetor__SetorI__00200768;
         
-        private global::System.Data.DataRelation relationFK__TipoServi__SubSe__797309D9;
+        private global::System.Data.DataRelation relationFK__TipoServi__SubSe__01142BA1;
         
-        private global::System.Data.DataRelation relationFK__Vindima_S__Servi__7B5B524B;
+        private global::System.Data.DataRelation relationFK__Vindima_S__Servi__02084FDA;
         
-        private global::System.Data.DataRelation relationFK__Vindima_S__Vindi__7A672E12;
+        private global::System.Data.DataRelation relationFK__Vindima_S__Vindi__02FC7413;
         
-        private global::System.Data.DataRelation relationFK__Vinho__ProducaoV__76969D2E;
+        private global::System.Data.DataRelation relationFK__Vinho__ProducaoV__03F0984C;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -896,33 +896,33 @@ namespace WindowsFormsApp1 {
                     this.tableVinho.InitVars();
                 }
             }
-            this.relationFK__Contacto__TipoCo__72C60C4A = this.Relations["FK__Contacto__TipoCo__72C60C4A"];
-            this.relationFK__Contacto__Trabal__74AE54BC = this.Relations["FK__Contacto__Trabal__74AE54BC"];
-            this.relationFK__Contrato__TipoCo__71D1E811 = this.Relations["FK__Contrato__TipoCo__71D1E811"];
-            this.relationFK__Contrato__Trabal__73BA3083 = this.Relations["FK__Contrato__Trabal__73BA3083"];
-            this.relationFK__Familiar__Client__6C190EBB = this.Relations["FK__Familiar__Client__6C190EBB"];
-            this.relationFK__LinhaFatu__Fatur__70DDC3D8 = this.Relations["FK__LinhaFatu__Fatur__70DDC3D8"];
-            this.relationFK__LinhaFatu__Servi__6FE99F9F = this.Relations["FK__LinhaFatu__Servi__6FE99F9F"];
-            this.relationFK__Pagamento__Reser__02FC7413 = this.Relations["FK__Pagamento__Reser__02FC7413"];
-            this.relationFK__Pagamento__TipoP__00200768 = this.Relations["FK__Pagamento__TipoP__00200768"];
-            this.relationFK__Plantacao__Vindi__7C4F7684 = this.Relations["FK__Plantacao__Vindi__7C4F7684"];
-            this.relationFK__Plantacao__Plant__7D439ABD = this.Relations["FK__Plantacao__Plant__7D439ABD"];
-            this.relationFK__Plantacao__Produ__7E37BEF6 = this.Relations["FK__Plantacao__Produ__7E37BEF6"];
-            this.relationFK__Quarto__ServicoI__778AC167 = this.Relations["FK__Quarto__ServicoI__778AC167"];
-            this.relationFK__Quarto__TipoQuar__787EE5A0 = this.Relations["FK__Quarto__TipoQuar__787EE5A0"];
-            this.relationFK__Recibo__FaturaID__7F2BE32F = this.Relations["FK__Recibo__FaturaID__7F2BE32F"];
-            this.relationFK__Reserva__Cliente__03F0984C = this.Relations["FK__Reserva__Cliente__03F0984C"];
-            this.relationFK__Reserva__Rececao__01142BA1 = this.Relations["FK__Reserva__Rececao__01142BA1"];
-            this.relationFK__Reserva__Servico__02084FDA = this.Relations["FK__Reserva__Servico__02084FDA"];
-            this.relationFK__Salao__ServicoID__75A278F5 = this.Relations["FK__Salao__ServicoID__75A278F5"];
-            this.relationFK__Servico__MesaNum__6E01572D = this.Relations["FK__Servico__MesaNum__6E01572D"];
-            this.relationFK__Servico__TipoSer__6D0D32F4 = this.Relations["FK__Servico__TipoSer__6D0D32F4"];
+            this.relationFK__Contacto__TipoCo__6B24EA82 = this.Relations["FK__Contacto__TipoCo__6B24EA82"];
+            this.relationFK__Contacto__Trabal__6C190EBB = this.Relations["FK__Contacto__Trabal__6C190EBB"];
+            this.relationFK__Contrato__TipoCo__6D0D32F4 = this.Relations["FK__Contrato__TipoCo__6D0D32F4"];
+            this.relationFK__Contrato__Trabal__6E01572D = this.Relations["FK__Contrato__Trabal__6E01572D"];
+            this.relationFK__Familiar__Client__6EF57B66 = this.Relations["FK__Familiar__Client__6EF57B66"];
+            this.relationFK__LinhaFatu__Fatur__6FE99F9F = this.Relations["FK__LinhaFatu__Fatur__6FE99F9F"];
+            this.relationFK__LinhaFatu__Servi__70DDC3D8 = this.Relations["FK__LinhaFatu__Servi__70DDC3D8"];
+            this.relationFK__Pagamento__Reser__71D1E811 = this.Relations["FK__Pagamento__Reser__71D1E811"];
+            this.relationFK__Pagamento__TipoP__72C60C4A = this.Relations["FK__Pagamento__TipoP__72C60C4A"];
+            this.relationFK__Plantacao__Vindi__73BA3083 = this.Relations["FK__Plantacao__Vindi__73BA3083"];
+            this.relationFK__Plantacao__Plant__74AE54BC = this.Relations["FK__Plantacao__Plant__74AE54BC"];
+            this.relationFK__Plantacao__Produ__75A278F5 = this.Relations["FK__Plantacao__Produ__75A278F5"];
+            this.relationFK__Quarto__ServicoI__76969D2E = this.Relations["FK__Quarto__ServicoI__76969D2E"];
+            this.relationFK__Quarto__TipoQuar__778AC167 = this.Relations["FK__Quarto__TipoQuar__778AC167"];
+            this.relationFK__Recibo__FaturaID__787EE5A0 = this.Relations["FK__Recibo__FaturaID__787EE5A0"];
+            this.relationFK__Reserva__Cliente__797309D9 = this.Relations["FK__Reserva__Cliente__797309D9"];
+            this.relationFK__Reserva__Rececao__7A672E12 = this.Relations["FK__Reserva__Rececao__7A672E12"];
+            this.relationFK__Reserva__Servico__7B5B524B = this.Relations["FK__Reserva__Servico__7B5B524B"];
+            this.relationFK__Salao__ServicoID__7C4F7684 = this.Relations["FK__Salao__ServicoID__7C4F7684"];
+            this.relationFK__Servico__MesaNum__7D439ABD = this.Relations["FK__Servico__MesaNum__7D439ABD"];
+            this.relationFK__Servico__TipoSer__7E37BEF6 = this.Relations["FK__Servico__TipoSer__7E37BEF6"];
             this.relationFK_Servico_Trabalhador = this.Relations["FK_Servico_Trabalhador"];
-            this.relationFK__SubSetor__SetorI__6B24EA82 = this.Relations["FK__SubSetor__SetorI__6B24EA82"];
-            this.relationFK__TipoServi__SubSe__797309D9 = this.Relations["FK__TipoServi__SubSe__797309D9"];
-            this.relationFK__Vindima_S__Servi__7B5B524B = this.Relations["FK__Vindima_S__Servi__7B5B524B"];
-            this.relationFK__Vindima_S__Vindi__7A672E12 = this.Relations["FK__Vindima_S__Vindi__7A672E12"];
-            this.relationFK__Vinho__ProducaoV__76969D2E = this.Relations["FK__Vinho__ProducaoV__76969D2E"];
+            this.relationFK__SubSetor__SetorI__00200768 = this.Relations["FK__SubSetor__SetorI__00200768"];
+            this.relationFK__TipoServi__SubSe__01142BA1 = this.Relations["FK__TipoServi__SubSe__01142BA1"];
+            this.relationFK__Vindima_S__Servi__02084FDA = this.Relations["FK__Vindima_S__Servi__02084FDA"];
+            this.relationFK__Vindima_S__Vindi__02FC7413 = this.Relations["FK__Vindima_S__Vindi__02FC7413"];
+            this.relationFK__Vinho__ProducaoV__03F0984C = this.Relations["FK__Vinho__ProducaoV__03F0984C"];
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -989,114 +989,114 @@ namespace WindowsFormsApp1 {
             base.Tables.Add(this.tableVindima_Servico);
             this.tableVinho = new VinhoDataTable();
             base.Tables.Add(this.tableVinho);
-            this.relationFK__Contacto__TipoCo__72C60C4A = new global::System.Data.DataRelation("FK__Contacto__TipoCo__72C60C4A", new global::System.Data.DataColumn[] {
+            this.relationFK__Contacto__TipoCo__6B24EA82 = new global::System.Data.DataRelation("FK__Contacto__TipoCo__6B24EA82", new global::System.Data.DataColumn[] {
                         this.tableTipoContacto.TipoContactoIDColumn}, new global::System.Data.DataColumn[] {
                         this.tableContacto.TipoContactoIDColumn}, false);
-            this.Relations.Add(this.relationFK__Contacto__TipoCo__72C60C4A);
-            this.relationFK__Contacto__Trabal__74AE54BC = new global::System.Data.DataRelation("FK__Contacto__Trabal__74AE54BC", new global::System.Data.DataColumn[] {
+            this.Relations.Add(this.relationFK__Contacto__TipoCo__6B24EA82);
+            this.relationFK__Contacto__Trabal__6C190EBB = new global::System.Data.DataRelation("FK__Contacto__Trabal__6C190EBB", new global::System.Data.DataColumn[] {
                         this.tableTrabalhador.TrabalhadorIDColumn}, new global::System.Data.DataColumn[] {
                         this.tableContacto.TrabalhadorIDColumn}, false);
-            this.Relations.Add(this.relationFK__Contacto__Trabal__74AE54BC);
-            this.relationFK__Contrato__TipoCo__71D1E811 = new global::System.Data.DataRelation("FK__Contrato__TipoCo__71D1E811", new global::System.Data.DataColumn[] {
+            this.Relations.Add(this.relationFK__Contacto__Trabal__6C190EBB);
+            this.relationFK__Contrato__TipoCo__6D0D32F4 = new global::System.Data.DataRelation("FK__Contrato__TipoCo__6D0D32F4", new global::System.Data.DataColumn[] {
                         this.tableTipoContrato.TipoContractoIDColumn}, new global::System.Data.DataColumn[] {
                         this.tableContrato.TipoContractoIDColumn}, false);
-            this.Relations.Add(this.relationFK__Contrato__TipoCo__71D1E811);
-            this.relationFK__Contrato__Trabal__73BA3083 = new global::System.Data.DataRelation("FK__Contrato__Trabal__73BA3083", new global::System.Data.DataColumn[] {
+            this.Relations.Add(this.relationFK__Contrato__TipoCo__6D0D32F4);
+            this.relationFK__Contrato__Trabal__6E01572D = new global::System.Data.DataRelation("FK__Contrato__Trabal__6E01572D", new global::System.Data.DataColumn[] {
                         this.tableTrabalhador.TrabalhadorIDColumn}, new global::System.Data.DataColumn[] {
                         this.tableContrato.TrabalhadorIDColumn}, false);
-            this.Relations.Add(this.relationFK__Contrato__Trabal__73BA3083);
-            this.relationFK__Familiar__Client__6C190EBB = new global::System.Data.DataRelation("FK__Familiar__Client__6C190EBB", new global::System.Data.DataColumn[] {
+            this.Relations.Add(this.relationFK__Contrato__Trabal__6E01572D);
+            this.relationFK__Familiar__Client__6EF57B66 = new global::System.Data.DataRelation("FK__Familiar__Client__6EF57B66", new global::System.Data.DataColumn[] {
                         this.tableCliente.ClienteIDColumn}, new global::System.Data.DataColumn[] {
                         this.tableFamiliar.ClienteIDColumn}, false);
-            this.Relations.Add(this.relationFK__Familiar__Client__6C190EBB);
-            this.relationFK__LinhaFatu__Fatur__70DDC3D8 = new global::System.Data.DataRelation("FK__LinhaFatu__Fatur__70DDC3D8", new global::System.Data.DataColumn[] {
+            this.Relations.Add(this.relationFK__Familiar__Client__6EF57B66);
+            this.relationFK__LinhaFatu__Fatur__6FE99F9F = new global::System.Data.DataRelation("FK__LinhaFatu__Fatur__6FE99F9F", new global::System.Data.DataColumn[] {
                         this.tableFatura.FaturaIDColumn}, new global::System.Data.DataColumn[] {
                         this.tableLinhaFatura.FaturaIDColumn}, false);
-            this.Relations.Add(this.relationFK__LinhaFatu__Fatur__70DDC3D8);
-            this.relationFK__LinhaFatu__Servi__6FE99F9F = new global::System.Data.DataRelation("FK__LinhaFatu__Servi__6FE99F9F", new global::System.Data.DataColumn[] {
+            this.Relations.Add(this.relationFK__LinhaFatu__Fatur__6FE99F9F);
+            this.relationFK__LinhaFatu__Servi__70DDC3D8 = new global::System.Data.DataRelation("FK__LinhaFatu__Servi__70DDC3D8", new global::System.Data.DataColumn[] {
                         this.tableServico.ServicoIDColumn}, new global::System.Data.DataColumn[] {
                         this.tableLinhaFatura.ServicoIDColumn}, false);
-            this.Relations.Add(this.relationFK__LinhaFatu__Servi__6FE99F9F);
-            this.relationFK__Pagamento__Reser__02FC7413 = new global::System.Data.DataRelation("FK__Pagamento__Reser__02FC7413", new global::System.Data.DataColumn[] {
+            this.Relations.Add(this.relationFK__LinhaFatu__Servi__70DDC3D8);
+            this.relationFK__Pagamento__Reser__71D1E811 = new global::System.Data.DataRelation("FK__Pagamento__Reser__71D1E811", new global::System.Data.DataColumn[] {
                         this.tableReserva.ReservaIDColumn}, new global::System.Data.DataColumn[] {
                         this.tablePagamento.ReservaIDColumn}, false);
-            this.Relations.Add(this.relationFK__Pagamento__Reser__02FC7413);
-            this.relationFK__Pagamento__TipoP__00200768 = new global::System.Data.DataRelation("FK__Pagamento__TipoP__00200768", new global::System.Data.DataColumn[] {
+            this.Relations.Add(this.relationFK__Pagamento__Reser__71D1E811);
+            this.relationFK__Pagamento__TipoP__72C60C4A = new global::System.Data.DataRelation("FK__Pagamento__TipoP__72C60C4A", new global::System.Data.DataColumn[] {
                         this.tableTipoPagamento.TipoPagamentoIDColumn}, new global::System.Data.DataColumn[] {
                         this.tablePagamento.TipoPagamentoIDColumn}, false);
-            this.Relations.Add(this.relationFK__Pagamento__TipoP__00200768);
-            this.relationFK__Plantacao__Vindi__7C4F7684 = new global::System.Data.DataRelation("FK__Plantacao__Vindi__7C4F7684", new global::System.Data.DataColumn[] {
+            this.Relations.Add(this.relationFK__Pagamento__TipoP__72C60C4A);
+            this.relationFK__Plantacao__Vindi__73BA3083 = new global::System.Data.DataRelation("FK__Plantacao__Vindi__73BA3083", new global::System.Data.DataColumn[] {
                         this.tableVindima.VindimaIDColumn}, new global::System.Data.DataColumn[] {
                         this.tablePlantacao.VindimaIDColumn}, false);
-            this.Relations.Add(this.relationFK__Plantacao__Vindi__7C4F7684);
-            this.relationFK__Plantacao__Plant__7D439ABD = new global::System.Data.DataRelation("FK__Plantacao__Plant__7D439ABD", new global::System.Data.DataColumn[] {
+            this.Relations.Add(this.relationFK__Plantacao__Vindi__73BA3083);
+            this.relationFK__Plantacao__Plant__74AE54BC = new global::System.Data.DataRelation("FK__Plantacao__Plant__74AE54BC", new global::System.Data.DataColumn[] {
                         this.tablePlantacao.PlantacaoIDColumn}, new global::System.Data.DataColumn[] {
                         this.tablePlantacao_ProducaoVinho.PlantacaoIDColumn}, false);
-            this.Relations.Add(this.relationFK__Plantacao__Plant__7D439ABD);
-            this.relationFK__Plantacao__Produ__7E37BEF6 = new global::System.Data.DataRelation("FK__Plantacao__Produ__7E37BEF6", new global::System.Data.DataColumn[] {
+            this.Relations.Add(this.relationFK__Plantacao__Plant__74AE54BC);
+            this.relationFK__Plantacao__Produ__75A278F5 = new global::System.Data.DataRelation("FK__Plantacao__Produ__75A278F5", new global::System.Data.DataColumn[] {
                         this.tableProducaoVinho.ProducaoVinhoIDColumn}, new global::System.Data.DataColumn[] {
                         this.tablePlantacao_ProducaoVinho.ProducaoVinhoIDColumn}, false);
-            this.Relations.Add(this.relationFK__Plantacao__Produ__7E37BEF6);
-            this.relationFK__Quarto__ServicoI__778AC167 = new global::System.Data.DataRelation("FK__Quarto__ServicoI__778AC167", new global::System.Data.DataColumn[] {
+            this.Relations.Add(this.relationFK__Plantacao__Produ__75A278F5);
+            this.relationFK__Quarto__ServicoI__76969D2E = new global::System.Data.DataRelation("FK__Quarto__ServicoI__76969D2E", new global::System.Data.DataColumn[] {
                         this.tableServico.ServicoIDColumn}, new global::System.Data.DataColumn[] {
                         this.tableQuarto.ServicoIDColumn}, false);
-            this.Relations.Add(this.relationFK__Quarto__ServicoI__778AC167);
-            this.relationFK__Quarto__TipoQuar__787EE5A0 = new global::System.Data.DataRelation("FK__Quarto__TipoQuar__787EE5A0", new global::System.Data.DataColumn[] {
+            this.Relations.Add(this.relationFK__Quarto__ServicoI__76969D2E);
+            this.relationFK__Quarto__TipoQuar__778AC167 = new global::System.Data.DataRelation("FK__Quarto__TipoQuar__778AC167", new global::System.Data.DataColumn[] {
                         this.tableTipoQuarto.TipoQuartoIDColumn}, new global::System.Data.DataColumn[] {
                         this.tableQuarto.TipoQuartoIDColumn}, false);
-            this.Relations.Add(this.relationFK__Quarto__TipoQuar__787EE5A0);
-            this.relationFK__Recibo__FaturaID__7F2BE32F = new global::System.Data.DataRelation("FK__Recibo__FaturaID__7F2BE32F", new global::System.Data.DataColumn[] {
+            this.Relations.Add(this.relationFK__Quarto__TipoQuar__778AC167);
+            this.relationFK__Recibo__FaturaID__787EE5A0 = new global::System.Data.DataRelation("FK__Recibo__FaturaID__787EE5A0", new global::System.Data.DataColumn[] {
                         this.tableFatura.FaturaIDColumn}, new global::System.Data.DataColumn[] {
                         this.tableRecibo.FaturaIDColumn}, false);
-            this.Relations.Add(this.relationFK__Recibo__FaturaID__7F2BE32F);
-            this.relationFK__Reserva__Cliente__03F0984C = new global::System.Data.DataRelation("FK__Reserva__Cliente__03F0984C", new global::System.Data.DataColumn[] {
+            this.Relations.Add(this.relationFK__Recibo__FaturaID__787EE5A0);
+            this.relationFK__Reserva__Cliente__797309D9 = new global::System.Data.DataRelation("FK__Reserva__Cliente__797309D9", new global::System.Data.DataColumn[] {
                         this.tableCliente.ClienteIDColumn}, new global::System.Data.DataColumn[] {
                         this.tableReserva.ClienteIDColumn}, false);
-            this.Relations.Add(this.relationFK__Reserva__Cliente__03F0984C);
-            this.relationFK__Reserva__Rececao__01142BA1 = new global::System.Data.DataRelation("FK__Reserva__Rececao__01142BA1", new global::System.Data.DataColumn[] {
+            this.Relations.Add(this.relationFK__Reserva__Cliente__797309D9);
+            this.relationFK__Reserva__Rececao__7A672E12 = new global::System.Data.DataRelation("FK__Reserva__Rececao__7A672E12", new global::System.Data.DataColumn[] {
                         this.tableRececao.RececaoIDColumn}, new global::System.Data.DataColumn[] {
                         this.tableReserva.RececaoIDColumn}, false);
-            this.Relations.Add(this.relationFK__Reserva__Rececao__01142BA1);
-            this.relationFK__Reserva__Servico__02084FDA = new global::System.Data.DataRelation("FK__Reserva__Servico__02084FDA", new global::System.Data.DataColumn[] {
+            this.Relations.Add(this.relationFK__Reserva__Rececao__7A672E12);
+            this.relationFK__Reserva__Servico__7B5B524B = new global::System.Data.DataRelation("FK__Reserva__Servico__7B5B524B", new global::System.Data.DataColumn[] {
                         this.tableServico.ServicoIDColumn}, new global::System.Data.DataColumn[] {
                         this.tableReserva.ServicoIDColumn}, false);
-            this.Relations.Add(this.relationFK__Reserva__Servico__02084FDA);
-            this.relationFK__Salao__ServicoID__75A278F5 = new global::System.Data.DataRelation("FK__Salao__ServicoID__75A278F5", new global::System.Data.DataColumn[] {
+            this.Relations.Add(this.relationFK__Reserva__Servico__7B5B524B);
+            this.relationFK__Salao__ServicoID__7C4F7684 = new global::System.Data.DataRelation("FK__Salao__ServicoID__7C4F7684", new global::System.Data.DataColumn[] {
                         this.tableServico.ServicoIDColumn}, new global::System.Data.DataColumn[] {
                         this.tableSalao.ServicoIDColumn}, false);
-            this.Relations.Add(this.relationFK__Salao__ServicoID__75A278F5);
-            this.relationFK__Servico__MesaNum__6E01572D = new global::System.Data.DataRelation("FK__Servico__MesaNum__6E01572D", new global::System.Data.DataColumn[] {
+            this.Relations.Add(this.relationFK__Salao__ServicoID__7C4F7684);
+            this.relationFK__Servico__MesaNum__7D439ABD = new global::System.Data.DataRelation("FK__Servico__MesaNum__7D439ABD", new global::System.Data.DataColumn[] {
                         this.tableMesa.NumeroMesaColumn}, new global::System.Data.DataColumn[] {
                         this.tableServico.MesaNumeroMesaColumn}, false);
-            this.Relations.Add(this.relationFK__Servico__MesaNum__6E01572D);
-            this.relationFK__Servico__TipoSer__6D0D32F4 = new global::System.Data.DataRelation("FK__Servico__TipoSer__6D0D32F4", new global::System.Data.DataColumn[] {
+            this.Relations.Add(this.relationFK__Servico__MesaNum__7D439ABD);
+            this.relationFK__Servico__TipoSer__7E37BEF6 = new global::System.Data.DataRelation("FK__Servico__TipoSer__7E37BEF6", new global::System.Data.DataColumn[] {
                         this.tableTipoServico.TipoServicoIDColumn}, new global::System.Data.DataColumn[] {
                         this.tableServico.TipoServicoIDColumn}, false);
-            this.Relations.Add(this.relationFK__Servico__TipoSer__6D0D32F4);
+            this.Relations.Add(this.relationFK__Servico__TipoSer__7E37BEF6);
             this.relationFK_Servico_Trabalhador = new global::System.Data.DataRelation("FK_Servico_Trabalhador", new global::System.Data.DataColumn[] {
                         this.tableTrabalhador.TrabalhadorIDColumn}, new global::System.Data.DataColumn[] {
                         this.tableServico.TrabalhadorIDColumn}, false);
             this.Relations.Add(this.relationFK_Servico_Trabalhador);
-            this.relationFK__SubSetor__SetorI__6B24EA82 = new global::System.Data.DataRelation("FK__SubSetor__SetorI__6B24EA82", new global::System.Data.DataColumn[] {
+            this.relationFK__SubSetor__SetorI__00200768 = new global::System.Data.DataRelation("FK__SubSetor__SetorI__00200768", new global::System.Data.DataColumn[] {
                         this.tableSetor.SetorIDColumn}, new global::System.Data.DataColumn[] {
                         this.tableSubSetor.SetorIDColumn}, false);
-            this.Relations.Add(this.relationFK__SubSetor__SetorI__6B24EA82);
-            this.relationFK__TipoServi__SubSe__797309D9 = new global::System.Data.DataRelation("FK__TipoServi__SubSe__797309D9", new global::System.Data.DataColumn[] {
+            this.Relations.Add(this.relationFK__SubSetor__SetorI__00200768);
+            this.relationFK__TipoServi__SubSe__01142BA1 = new global::System.Data.DataRelation("FK__TipoServi__SubSe__01142BA1", new global::System.Data.DataColumn[] {
                         this.tableSubSetor.SubSetorIDColumn}, new global::System.Data.DataColumn[] {
                         this.tableTipoServico.SubSetorIDColumn}, false);
-            this.Relations.Add(this.relationFK__TipoServi__SubSe__797309D9);
-            this.relationFK__Vindima_S__Servi__7B5B524B = new global::System.Data.DataRelation("FK__Vindima_S__Servi__7B5B524B", new global::System.Data.DataColumn[] {
+            this.Relations.Add(this.relationFK__TipoServi__SubSe__01142BA1);
+            this.relationFK__Vindima_S__Servi__02084FDA = new global::System.Data.DataRelation("FK__Vindima_S__Servi__02084FDA", new global::System.Data.DataColumn[] {
                         this.tableServico.ServicoIDColumn}, new global::System.Data.DataColumn[] {
                         this.tableVindima_Servico.ServicoIDColumn}, false);
-            this.Relations.Add(this.relationFK__Vindima_S__Servi__7B5B524B);
-            this.relationFK__Vindima_S__Vindi__7A672E12 = new global::System.Data.DataRelation("FK__Vindima_S__Vindi__7A672E12", new global::System.Data.DataColumn[] {
+            this.Relations.Add(this.relationFK__Vindima_S__Servi__02084FDA);
+            this.relationFK__Vindima_S__Vindi__02FC7413 = new global::System.Data.DataRelation("FK__Vindima_S__Vindi__02FC7413", new global::System.Data.DataColumn[] {
                         this.tableVindima.VindimaIDColumn}, new global::System.Data.DataColumn[] {
                         this.tableVindima_Servico.VindimaIDColumn}, false);
-            this.Relations.Add(this.relationFK__Vindima_S__Vindi__7A672E12);
-            this.relationFK__Vinho__ProducaoV__76969D2E = new global::System.Data.DataRelation("FK__Vinho__ProducaoV__76969D2E", new global::System.Data.DataColumn[] {
+            this.Relations.Add(this.relationFK__Vindima_S__Vindi__02FC7413);
+            this.relationFK__Vinho__ProducaoV__03F0984C = new global::System.Data.DataRelation("FK__Vinho__ProducaoV__03F0984C", new global::System.Data.DataColumn[] {
                         this.tableProducaoVinho.ProducaoVinhoIDColumn}, new global::System.Data.DataColumn[] {
                         this.tableVinho.ProducaoVinhoIDColumn}, false);
-            this.Relations.Add(this.relationFK__Vinho__ProducaoV__76969D2E);
+            this.Relations.Add(this.relationFK__Vinho__ProducaoV__03F0984C);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1819,17 +1819,17 @@ namespace WindowsFormsApp1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public ContactoRow AddContactoRow(TrabalhadorRow parentTrabalhadorRowByFK__Contacto__Trabal__74AE54BC, TipoContactoRow parentTipoContactoRowByFK__Contacto__TipoCo__72C60C4A) {
+            public ContactoRow AddContactoRow(TrabalhadorRow parentTrabalhadorRowByFK__Contacto__Trabal__6C190EBB, TipoContactoRow parentTipoContactoRowByFK__Contacto__TipoCo__6B24EA82) {
                 ContactoRow rowContactoRow = ((ContactoRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         null,
                         null};
-                if ((parentTrabalhadorRowByFK__Contacto__Trabal__74AE54BC != null)) {
-                    columnValuesArray[0] = parentTrabalhadorRowByFK__Contacto__Trabal__74AE54BC[0];
+                if ((parentTrabalhadorRowByFK__Contacto__Trabal__6C190EBB != null)) {
+                    columnValuesArray[0] = parentTrabalhadorRowByFK__Contacto__Trabal__6C190EBB[0];
                 }
-                if ((parentTipoContactoRowByFK__Contacto__TipoCo__72C60C4A != null)) {
-                    columnValuesArray[2] = parentTipoContactoRowByFK__Contacto__TipoCo__72C60C4A[0];
+                if ((parentTipoContactoRowByFK__Contacto__TipoCo__6B24EA82 != null)) {
+                    columnValuesArray[2] = parentTipoContactoRowByFK__Contacto__TipoCo__6B24EA82[0];
                 }
                 rowContactoRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowContactoRow);
@@ -2127,18 +2127,18 @@ namespace WindowsFormsApp1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public ContratoRow AddContratoRow(int Salario, TrabalhadorRow parentTrabalhadorRowByFK__Contrato__Trabal__73BA3083, TipoContratoRow parentTipoContratoRowByFK__Contrato__TipoCo__71D1E811) {
+            public ContratoRow AddContratoRow(int Salario, TrabalhadorRow parentTrabalhadorRowByFK__Contrato__Trabal__6E01572D, TipoContratoRow parentTipoContratoRowByFK__Contrato__TipoCo__6D0D32F4) {
                 ContratoRow rowContratoRow = ((ContratoRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         Salario,
                         null,
                         null};
-                if ((parentTrabalhadorRowByFK__Contrato__Trabal__73BA3083 != null)) {
-                    columnValuesArray[2] = parentTrabalhadorRowByFK__Contrato__Trabal__73BA3083[0];
+                if ((parentTrabalhadorRowByFK__Contrato__Trabal__6E01572D != null)) {
+                    columnValuesArray[2] = parentTrabalhadorRowByFK__Contrato__Trabal__6E01572D[0];
                 }
-                if ((parentTipoContratoRowByFK__Contrato__TipoCo__71D1E811 != null)) {
-                    columnValuesArray[3] = parentTipoContratoRowByFK__Contrato__TipoCo__71D1E811[3];
+                if ((parentTipoContratoRowByFK__Contrato__TipoCo__6D0D32F4 != null)) {
+                    columnValuesArray[3] = parentTipoContratoRowByFK__Contrato__TipoCo__6D0D32F4[3];
                 }
                 rowContratoRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowContratoRow);
@@ -2449,7 +2449,7 @@ namespace WindowsFormsApp1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public FamiliarRow AddFamiliarRow(string NomeFamiliar, System.DateTime DataNascimentoFamiliar, string CartaoCidadaoFamiliar, ClienteRow parentClienteRowByFK__Familiar__Client__6C190EBB) {
+            public FamiliarRow AddFamiliarRow(string NomeFamiliar, System.DateTime DataNascimentoFamiliar, string CartaoCidadaoFamiliar, ClienteRow parentClienteRowByFK__Familiar__Client__6EF57B66) {
                 FamiliarRow rowFamiliarRow = ((FamiliarRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -2457,8 +2457,8 @@ namespace WindowsFormsApp1 {
                         DataNascimentoFamiliar,
                         CartaoCidadaoFamiliar,
                         null};
-                if ((parentClienteRowByFK__Familiar__Client__6C190EBB != null)) {
-                    columnValuesArray[4] = parentClienteRowByFK__Familiar__Client__6C190EBB[0];
+                if ((parentClienteRowByFK__Familiar__Client__6EF57B66 != null)) {
+                    columnValuesArray[4] = parentClienteRowByFK__Familiar__Client__6EF57B66[0];
                 }
                 rowFamiliarRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowFamiliarRow);
@@ -3053,18 +3053,18 @@ namespace WindowsFormsApp1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public LinhaFaturaRow AddLinhaFaturaRow(FaturaRow parentFaturaRowByFK__LinhaFatu__Fatur__70DDC3D8, ServicoRow parentServicoRowByFK__LinhaFatu__Servi__6FE99F9F, int ReciboID) {
+            public LinhaFaturaRow AddLinhaFaturaRow(FaturaRow parentFaturaRowByFK__LinhaFatu__Fatur__6FE99F9F, ServicoRow parentServicoRowByFK__LinhaFatu__Servi__70DDC3D8, int ReciboID) {
                 LinhaFaturaRow rowLinhaFaturaRow = ((LinhaFaturaRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         null,
                         null,
                         ReciboID};
-                if ((parentFaturaRowByFK__LinhaFatu__Fatur__70DDC3D8 != null)) {
-                    columnValuesArray[1] = parentFaturaRowByFK__LinhaFatu__Fatur__70DDC3D8[0];
+                if ((parentFaturaRowByFK__LinhaFatu__Fatur__6FE99F9F != null)) {
+                    columnValuesArray[1] = parentFaturaRowByFK__LinhaFatu__Fatur__6FE99F9F[0];
                 }
-                if ((parentServicoRowByFK__LinhaFatu__Servi__6FE99F9F != null)) {
-                    columnValuesArray[2] = parentServicoRowByFK__LinhaFatu__Servi__6FE99F9F[0];
+                if ((parentServicoRowByFK__LinhaFatu__Servi__70DDC3D8 != null)) {
+                    columnValuesArray[2] = parentServicoRowByFK__LinhaFatu__Servi__70DDC3D8[0];
                 }
                 rowLinhaFaturaRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowLinhaFaturaRow);
@@ -3654,18 +3654,18 @@ namespace WindowsFormsApp1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public PagamentoRow AddPagamentoRow(float Montante, ReservaRow parentReservaRowByFK__Pagamento__Reser__02FC7413, TipoPagamentoRow parentTipoPagamentoRowByFK__Pagamento__TipoP__00200768) {
+            public PagamentoRow AddPagamentoRow(float Montante, ReservaRow parentReservaRowByFK__Pagamento__Reser__71D1E811, TipoPagamentoRow parentTipoPagamentoRowByFK__Pagamento__TipoP__72C60C4A) {
                 PagamentoRow rowPagamentoRow = ((PagamentoRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         Montante,
                         null,
                         null};
-                if ((parentReservaRowByFK__Pagamento__Reser__02FC7413 != null)) {
-                    columnValuesArray[2] = parentReservaRowByFK__Pagamento__Reser__02FC7413[0];
+                if ((parentReservaRowByFK__Pagamento__Reser__71D1E811 != null)) {
+                    columnValuesArray[2] = parentReservaRowByFK__Pagamento__Reser__71D1E811[0];
                 }
-                if ((parentTipoPagamentoRowByFK__Pagamento__TipoP__00200768 != null)) {
-                    columnValuesArray[3] = parentTipoPagamentoRowByFK__Pagamento__TipoP__00200768[0];
+                if ((parentTipoPagamentoRowByFK__Pagamento__TipoP__72C60C4A != null)) {
+                    columnValuesArray[3] = parentTipoPagamentoRowByFK__Pagamento__TipoP__72C60C4A[0];
                 }
                 rowPagamentoRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowPagamentoRow);
@@ -3966,15 +3966,15 @@ namespace WindowsFormsApp1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public PlantacaoRow AddPlantacaoRow(string TipoUva, System.DateTime DiaPlantacao, VindimaRow parentVindimaRowByFK__Plantacao__Vindi__7C4F7684) {
+            public PlantacaoRow AddPlantacaoRow(string TipoUva, System.DateTime DiaPlantacao, VindimaRow parentVindimaRowByFK__Plantacao__Vindi__73BA3083) {
                 PlantacaoRow rowPlantacaoRow = ((PlantacaoRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         TipoUva,
                         DiaPlantacao,
                         null};
-                if ((parentVindimaRowByFK__Plantacao__Vindi__7C4F7684 != null)) {
-                    columnValuesArray[3] = parentVindimaRowByFK__Plantacao__Vindi__7C4F7684[0];
+                if ((parentVindimaRowByFK__Plantacao__Vindi__73BA3083 != null)) {
+                    columnValuesArray[3] = parentVindimaRowByFK__Plantacao__Vindi__73BA3083[0];
                 }
                 rowPlantacaoRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowPlantacaoRow);
@@ -4255,16 +4255,16 @@ namespace WindowsFormsApp1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public Plantacao_ProducaoVinhoRow AddPlantacao_ProducaoVinhoRow(PlantacaoRow parentPlantacaoRowByFK__Plantacao__Plant__7D439ABD, ProducaoVinhoRow parentProducaoVinhoRowByFK__Plantacao__Produ__7E37BEF6) {
+            public Plantacao_ProducaoVinhoRow AddPlantacao_ProducaoVinhoRow(PlantacaoRow parentPlantacaoRowByFK__Plantacao__Plant__74AE54BC, ProducaoVinhoRow parentProducaoVinhoRowByFK__Plantacao__Produ__75A278F5) {
                 Plantacao_ProducaoVinhoRow rowPlantacao_ProducaoVinhoRow = ((Plantacao_ProducaoVinhoRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         null};
-                if ((parentPlantacaoRowByFK__Plantacao__Plant__7D439ABD != null)) {
-                    columnValuesArray[0] = parentPlantacaoRowByFK__Plantacao__Plant__7D439ABD[0];
+                if ((parentPlantacaoRowByFK__Plantacao__Plant__74AE54BC != null)) {
+                    columnValuesArray[0] = parentPlantacaoRowByFK__Plantacao__Plant__74AE54BC[0];
                 }
-                if ((parentProducaoVinhoRowByFK__Plantacao__Produ__7E37BEF6 != null)) {
-                    columnValuesArray[1] = parentProducaoVinhoRowByFK__Plantacao__Produ__7E37BEF6[0];
+                if ((parentProducaoVinhoRowByFK__Plantacao__Produ__75A278F5 != null)) {
+                    columnValuesArray[1] = parentProducaoVinhoRowByFK__Plantacao__Produ__75A278F5[0];
                 }
                 rowPlantacao_ProducaoVinhoRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowPlantacao_ProducaoVinhoRow);
@@ -4817,18 +4817,18 @@ namespace WindowsFormsApp1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public QuartoRow AddQuartoRow(int NumeroCamas, ServicoRow parentServicoRowByFK__Quarto__ServicoI__778AC167, TipoQuartoRow parentTipoQuartoRowByFK__Quarto__TipoQuar__787EE5A0) {
+            public QuartoRow AddQuartoRow(int NumeroCamas, ServicoRow parentServicoRowByFK__Quarto__ServicoI__76969D2E, TipoQuartoRow parentTipoQuartoRowByFK__Quarto__TipoQuar__778AC167) {
                 QuartoRow rowQuartoRow = ((QuartoRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         NumeroCamas,
                         null,
                         null};
-                if ((parentServicoRowByFK__Quarto__ServicoI__778AC167 != null)) {
-                    columnValuesArray[2] = parentServicoRowByFK__Quarto__ServicoI__778AC167[0];
+                if ((parentServicoRowByFK__Quarto__ServicoI__76969D2E != null)) {
+                    columnValuesArray[2] = parentServicoRowByFK__Quarto__ServicoI__76969D2E[0];
                 }
-                if ((parentTipoQuartoRowByFK__Quarto__TipoQuar__787EE5A0 != null)) {
-                    columnValuesArray[3] = parentTipoQuartoRowByFK__Quarto__TipoQuar__787EE5A0[0];
+                if ((parentTipoQuartoRowByFK__Quarto__TipoQuar__778AC167 != null)) {
+                    columnValuesArray[3] = parentTipoQuartoRowByFK__Quarto__TipoQuar__778AC167[0];
                 }
                 rowQuartoRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowQuartoRow);
@@ -5405,15 +5405,15 @@ namespace WindowsFormsApp1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public ReciboRow AddReciboRow(System.DateTime DataRecibo, float ValorRecibo, FaturaRow parentFaturaRowByFK__Recibo__FaturaID__7F2BE32F) {
+            public ReciboRow AddReciboRow(System.DateTime DataRecibo, float ValorRecibo, FaturaRow parentFaturaRowByFK__Recibo__FaturaID__787EE5A0) {
                 ReciboRow rowReciboRow = ((ReciboRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         DataRecibo,
                         ValorRecibo,
                         null};
-                if ((parentFaturaRowByFK__Recibo__FaturaID__7F2BE32F != null)) {
-                    columnValuesArray[3] = parentFaturaRowByFK__Recibo__FaturaID__7F2BE32F[0];
+                if ((parentFaturaRowByFK__Recibo__FaturaID__787EE5A0 != null)) {
+                    columnValuesArray[3] = parentFaturaRowByFK__Recibo__FaturaID__787EE5A0[0];
                 }
                 rowReciboRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowReciboRow);
@@ -5753,7 +5753,7 @@ namespace WindowsFormsApp1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public ReservaRow AddReservaRow(string Estado, int FaturaID, ServicoRow parentServicoRowByFK__Reserva__Servico__02084FDA, System.DateTime DataEntrada, System.DateTime DataSaida, ClienteRow parentClienteRowByFK__Reserva__Cliente__03F0984C, RececaoRow parentRececaoRowByFK__Reserva__Rececao__01142BA1) {
+            public ReservaRow AddReservaRow(string Estado, int FaturaID, ServicoRow parentServicoRowByFK__Reserva__Servico__7B5B524B, System.DateTime DataEntrada, System.DateTime DataSaida, ClienteRow parentClienteRowByFK__Reserva__Cliente__797309D9, RececaoRow parentRececaoRowByFK__Reserva__Rececao__7A672E12) {
                 ReservaRow rowReservaRow = ((ReservaRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -5764,14 +5764,14 @@ namespace WindowsFormsApp1 {
                         DataSaida,
                         null,
                         null};
-                if ((parentServicoRowByFK__Reserva__Servico__02084FDA != null)) {
-                    columnValuesArray[3] = parentServicoRowByFK__Reserva__Servico__02084FDA[0];
+                if ((parentServicoRowByFK__Reserva__Servico__7B5B524B != null)) {
+                    columnValuesArray[3] = parentServicoRowByFK__Reserva__Servico__7B5B524B[0];
                 }
-                if ((parentClienteRowByFK__Reserva__Cliente__03F0984C != null)) {
-                    columnValuesArray[6] = parentClienteRowByFK__Reserva__Cliente__03F0984C[0];
+                if ((parentClienteRowByFK__Reserva__Cliente__797309D9 != null)) {
+                    columnValuesArray[6] = parentClienteRowByFK__Reserva__Cliente__797309D9[0];
                 }
-                if ((parentRececaoRowByFK__Reserva__Rececao__01142BA1 != null)) {
-                    columnValuesArray[7] = parentRececaoRowByFK__Reserva__Rececao__01142BA1[1];
+                if ((parentRececaoRowByFK__Reserva__Rececao__7A672E12 != null)) {
+                    columnValuesArray[7] = parentRececaoRowByFK__Reserva__Rececao__7A672E12[1];
                 }
                 rowReservaRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowReservaRow);
@@ -6066,13 +6066,13 @@ namespace WindowsFormsApp1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public SalaoRow AddSalaoRow(ServicoRow parentServicoRowByFK__Salao__ServicoID__75A278F5) {
+            public SalaoRow AddSalaoRow(ServicoRow parentServicoRowByFK__Salao__ServicoID__7C4F7684) {
                 SalaoRow rowSalaoRow = ((SalaoRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         null};
-                if ((parentServicoRowByFK__Salao__ServicoID__75A278F5 != null)) {
-                    columnValuesArray[1] = parentServicoRowByFK__Salao__ServicoID__75A278F5[0];
+                if ((parentServicoRowByFK__Salao__ServicoID__7C4F7684 != null)) {
+                    columnValuesArray[1] = parentServicoRowByFK__Salao__ServicoID__7C4F7684[0];
                 }
                 rowSalaoRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowSalaoRow);
@@ -6366,7 +6366,7 @@ namespace WindowsFormsApp1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public ServicoRow AddServicoRow(TrabalhadorRow parentTrabalhadorRowByFK_Servico_Trabalhador, TipoServicoRow parentTipoServicoRowByFK__Servico__TipoSer__6D0D32F4, MesaRow parentMesaRowByFK__Servico__MesaNum__6E01572D) {
+            public ServicoRow AddServicoRow(TrabalhadorRow parentTrabalhadorRowByFK_Servico_Trabalhador, TipoServicoRow parentTipoServicoRowByFK__Servico__TipoSer__7E37BEF6, MesaRow parentMesaRowByFK__Servico__MesaNum__7D439ABD) {
                 ServicoRow rowServicoRow = ((ServicoRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -6376,11 +6376,11 @@ namespace WindowsFormsApp1 {
                 if ((parentTrabalhadorRowByFK_Servico_Trabalhador != null)) {
                     columnValuesArray[1] = parentTrabalhadorRowByFK_Servico_Trabalhador[0];
                 }
-                if ((parentTipoServicoRowByFK__Servico__TipoSer__6D0D32F4 != null)) {
-                    columnValuesArray[2] = parentTipoServicoRowByFK__Servico__TipoSer__6D0D32F4[0];
+                if ((parentTipoServicoRowByFK__Servico__TipoSer__7E37BEF6 != null)) {
+                    columnValuesArray[2] = parentTipoServicoRowByFK__Servico__TipoSer__7E37BEF6[0];
                 }
-                if ((parentMesaRowByFK__Servico__MesaNum__6E01572D != null)) {
-                    columnValuesArray[3] = parentMesaRowByFK__Servico__MesaNum__6E01572D[0];
+                if ((parentMesaRowByFK__Servico__MesaNum__7D439ABD != null)) {
+                    columnValuesArray[3] = parentMesaRowByFK__Servico__MesaNum__7D439ABD[0];
                 }
                 rowServicoRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowServicoRow);
@@ -6937,13 +6937,13 @@ namespace WindowsFormsApp1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public SubSetorRow AddSubSetorRow(SetorRow parentSetorRowByFK__SubSetor__SetorI__6B24EA82) {
+            public SubSetorRow AddSubSetorRow(SetorRow parentSetorRowByFK__SubSetor__SetorI__00200768) {
                 SubSetorRow rowSubSetorRow = ((SubSetorRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         null};
-                if ((parentSetorRowByFK__SubSetor__SetorI__6B24EA82 != null)) {
-                    columnValuesArray[1] = parentSetorRowByFK__SubSetor__SetorI__6B24EA82[0];
+                if ((parentSetorRowByFK__SubSetor__SetorI__00200768 != null)) {
+                    columnValuesArray[1] = parentSetorRowByFK__SubSetor__SetorI__00200768[0];
                 }
                 rowSubSetorRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowSubSetorRow);
@@ -8352,13 +8352,13 @@ namespace WindowsFormsApp1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public TipoServicoRow AddTipoServicoRow(SubSetorRow parentSubSetorRowByFK__TipoServi__SubSe__797309D9) {
+            public TipoServicoRow AddTipoServicoRow(SubSetorRow parentSubSetorRowByFK__TipoServi__SubSe__01142BA1) {
                 TipoServicoRow rowTipoServicoRow = ((TipoServicoRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         null};
-                if ((parentSubSetorRowByFK__TipoServi__SubSe__797309D9 != null)) {
-                    columnValuesArray[1] = parentSubSetorRowByFK__TipoServi__SubSe__797309D9[0];
+                if ((parentSubSetorRowByFK__TipoServi__SubSe__01142BA1 != null)) {
+                    columnValuesArray[1] = parentSubSetorRowByFK__TipoServi__SubSe__01142BA1[0];
                 }
                 rowTipoServicoRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowTipoServicoRow);
@@ -8652,7 +8652,7 @@ namespace WindowsFormsApp1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public TrabalhadorRow AddTrabalhadorRow(string NomeTrabalhador, System.DateTime HoraEntrada, System.DateTime HoraSaida) {
+            public TrabalhadorRow AddTrabalhadorRow(string NomeTrabalhador, double HoraEntrada, double HoraSaida) {
                 TrabalhadorRow rowTrabalhadorRow = ((TrabalhadorRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -8701,9 +8701,9 @@ namespace WindowsFormsApp1 {
                 base.Columns.Add(this.columnTrabalhadorID);
                 this.columnNomeTrabalhador = new global::System.Data.DataColumn("NomeTrabalhador", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnNomeTrabalhador);
-                this.columnHoraEntrada = new global::System.Data.DataColumn("HoraEntrada", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                this.columnHoraEntrada = new global::System.Data.DataColumn("HoraEntrada", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnHoraEntrada);
-                this.columnHoraSaida = new global::System.Data.DataColumn("HoraSaida", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                this.columnHoraSaida = new global::System.Data.DataColumn("HoraSaida", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnHoraSaida);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnTrabalhadorID}, true));
@@ -9213,16 +9213,16 @@ namespace WindowsFormsApp1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public Vindima_ServicoRow AddVindima_ServicoRow(ServicoRow parentServicoRowByFK__Vindima_S__Servi__7B5B524B, VindimaRow parentVindimaRowByFK__Vindima_S__Vindi__7A672E12) {
+            public Vindima_ServicoRow AddVindima_ServicoRow(ServicoRow parentServicoRowByFK__Vindima_S__Servi__02084FDA, VindimaRow parentVindimaRowByFK__Vindima_S__Vindi__02FC7413) {
                 Vindima_ServicoRow rowVindima_ServicoRow = ((Vindima_ServicoRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         null};
-                if ((parentServicoRowByFK__Vindima_S__Servi__7B5B524B != null)) {
-                    columnValuesArray[0] = parentServicoRowByFK__Vindima_S__Servi__7B5B524B[0];
+                if ((parentServicoRowByFK__Vindima_S__Servi__02084FDA != null)) {
+                    columnValuesArray[0] = parentServicoRowByFK__Vindima_S__Servi__02084FDA[0];
                 }
-                if ((parentVindimaRowByFK__Vindima_S__Vindi__7A672E12 != null)) {
-                    columnValuesArray[1] = parentVindimaRowByFK__Vindima_S__Vindi__7A672E12[0];
+                if ((parentVindimaRowByFK__Vindima_S__Vindi__02FC7413 != null)) {
+                    columnValuesArray[1] = parentVindimaRowByFK__Vindima_S__Vindi__02FC7413[0];
                 }
                 rowVindima_ServicoRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowVindima_ServicoRow);
@@ -9533,7 +9533,7 @@ namespace WindowsFormsApp1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public VinhoRow AddVinhoRow(string NomeVinho, float ValorUnitarioVinho, int AnoProducaoVinho, int NumeroGarrafas, ProducaoVinhoRow parentProducaoVinhoRowByFK__Vinho__ProducaoV__76969D2E) {
+            public VinhoRow AddVinhoRow(string NomeVinho, float ValorUnitarioVinho, int AnoProducaoVinho, int NumeroGarrafas, ProducaoVinhoRow parentProducaoVinhoRowByFK__Vinho__ProducaoV__03F0984C) {
                 VinhoRow rowVinhoRow = ((VinhoRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -9542,8 +9542,8 @@ namespace WindowsFormsApp1 {
                         AnoProducaoVinho,
                         NumeroGarrafas,
                         null};
-                if ((parentProducaoVinhoRowByFK__Vinho__ProducaoV__76969D2E != null)) {
-                    columnValuesArray[5] = parentProducaoVinhoRowByFK__Vinho__ProducaoV__76969D2E[0];
+                if ((parentProducaoVinhoRowByFK__Vinho__ProducaoV__03F0984C != null)) {
+                    columnValuesArray[5] = parentProducaoVinhoRowByFK__Vinho__ProducaoV__03F0984C[0];
                 }
                 rowVinhoRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowVinhoRow);
@@ -9845,22 +9845,22 @@ namespace WindowsFormsApp1 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public FamiliarRow[] GetFamiliarRows() {
-                if ((this.Table.ChildRelations["FK__Familiar__Client__6C190EBB"] == null)) {
+                if ((this.Table.ChildRelations["FK__Familiar__Client__6EF57B66"] == null)) {
                     return new FamiliarRow[0];
                 }
                 else {
-                    return ((FamiliarRow[])(base.GetChildRows(this.Table.ChildRelations["FK__Familiar__Client__6C190EBB"])));
+                    return ((FamiliarRow[])(base.GetChildRows(this.Table.ChildRelations["FK__Familiar__Client__6EF57B66"])));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public ReservaRow[] GetReservaRows() {
-                if ((this.Table.ChildRelations["FK__Reserva__Cliente__03F0984C"] == null)) {
+                if ((this.Table.ChildRelations["FK__Reserva__Cliente__797309D9"] == null)) {
                     return new ReservaRow[0];
                 }
                 else {
-                    return ((ReservaRow[])(base.GetChildRows(this.Table.ChildRelations["FK__Reserva__Cliente__03F0984C"])));
+                    return ((ReservaRow[])(base.GetChildRows(this.Table.ChildRelations["FK__Reserva__Cliente__797309D9"])));
                 }
             }
         }
@@ -9916,10 +9916,10 @@ namespace WindowsFormsApp1 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public TipoContactoRow TipoContactoRow {
                 get {
-                    return ((TipoContactoRow)(this.GetParentRow(this.Table.ParentRelations["FK__Contacto__TipoCo__72C60C4A"])));
+                    return ((TipoContactoRow)(this.GetParentRow(this.Table.ParentRelations["FK__Contacto__TipoCo__6B24EA82"])));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK__Contacto__TipoCo__72C60C4A"]);
+                    this.SetParentRow(value, this.Table.ParentRelations["FK__Contacto__TipoCo__6B24EA82"]);
                 }
             }
             
@@ -9927,10 +9927,10 @@ namespace WindowsFormsApp1 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public TrabalhadorRow TrabalhadorRow {
                 get {
-                    return ((TrabalhadorRow)(this.GetParentRow(this.Table.ParentRelations["FK__Contacto__Trabal__74AE54BC"])));
+                    return ((TrabalhadorRow)(this.GetParentRow(this.Table.ParentRelations["FK__Contacto__Trabal__6C190EBB"])));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK__Contacto__Trabal__74AE54BC"]);
+                    this.SetParentRow(value, this.Table.ParentRelations["FK__Contacto__Trabal__6C190EBB"]);
                 }
             }
         }
@@ -10002,10 +10002,10 @@ namespace WindowsFormsApp1 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public TipoContratoRow TipoContratoRow {
                 get {
-                    return ((TipoContratoRow)(this.GetParentRow(this.Table.ParentRelations["FK__Contrato__TipoCo__71D1E811"])));
+                    return ((TipoContratoRow)(this.GetParentRow(this.Table.ParentRelations["FK__Contrato__TipoCo__6D0D32F4"])));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK__Contrato__TipoCo__71D1E811"]);
+                    this.SetParentRow(value, this.Table.ParentRelations["FK__Contrato__TipoCo__6D0D32F4"]);
                 }
             }
             
@@ -10013,10 +10013,10 @@ namespace WindowsFormsApp1 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public TrabalhadorRow TrabalhadorRow {
                 get {
-                    return ((TrabalhadorRow)(this.GetParentRow(this.Table.ParentRelations["FK__Contrato__Trabal__73BA3083"])));
+                    return ((TrabalhadorRow)(this.GetParentRow(this.Table.ParentRelations["FK__Contrato__Trabal__6E01572D"])));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK__Contrato__Trabal__73BA3083"]);
+                    this.SetParentRow(value, this.Table.ParentRelations["FK__Contrato__Trabal__6E01572D"]);
                 }
             }
             
@@ -10121,10 +10121,10 @@ namespace WindowsFormsApp1 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public ClienteRow ClienteRow {
                 get {
-                    return ((ClienteRow)(this.GetParentRow(this.Table.ParentRelations["FK__Familiar__Client__6C190EBB"])));
+                    return ((ClienteRow)(this.GetParentRow(this.Table.ParentRelations["FK__Familiar__Client__6EF57B66"])));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK__Familiar__Client__6C190EBB"]);
+                    this.SetParentRow(value, this.Table.ParentRelations["FK__Familiar__Client__6EF57B66"]);
                 }
             }
             
@@ -10249,22 +10249,22 @@ namespace WindowsFormsApp1 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public LinhaFaturaRow[] GetLinhaFaturaRows() {
-                if ((this.Table.ChildRelations["FK__LinhaFatu__Fatur__70DDC3D8"] == null)) {
+                if ((this.Table.ChildRelations["FK__LinhaFatu__Fatur__6FE99F9F"] == null)) {
                     return new LinhaFaturaRow[0];
                 }
                 else {
-                    return ((LinhaFaturaRow[])(base.GetChildRows(this.Table.ChildRelations["FK__LinhaFatu__Fatur__70DDC3D8"])));
+                    return ((LinhaFaturaRow[])(base.GetChildRows(this.Table.ChildRelations["FK__LinhaFatu__Fatur__6FE99F9F"])));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public ReciboRow[] GetReciboRows() {
-                if ((this.Table.ChildRelations["FK__Recibo__FaturaID__7F2BE32F"] == null)) {
+                if ((this.Table.ChildRelations["FK__Recibo__FaturaID__787EE5A0"] == null)) {
                     return new ReciboRow[0];
                 }
                 else {
-                    return ((ReciboRow[])(base.GetChildRows(this.Table.ChildRelations["FK__Recibo__FaturaID__7F2BE32F"])));
+                    return ((ReciboRow[])(base.GetChildRows(this.Table.ChildRelations["FK__Recibo__FaturaID__787EE5A0"])));
                 }
             }
         }
@@ -10341,10 +10341,10 @@ namespace WindowsFormsApp1 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public FaturaRow FaturaRow {
                 get {
-                    return ((FaturaRow)(this.GetParentRow(this.Table.ParentRelations["FK__LinhaFatu__Fatur__70DDC3D8"])));
+                    return ((FaturaRow)(this.GetParentRow(this.Table.ParentRelations["FK__LinhaFatu__Fatur__6FE99F9F"])));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK__LinhaFatu__Fatur__70DDC3D8"]);
+                    this.SetParentRow(value, this.Table.ParentRelations["FK__LinhaFatu__Fatur__6FE99F9F"]);
                 }
             }
             
@@ -10352,10 +10352,10 @@ namespace WindowsFormsApp1 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public ServicoRow ServicoRow {
                 get {
-                    return ((ServicoRow)(this.GetParentRow(this.Table.ParentRelations["FK__LinhaFatu__Servi__6FE99F9F"])));
+                    return ((ServicoRow)(this.GetParentRow(this.Table.ParentRelations["FK__LinhaFatu__Servi__70DDC3D8"])));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK__LinhaFatu__Servi__6FE99F9F"]);
+                    this.SetParentRow(value, this.Table.ParentRelations["FK__LinhaFatu__Servi__70DDC3D8"]);
                 }
             }
             
@@ -10468,11 +10468,11 @@ namespace WindowsFormsApp1 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public ServicoRow[] GetServicoRows() {
-                if ((this.Table.ChildRelations["FK__Servico__MesaNum__6E01572D"] == null)) {
+                if ((this.Table.ChildRelations["FK__Servico__MesaNum__7D439ABD"] == null)) {
                     return new ServicoRow[0];
                 }
                 else {
-                    return ((ServicoRow[])(base.GetChildRows(this.Table.ChildRelations["FK__Servico__MesaNum__6E01572D"])));
+                    return ((ServicoRow[])(base.GetChildRows(this.Table.ChildRelations["FK__Servico__MesaNum__7D439ABD"])));
                 }
             }
         }
@@ -10544,10 +10544,10 @@ namespace WindowsFormsApp1 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public ReservaRow ReservaRow {
                 get {
-                    return ((ReservaRow)(this.GetParentRow(this.Table.ParentRelations["FK__Pagamento__Reser__02FC7413"])));
+                    return ((ReservaRow)(this.GetParentRow(this.Table.ParentRelations["FK__Pagamento__Reser__71D1E811"])));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK__Pagamento__Reser__02FC7413"]);
+                    this.SetParentRow(value, this.Table.ParentRelations["FK__Pagamento__Reser__71D1E811"]);
                 }
             }
             
@@ -10555,10 +10555,10 @@ namespace WindowsFormsApp1 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public TipoPagamentoRow TipoPagamentoRow {
                 get {
-                    return ((TipoPagamentoRow)(this.GetParentRow(this.Table.ParentRelations["FK__Pagamento__TipoP__00200768"])));
+                    return ((TipoPagamentoRow)(this.GetParentRow(this.Table.ParentRelations["FK__Pagamento__TipoP__72C60C4A"])));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK__Pagamento__TipoP__00200768"]);
+                    this.SetParentRow(value, this.Table.ParentRelations["FK__Pagamento__TipoP__72C60C4A"]);
                 }
             }
             
@@ -10647,10 +10647,10 @@ namespace WindowsFormsApp1 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public VindimaRow VindimaRow {
                 get {
-                    return ((VindimaRow)(this.GetParentRow(this.Table.ParentRelations["FK__Plantacao__Vindi__7C4F7684"])));
+                    return ((VindimaRow)(this.GetParentRow(this.Table.ParentRelations["FK__Plantacao__Vindi__73BA3083"])));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK__Plantacao__Vindi__7C4F7684"]);
+                    this.SetParentRow(value, this.Table.ParentRelations["FK__Plantacao__Vindi__73BA3083"]);
                 }
             }
             
@@ -10681,11 +10681,11 @@ namespace WindowsFormsApp1 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public Plantacao_ProducaoVinhoRow[] GetPlantacao_ProducaoVinhoRows() {
-                if ((this.Table.ChildRelations["FK__Plantacao__Plant__7D439ABD"] == null)) {
+                if ((this.Table.ChildRelations["FK__Plantacao__Plant__74AE54BC"] == null)) {
                     return new Plantacao_ProducaoVinhoRow[0];
                 }
                 else {
-                    return ((Plantacao_ProducaoVinhoRow[])(base.GetChildRows(this.Table.ChildRelations["FK__Plantacao__Plant__7D439ABD"])));
+                    return ((Plantacao_ProducaoVinhoRow[])(base.GetChildRows(this.Table.ChildRelations["FK__Plantacao__Plant__74AE54BC"])));
                 }
             }
         }
@@ -10730,10 +10730,10 @@ namespace WindowsFormsApp1 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public PlantacaoRow PlantacaoRow {
                 get {
-                    return ((PlantacaoRow)(this.GetParentRow(this.Table.ParentRelations["FK__Plantacao__Plant__7D439ABD"])));
+                    return ((PlantacaoRow)(this.GetParentRow(this.Table.ParentRelations["FK__Plantacao__Plant__74AE54BC"])));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK__Plantacao__Plant__7D439ABD"]);
+                    this.SetParentRow(value, this.Table.ParentRelations["FK__Plantacao__Plant__74AE54BC"]);
                 }
             }
             
@@ -10741,10 +10741,10 @@ namespace WindowsFormsApp1 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public ProducaoVinhoRow ProducaoVinhoRow {
                 get {
-                    return ((ProducaoVinhoRow)(this.GetParentRow(this.Table.ParentRelations["FK__Plantacao__Produ__7E37BEF6"])));
+                    return ((ProducaoVinhoRow)(this.GetParentRow(this.Table.ParentRelations["FK__Plantacao__Produ__75A278F5"])));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK__Plantacao__Produ__7E37BEF6"]);
+                    this.SetParentRow(value, this.Table.ParentRelations["FK__Plantacao__Produ__75A278F5"]);
                 }
             }
         }
@@ -10777,22 +10777,22 @@ namespace WindowsFormsApp1 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public Plantacao_ProducaoVinhoRow[] GetPlantacao_ProducaoVinhoRows() {
-                if ((this.Table.ChildRelations["FK__Plantacao__Produ__7E37BEF6"] == null)) {
+                if ((this.Table.ChildRelations["FK__Plantacao__Produ__75A278F5"] == null)) {
                     return new Plantacao_ProducaoVinhoRow[0];
                 }
                 else {
-                    return ((Plantacao_ProducaoVinhoRow[])(base.GetChildRows(this.Table.ChildRelations["FK__Plantacao__Produ__7E37BEF6"])));
+                    return ((Plantacao_ProducaoVinhoRow[])(base.GetChildRows(this.Table.ChildRelations["FK__Plantacao__Produ__75A278F5"])));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public VinhoRow[] GetVinhoRows() {
-                if ((this.Table.ChildRelations["FK__Vinho__ProducaoV__76969D2E"] == null)) {
+                if ((this.Table.ChildRelations["FK__Vinho__ProducaoV__03F0984C"] == null)) {
                     return new VinhoRow[0];
                 }
                 else {
-                    return ((VinhoRow[])(base.GetChildRows(this.Table.ChildRelations["FK__Vinho__ProducaoV__76969D2E"])));
+                    return ((VinhoRow[])(base.GetChildRows(this.Table.ChildRelations["FK__Vinho__ProducaoV__03F0984C"])));
                 }
             }
         }
@@ -10864,10 +10864,10 @@ namespace WindowsFormsApp1 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public ServicoRow ServicoRow {
                 get {
-                    return ((ServicoRow)(this.GetParentRow(this.Table.ParentRelations["FK__Quarto__ServicoI__778AC167"])));
+                    return ((ServicoRow)(this.GetParentRow(this.Table.ParentRelations["FK__Quarto__ServicoI__76969D2E"])));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK__Quarto__ServicoI__778AC167"]);
+                    this.SetParentRow(value, this.Table.ParentRelations["FK__Quarto__ServicoI__76969D2E"]);
                 }
             }
             
@@ -10875,10 +10875,10 @@ namespace WindowsFormsApp1 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public TipoQuartoRow TipoQuartoRow {
                 get {
-                    return ((TipoQuartoRow)(this.GetParentRow(this.Table.ParentRelations["FK__Quarto__TipoQuar__787EE5A0"])));
+                    return ((TipoQuartoRow)(this.GetParentRow(this.Table.ParentRelations["FK__Quarto__TipoQuar__778AC167"])));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK__Quarto__TipoQuar__787EE5A0"]);
+                    this.SetParentRow(value, this.Table.ParentRelations["FK__Quarto__TipoQuar__778AC167"]);
                 }
             }
             
@@ -10951,11 +10951,11 @@ namespace WindowsFormsApp1 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public ReservaRow[] GetReservaRows() {
-                if ((this.Table.ChildRelations["FK__Reserva__Rececao__01142BA1"] == null)) {
+                if ((this.Table.ChildRelations["FK__Reserva__Rececao__7A672E12"] == null)) {
                     return new ReservaRow[0];
                 }
                 else {
-                    return ((ReservaRow[])(base.GetChildRows(this.Table.ChildRelations["FK__Reserva__Rececao__01142BA1"])));
+                    return ((ReservaRow[])(base.GetChildRows(this.Table.ChildRelations["FK__Reserva__Rececao__7A672E12"])));
                 }
             }
         }
@@ -11032,10 +11032,10 @@ namespace WindowsFormsApp1 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public FaturaRow FaturaRow {
                 get {
-                    return ((FaturaRow)(this.GetParentRow(this.Table.ParentRelations["FK__Recibo__FaturaID__7F2BE32F"])));
+                    return ((FaturaRow)(this.GetParentRow(this.Table.ParentRelations["FK__Recibo__FaturaID__787EE5A0"])));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK__Recibo__FaturaID__7F2BE32F"]);
+                    this.SetParentRow(value, this.Table.ParentRelations["FK__Recibo__FaturaID__787EE5A0"]);
                 }
             }
             
@@ -11190,10 +11190,10 @@ namespace WindowsFormsApp1 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public ClienteRow ClienteRow {
                 get {
-                    return ((ClienteRow)(this.GetParentRow(this.Table.ParentRelations["FK__Reserva__Cliente__03F0984C"])));
+                    return ((ClienteRow)(this.GetParentRow(this.Table.ParentRelations["FK__Reserva__Cliente__797309D9"])));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK__Reserva__Cliente__03F0984C"]);
+                    this.SetParentRow(value, this.Table.ParentRelations["FK__Reserva__Cliente__797309D9"]);
                 }
             }
             
@@ -11201,10 +11201,10 @@ namespace WindowsFormsApp1 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public RececaoRow RececaoRow {
                 get {
-                    return ((RececaoRow)(this.GetParentRow(this.Table.ParentRelations["FK__Reserva__Rececao__01142BA1"])));
+                    return ((RececaoRow)(this.GetParentRow(this.Table.ParentRelations["FK__Reserva__Rececao__7A672E12"])));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK__Reserva__Rececao__01142BA1"]);
+                    this.SetParentRow(value, this.Table.ParentRelations["FK__Reserva__Rececao__7A672E12"]);
                 }
             }
             
@@ -11212,10 +11212,10 @@ namespace WindowsFormsApp1 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public ServicoRow ServicoRow {
                 get {
-                    return ((ServicoRow)(this.GetParentRow(this.Table.ParentRelations["FK__Reserva__Servico__02084FDA"])));
+                    return ((ServicoRow)(this.GetParentRow(this.Table.ParentRelations["FK__Reserva__Servico__7B5B524B"])));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK__Reserva__Servico__02084FDA"]);
+                    this.SetParentRow(value, this.Table.ParentRelations["FK__Reserva__Servico__7B5B524B"]);
                 }
             }
             
@@ -11270,11 +11270,11 @@ namespace WindowsFormsApp1 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public PagamentoRow[] GetPagamentoRows() {
-                if ((this.Table.ChildRelations["FK__Pagamento__Reser__02FC7413"] == null)) {
+                if ((this.Table.ChildRelations["FK__Pagamento__Reser__71D1E811"] == null)) {
                     return new PagamentoRow[0];
                 }
                 else {
-                    return ((PagamentoRow[])(base.GetChildRows(this.Table.ChildRelations["FK__Pagamento__Reser__02FC7413"])));
+                    return ((PagamentoRow[])(base.GetChildRows(this.Table.ChildRelations["FK__Pagamento__Reser__71D1E811"])));
                 }
             }
         }
@@ -11319,10 +11319,10 @@ namespace WindowsFormsApp1 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public ServicoRow ServicoRow {
                 get {
-                    return ((ServicoRow)(this.GetParentRow(this.Table.ParentRelations["FK__Salao__ServicoID__75A278F5"])));
+                    return ((ServicoRow)(this.GetParentRow(this.Table.ParentRelations["FK__Salao__ServicoID__7C4F7684"])));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK__Salao__ServicoID__75A278F5"]);
+                    this.SetParentRow(value, this.Table.ParentRelations["FK__Salao__ServicoID__7C4F7684"]);
                 }
             }
         }
@@ -11399,10 +11399,10 @@ namespace WindowsFormsApp1 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public MesaRow MesaRow {
                 get {
-                    return ((MesaRow)(this.GetParentRow(this.Table.ParentRelations["FK__Servico__MesaNum__6E01572D"])));
+                    return ((MesaRow)(this.GetParentRow(this.Table.ParentRelations["FK__Servico__MesaNum__7D439ABD"])));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK__Servico__MesaNum__6E01572D"]);
+                    this.SetParentRow(value, this.Table.ParentRelations["FK__Servico__MesaNum__7D439ABD"]);
                 }
             }
             
@@ -11410,10 +11410,10 @@ namespace WindowsFormsApp1 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public TipoServicoRow TipoServicoRow {
                 get {
-                    return ((TipoServicoRow)(this.GetParentRow(this.Table.ParentRelations["FK__Servico__TipoSer__6D0D32F4"])));
+                    return ((TipoServicoRow)(this.GetParentRow(this.Table.ParentRelations["FK__Servico__TipoSer__7E37BEF6"])));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK__Servico__TipoSer__6D0D32F4"]);
+                    this.SetParentRow(value, this.Table.ParentRelations["FK__Servico__TipoSer__7E37BEF6"]);
                 }
             }
             
@@ -11455,55 +11455,55 @@ namespace WindowsFormsApp1 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public LinhaFaturaRow[] GetLinhaFaturaRows() {
-                if ((this.Table.ChildRelations["FK__LinhaFatu__Servi__6FE99F9F"] == null)) {
+                if ((this.Table.ChildRelations["FK__LinhaFatu__Servi__70DDC3D8"] == null)) {
                     return new LinhaFaturaRow[0];
                 }
                 else {
-                    return ((LinhaFaturaRow[])(base.GetChildRows(this.Table.ChildRelations["FK__LinhaFatu__Servi__6FE99F9F"])));
+                    return ((LinhaFaturaRow[])(base.GetChildRows(this.Table.ChildRelations["FK__LinhaFatu__Servi__70DDC3D8"])));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public QuartoRow[] GetQuartoRows() {
-                if ((this.Table.ChildRelations["FK__Quarto__ServicoI__778AC167"] == null)) {
+                if ((this.Table.ChildRelations["FK__Quarto__ServicoI__76969D2E"] == null)) {
                     return new QuartoRow[0];
                 }
                 else {
-                    return ((QuartoRow[])(base.GetChildRows(this.Table.ChildRelations["FK__Quarto__ServicoI__778AC167"])));
+                    return ((QuartoRow[])(base.GetChildRows(this.Table.ChildRelations["FK__Quarto__ServicoI__76969D2E"])));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public ReservaRow[] GetReservaRows() {
-                if ((this.Table.ChildRelations["FK__Reserva__Servico__02084FDA"] == null)) {
+                if ((this.Table.ChildRelations["FK__Reserva__Servico__7B5B524B"] == null)) {
                     return new ReservaRow[0];
                 }
                 else {
-                    return ((ReservaRow[])(base.GetChildRows(this.Table.ChildRelations["FK__Reserva__Servico__02084FDA"])));
+                    return ((ReservaRow[])(base.GetChildRows(this.Table.ChildRelations["FK__Reserva__Servico__7B5B524B"])));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public SalaoRow[] GetSalaoRows() {
-                if ((this.Table.ChildRelations["FK__Salao__ServicoID__75A278F5"] == null)) {
+                if ((this.Table.ChildRelations["FK__Salao__ServicoID__7C4F7684"] == null)) {
                     return new SalaoRow[0];
                 }
                 else {
-                    return ((SalaoRow[])(base.GetChildRows(this.Table.ChildRelations["FK__Salao__ServicoID__75A278F5"])));
+                    return ((SalaoRow[])(base.GetChildRows(this.Table.ChildRelations["FK__Salao__ServicoID__7C4F7684"])));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public Vindima_ServicoRow[] GetVindima_ServicoRows() {
-                if ((this.Table.ChildRelations["FK__Vindima_S__Servi__7B5B524B"] == null)) {
+                if ((this.Table.ChildRelations["FK__Vindima_S__Servi__02084FDA"] == null)) {
                     return new Vindima_ServicoRow[0];
                 }
                 else {
-                    return ((Vindima_ServicoRow[])(base.GetChildRows(this.Table.ChildRelations["FK__Vindima_S__Servi__7B5B524B"])));
+                    return ((Vindima_ServicoRow[])(base.GetChildRows(this.Table.ChildRelations["FK__Vindima_S__Servi__02084FDA"])));
                 }
             }
         }
@@ -11564,11 +11564,11 @@ namespace WindowsFormsApp1 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public SubSetorRow[] GetSubSetorRows() {
-                if ((this.Table.ChildRelations["FK__SubSetor__SetorI__6B24EA82"] == null)) {
+                if ((this.Table.ChildRelations["FK__SubSetor__SetorI__00200768"] == null)) {
                     return new SubSetorRow[0];
                 }
                 else {
-                    return ((SubSetorRow[])(base.GetChildRows(this.Table.ChildRelations["FK__SubSetor__SetorI__6B24EA82"])));
+                    return ((SubSetorRow[])(base.GetChildRows(this.Table.ChildRelations["FK__SubSetor__SetorI__00200768"])));
                 }
             }
         }
@@ -11613,21 +11613,21 @@ namespace WindowsFormsApp1 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public SetorRow SetorRow {
                 get {
-                    return ((SetorRow)(this.GetParentRow(this.Table.ParentRelations["FK__SubSetor__SetorI__6B24EA82"])));
+                    return ((SetorRow)(this.GetParentRow(this.Table.ParentRelations["FK__SubSetor__SetorI__00200768"])));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK__SubSetor__SetorI__6B24EA82"]);
+                    this.SetParentRow(value, this.Table.ParentRelations["FK__SubSetor__SetorI__00200768"]);
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public TipoServicoRow[] GetTipoServicoRows() {
-                if ((this.Table.ChildRelations["FK__TipoServi__SubSe__797309D9"] == null)) {
+                if ((this.Table.ChildRelations["FK__TipoServi__SubSe__01142BA1"] == null)) {
                     return new TipoServicoRow[0];
                 }
                 else {
-                    return ((TipoServicoRow[])(base.GetChildRows(this.Table.ChildRelations["FK__TipoServi__SubSe__797309D9"])));
+                    return ((TipoServicoRow[])(base.GetChildRows(this.Table.ChildRelations["FK__TipoServi__SubSe__01142BA1"])));
                 }
             }
         }
@@ -11688,11 +11688,11 @@ namespace WindowsFormsApp1 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public ContactoRow[] GetContactoRows() {
-                if ((this.Table.ChildRelations["FK__Contacto__TipoCo__72C60C4A"] == null)) {
+                if ((this.Table.ChildRelations["FK__Contacto__TipoCo__6B24EA82"] == null)) {
                     return new ContactoRow[0];
                 }
                 else {
-                    return ((ContactoRow[])(base.GetChildRows(this.Table.ChildRelations["FK__Contacto__TipoCo__72C60C4A"])));
+                    return ((ContactoRow[])(base.GetChildRows(this.Table.ChildRelations["FK__Contacto__TipoCo__6B24EA82"])));
                 }
             }
         }
@@ -11809,11 +11809,11 @@ namespace WindowsFormsApp1 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public ContratoRow[] GetContratoRows() {
-                if ((this.Table.ChildRelations["FK__Contrato__TipoCo__71D1E811"] == null)) {
+                if ((this.Table.ChildRelations["FK__Contrato__TipoCo__6D0D32F4"] == null)) {
                     return new ContratoRow[0];
                 }
                 else {
-                    return ((ContratoRow[])(base.GetChildRows(this.Table.ChildRelations["FK__Contrato__TipoCo__71D1E811"])));
+                    return ((ContratoRow[])(base.GetChildRows(this.Table.ChildRelations["FK__Contrato__TipoCo__6D0D32F4"])));
                 }
             }
         }
@@ -11874,11 +11874,11 @@ namespace WindowsFormsApp1 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public PagamentoRow[] GetPagamentoRows() {
-                if ((this.Table.ChildRelations["FK__Pagamento__TipoP__00200768"] == null)) {
+                if ((this.Table.ChildRelations["FK__Pagamento__TipoP__72C60C4A"] == null)) {
                     return new PagamentoRow[0];
                 }
                 else {
-                    return ((PagamentoRow[])(base.GetChildRows(this.Table.ChildRelations["FK__Pagamento__TipoP__00200768"])));
+                    return ((PagamentoRow[])(base.GetChildRows(this.Table.ChildRelations["FK__Pagamento__TipoP__72C60C4A"])));
                 }
             }
         }
@@ -11939,11 +11939,11 @@ namespace WindowsFormsApp1 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public QuartoRow[] GetQuartoRows() {
-                if ((this.Table.ChildRelations["FK__Quarto__TipoQuar__787EE5A0"] == null)) {
+                if ((this.Table.ChildRelations["FK__Quarto__TipoQuar__778AC167"] == null)) {
                     return new QuartoRow[0];
                 }
                 else {
-                    return ((QuartoRow[])(base.GetChildRows(this.Table.ChildRelations["FK__Quarto__TipoQuar__787EE5A0"])));
+                    return ((QuartoRow[])(base.GetChildRows(this.Table.ChildRelations["FK__Quarto__TipoQuar__778AC167"])));
                 }
             }
         }
@@ -11988,21 +11988,21 @@ namespace WindowsFormsApp1 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public SubSetorRow SubSetorRow {
                 get {
-                    return ((SubSetorRow)(this.GetParentRow(this.Table.ParentRelations["FK__TipoServi__SubSe__797309D9"])));
+                    return ((SubSetorRow)(this.GetParentRow(this.Table.ParentRelations["FK__TipoServi__SubSe__01142BA1"])));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK__TipoServi__SubSe__797309D9"]);
+                    this.SetParentRow(value, this.Table.ParentRelations["FK__TipoServi__SubSe__01142BA1"]);
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public ServicoRow[] GetServicoRows() {
-                if ((this.Table.ChildRelations["FK__Servico__TipoSer__6D0D32F4"] == null)) {
+                if ((this.Table.ChildRelations["FK__Servico__TipoSer__7E37BEF6"] == null)) {
                     return new ServicoRow[0];
                 }
                 else {
-                    return ((ServicoRow[])(base.GetChildRows(this.Table.ChildRelations["FK__Servico__TipoSer__6D0D32F4"])));
+                    return ((ServicoRow[])(base.GetChildRows(this.Table.ChildRelations["FK__Servico__TipoSer__7E37BEF6"])));
                 }
             }
         }
@@ -12050,10 +12050,10 @@ namespace WindowsFormsApp1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public System.DateTime HoraEntrada {
+            public double HoraEntrada {
                 get {
                     try {
-                        return ((global::System.DateTime)(this[this.tableTrabalhador.HoraEntradaColumn]));
+                        return ((double)(this[this.tableTrabalhador.HoraEntradaColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'HoraEntrada\' in table \'Trabalhador\' is DBNull.", e);
@@ -12066,10 +12066,10 @@ namespace WindowsFormsApp1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public System.DateTime HoraSaida {
+            public double HoraSaida {
                 get {
                     try {
-                        return ((global::System.DateTime)(this[this.tableTrabalhador.HoraSaidaColumn]));
+                        return ((double)(this[this.tableTrabalhador.HoraSaidaColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'HoraSaida\' in table \'Trabalhador\' is DBNull.", e);
@@ -12119,22 +12119,22 @@ namespace WindowsFormsApp1 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public ContactoRow[] GetContactoRows() {
-                if ((this.Table.ChildRelations["FK__Contacto__Trabal__74AE54BC"] == null)) {
+                if ((this.Table.ChildRelations["FK__Contacto__Trabal__6C190EBB"] == null)) {
                     return new ContactoRow[0];
                 }
                 else {
-                    return ((ContactoRow[])(base.GetChildRows(this.Table.ChildRelations["FK__Contacto__Trabal__74AE54BC"])));
+                    return ((ContactoRow[])(base.GetChildRows(this.Table.ChildRelations["FK__Contacto__Trabal__6C190EBB"])));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public ContratoRow[] GetContratoRows() {
-                if ((this.Table.ChildRelations["FK__Contrato__Trabal__73BA3083"] == null)) {
+                if ((this.Table.ChildRelations["FK__Contrato__Trabal__6E01572D"] == null)) {
                     return new ContratoRow[0];
                 }
                 else {
-                    return ((ContratoRow[])(base.GetChildRows(this.Table.ChildRelations["FK__Contrato__Trabal__73BA3083"])));
+                    return ((ContratoRow[])(base.GetChildRows(this.Table.ChildRelations["FK__Contrato__Trabal__6E01572D"])));
                 }
             }
             
@@ -12206,22 +12206,22 @@ namespace WindowsFormsApp1 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public PlantacaoRow[] GetPlantacaoRows() {
-                if ((this.Table.ChildRelations["FK__Plantacao__Vindi__7C4F7684"] == null)) {
+                if ((this.Table.ChildRelations["FK__Plantacao__Vindi__73BA3083"] == null)) {
                     return new PlantacaoRow[0];
                 }
                 else {
-                    return ((PlantacaoRow[])(base.GetChildRows(this.Table.ChildRelations["FK__Plantacao__Vindi__7C4F7684"])));
+                    return ((PlantacaoRow[])(base.GetChildRows(this.Table.ChildRelations["FK__Plantacao__Vindi__73BA3083"])));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public Vindima_ServicoRow[] GetVindima_ServicoRows() {
-                if ((this.Table.ChildRelations["FK__Vindima_S__Vindi__7A672E12"] == null)) {
+                if ((this.Table.ChildRelations["FK__Vindima_S__Vindi__02FC7413"] == null)) {
                     return new Vindima_ServicoRow[0];
                 }
                 else {
-                    return ((Vindima_ServicoRow[])(base.GetChildRows(this.Table.ChildRelations["FK__Vindima_S__Vindi__7A672E12"])));
+                    return ((Vindima_ServicoRow[])(base.GetChildRows(this.Table.ChildRelations["FK__Vindima_S__Vindi__02FC7413"])));
                 }
             }
         }
@@ -12266,10 +12266,10 @@ namespace WindowsFormsApp1 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public ServicoRow ServicoRow {
                 get {
-                    return ((ServicoRow)(this.GetParentRow(this.Table.ParentRelations["FK__Vindima_S__Servi__7B5B524B"])));
+                    return ((ServicoRow)(this.GetParentRow(this.Table.ParentRelations["FK__Vindima_S__Servi__02084FDA"])));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK__Vindima_S__Servi__7B5B524B"]);
+                    this.SetParentRow(value, this.Table.ParentRelations["FK__Vindima_S__Servi__02084FDA"]);
                 }
             }
             
@@ -12277,10 +12277,10 @@ namespace WindowsFormsApp1 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public VindimaRow VindimaRow {
                 get {
-                    return ((VindimaRow)(this.GetParentRow(this.Table.ParentRelations["FK__Vindima_S__Vindi__7A672E12"])));
+                    return ((VindimaRow)(this.GetParentRow(this.Table.ParentRelations["FK__Vindima_S__Vindi__02FC7413"])));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK__Vindima_S__Vindi__7A672E12"]);
+                    this.SetParentRow(value, this.Table.ParentRelations["FK__Vindima_S__Vindi__02FC7413"]);
                 }
             }
         }
@@ -12389,10 +12389,10 @@ namespace WindowsFormsApp1 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public ProducaoVinhoRow ProducaoVinhoRow {
                 get {
-                    return ((ProducaoVinhoRow)(this.GetParentRow(this.Table.ParentRelations["FK__Vinho__ProducaoV__76969D2E"])));
+                    return ((ProducaoVinhoRow)(this.GetParentRow(this.Table.ParentRelations["FK__Vinho__ProducaoV__03F0984C"])));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK__Vinho__ProducaoV__76969D2E"]);
+                    this.SetParentRow(value, this.Table.ParentRelations["FK__Vinho__ProducaoV__03F0984C"]);
                 }
             }
             
@@ -21779,9 +21779,9 @@ SELECT TipoQuartoID, DescricaoQuarto FROM TipoQuarto WHERE (TipoQuartoID = @Tipo
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_NomeTrabalhador", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NomeTrabalhador", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_NomeTrabalhador", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NomeTrabalhador", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_HoraEntrada", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HoraEntrada", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_HoraEntrada", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HoraEntrada", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_HoraEntrada", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HoraEntrada", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_HoraSaida", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HoraSaida", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_HoraSaida", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HoraSaida", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_HoraSaida", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HoraSaida", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
             this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Trabalhador] ([NomeTrabalhador], [HoraEntrada], [HoraSaida]) V" +
@@ -21790,23 +21790,23 @@ SELECT TipoQuartoID, DescricaoQuarto FROM TipoQuarto WHERE (TipoQuartoID = @Tipo
                 "_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NomeTrabalhador", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NomeTrabalhador", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@HoraEntrada", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HoraEntrada", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@HoraSaida", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HoraSaida", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@HoraEntrada", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HoraEntrada", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@HoraSaida", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HoraSaida", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
             this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Trabalhador] SET [NomeTrabalhador] = @NomeTrabalhador, [HoraEntrada] = @HoraEntrada, [HoraSaida] = @HoraSaida WHERE (([TrabalhadorID] = @Original_TrabalhadorID) AND ((@IsNull_NomeTrabalhador = 1 AND [NomeTrabalhador] IS NULL) OR ([NomeTrabalhador] = @Original_NomeTrabalhador)) AND ((@IsNull_HoraEntrada = 1 AND [HoraEntrada] IS NULL) OR ([HoraEntrada] = @Original_HoraEntrada)) AND ((@IsNull_HoraSaida = 1 AND [HoraSaida] IS NULL) OR ([HoraSaida] = @Original_HoraSaida)));
 SELECT TrabalhadorID, NomeTrabalhador, HoraEntrada, HoraSaida FROM Trabalhador WHERE (TrabalhadorID = @TrabalhadorID)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NomeTrabalhador", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NomeTrabalhador", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@HoraEntrada", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HoraEntrada", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@HoraSaida", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HoraSaida", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@HoraEntrada", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HoraEntrada", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@HoraSaida", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HoraSaida", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_TrabalhadorID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TrabalhadorID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_NomeTrabalhador", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NomeTrabalhador", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_NomeTrabalhador", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NomeTrabalhador", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_HoraEntrada", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HoraEntrada", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_HoraEntrada", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HoraEntrada", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_HoraEntrada", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HoraEntrada", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_HoraSaida", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HoraSaida", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_HoraSaida", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HoraSaida", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_HoraSaida", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HoraSaida", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TrabalhadorID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "TrabalhadorID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
@@ -21885,7 +21885,7 @@ SELECT TrabalhadorID, NomeTrabalhador, HoraEntrada, HoraSaida FROM Trabalhador W
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_TrabalhadorID, string Original_NomeTrabalhador, global::System.Nullable<global::System.DateTime> Original_HoraEntrada, global::System.Nullable<global::System.DateTime> Original_HoraSaida) {
+        public virtual int Delete(int Original_TrabalhadorID, string Original_NomeTrabalhador, global::System.Nullable<double> Original_HoraEntrada, global::System.Nullable<double> Original_HoraSaida) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_TrabalhadorID));
             if ((Original_NomeTrabalhador == null)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
@@ -21897,7 +21897,7 @@ SELECT TrabalhadorID, NomeTrabalhador, HoraEntrada, HoraSaida FROM Trabalhador W
             }
             if ((Original_HoraEntrada.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((System.DateTime)(Original_HoraEntrada.Value));
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((double)(Original_HoraEntrada.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
@@ -21905,7 +21905,7 @@ SELECT TrabalhadorID, NomeTrabalhador, HoraEntrada, HoraSaida FROM Trabalhador W
             }
             if ((Original_HoraSaida.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[6].Value = ((System.DateTime)(Original_HoraSaida.Value));
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((double)(Original_HoraSaida.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(1));
@@ -21931,7 +21931,7 @@ SELECT TrabalhadorID, NomeTrabalhador, HoraEntrada, HoraSaida FROM Trabalhador W
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string NomeTrabalhador, global::System.Nullable<global::System.DateTime> HoraEntrada, global::System.Nullable<global::System.DateTime> HoraSaida) {
+        public virtual int Insert(string NomeTrabalhador, global::System.Nullable<double> HoraEntrada, global::System.Nullable<double> HoraSaida) {
             if ((NomeTrabalhador == null)) {
                 this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -21939,13 +21939,13 @@ SELECT TrabalhadorID, NomeTrabalhador, HoraEntrada, HoraSaida FROM Trabalhador W
                 this.Adapter.InsertCommand.Parameters[0].Value = ((string)(NomeTrabalhador));
             }
             if ((HoraEntrada.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((System.DateTime)(HoraEntrada.Value));
+                this.Adapter.InsertCommand.Parameters[1].Value = ((double)(HoraEntrada.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
             if ((HoraSaida.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((System.DateTime)(HoraSaida.Value));
+                this.Adapter.InsertCommand.Parameters[2].Value = ((double)(HoraSaida.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
@@ -21970,7 +21970,7 @@ SELECT TrabalhadorID, NomeTrabalhador, HoraEntrada, HoraSaida FROM Trabalhador W
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string NomeTrabalhador, global::System.Nullable<global::System.DateTime> HoraEntrada, global::System.Nullable<global::System.DateTime> HoraSaida, int Original_TrabalhadorID, string Original_NomeTrabalhador, global::System.Nullable<global::System.DateTime> Original_HoraEntrada, global::System.Nullable<global::System.DateTime> Original_HoraSaida, int TrabalhadorID) {
+        public virtual int Update(string NomeTrabalhador, global::System.Nullable<double> HoraEntrada, global::System.Nullable<double> HoraSaida, int Original_TrabalhadorID, string Original_NomeTrabalhador, global::System.Nullable<double> Original_HoraEntrada, global::System.Nullable<double> Original_HoraSaida, int TrabalhadorID) {
             if ((NomeTrabalhador == null)) {
                 this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -21978,13 +21978,13 @@ SELECT TrabalhadorID, NomeTrabalhador, HoraEntrada, HoraSaida FROM Trabalhador W
                 this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(NomeTrabalhador));
             }
             if ((HoraEntrada.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((System.DateTime)(HoraEntrada.Value));
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((double)(HoraEntrada.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
             if ((HoraSaida.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((System.DateTime)(HoraSaida.Value));
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((double)(HoraSaida.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
@@ -22000,7 +22000,7 @@ SELECT TrabalhadorID, NomeTrabalhador, HoraEntrada, HoraSaida FROM Trabalhador W
             }
             if ((Original_HoraEntrada.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((System.DateTime)(Original_HoraEntrada.Value));
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((double)(Original_HoraEntrada.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(1));
@@ -22008,7 +22008,7 @@ SELECT TrabalhadorID, NomeTrabalhador, HoraEntrada, HoraSaida FROM Trabalhador W
             }
             if ((Original_HoraSaida.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((System.DateTime)(Original_HoraSaida.Value));
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((double)(Original_HoraSaida.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(1));
@@ -22035,7 +22035,7 @@ SELECT TrabalhadorID, NomeTrabalhador, HoraEntrada, HoraSaida FROM Trabalhador W
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string NomeTrabalhador, global::System.Nullable<global::System.DateTime> HoraEntrada, global::System.Nullable<global::System.DateTime> HoraSaida, int Original_TrabalhadorID, string Original_NomeTrabalhador, global::System.Nullable<global::System.DateTime> Original_HoraEntrada, global::System.Nullable<global::System.DateTime> Original_HoraSaida) {
+        public virtual int Update(string NomeTrabalhador, global::System.Nullable<double> HoraEntrada, global::System.Nullable<double> HoraSaida, int Original_TrabalhadorID, string Original_NomeTrabalhador, global::System.Nullable<double> Original_HoraEntrada, global::System.Nullable<double> Original_HoraSaida) {
             return this.Update(NomeTrabalhador, HoraEntrada, HoraSaida, Original_TrabalhadorID, Original_NomeTrabalhador, Original_HoraEntrada, Original_HoraSaida, Original_TrabalhadorID);
         }
     }

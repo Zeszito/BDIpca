@@ -79,7 +79,7 @@ namespace WindowsFormsApp1
                 int userval = int.Parse(textBoxClienteID.Text.ToString());
                 int userval1 = int.Parse(textBoxServicoID.Text.ToString());
                 int userval2 = int.Parse(textBoxRececaoID.Text.ToString());
-                String query = "insert into Reserva (Cliente.clienteID, Servico.ServicoID, RececaoRecepID) values (" + userval + "," + userval1 + "," + userval2 + ");";
+                String query = "insert into Reserva (Cliente.clienteID, Servico.ServicoID, RececaoID) values (" + userval + "," + userval1 + "," + userval2 + ");";
                 SqlCommand cmd = new SqlCommand(query, con);
                 cmd.ExecuteNonQuery();
 
@@ -87,10 +87,7 @@ namespace WindowsFormsApp1
             if (Form1.create == Form1.Create.Cliente)
             {
                 String nome = textBoxNome.Text.ToString();
-                DateTime data = (dateTimeData.Value);
-
-                data = DateTime.ParseExact(data.ToString(), "M/d/yyyy h:mm:ss tt", CultureInfo.InvariantCulture);
-
+                String data = (dateTimeData.Value.ToString("dd/MM/yyyy"));
                 int CC = int.Parse(textBoxCartaoCidadao.Text.ToString());
                 String query = "insert into Cliente(NomeCliente, DataNascimento, CartaoCidadao) values('" + nome + "', " + data + ", " + CC + ");";
                 SqlCommand cmd = new SqlCommand(query, con);

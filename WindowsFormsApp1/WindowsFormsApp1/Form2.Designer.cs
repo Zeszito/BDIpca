@@ -44,7 +44,7 @@
             this.textBoxCartaoCidadao = new System.Windows.Forms.TextBox();
             this.labelCartaoCidadao = new System.Windows.Forms.Label();
             this.labelDataNascimento = new System.Windows.Forms.Label();
-            this.LabelNomeCliente = new System.Windows.Forms.Label();
+            this.labelNomeCliente = new System.Windows.Forms.Label();
             this.btnAlterar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.labelCliente = new System.Windows.Forms.Label();
@@ -62,7 +62,7 @@
             // labelHoraSStaff
             // 
             this.labelHoraSStaff.AutoSize = true;
-            this.labelHoraSStaff.Location = new System.Drawing.Point(36, 163);
+            this.labelHoraSStaff.Location = new System.Drawing.Point(36, 181);
             this.labelHoraSStaff.Name = "labelHoraSStaff";
             this.labelHoraSStaff.Size = new System.Drawing.Size(62, 13);
             this.labelHoraSStaff.TabIndex = 55;
@@ -71,7 +71,7 @@
             // 
             // textBoxHoraS
             // 
-            this.textBoxHoraS.Location = new System.Drawing.Point(113, 160);
+            this.textBoxHoraS.Location = new System.Drawing.Point(113, 178);
             this.textBoxHoraS.Name = "textBoxHoraS";
             this.textBoxHoraS.Size = new System.Drawing.Size(153, 20);
             this.textBoxHoraS.TabIndex = 54;
@@ -79,7 +79,7 @@
             // 
             // textBoxHoraE
             // 
-            this.textBoxHoraE.Location = new System.Drawing.Point(112, 91);
+            this.textBoxHoraE.Location = new System.Drawing.Point(113, 134);
             this.textBoxHoraE.Name = "textBoxHoraE";
             this.textBoxHoraE.Size = new System.Drawing.Size(153, 20);
             this.textBoxHoraE.TabIndex = 53;
@@ -88,7 +88,7 @@
             // labelHoraEStaff
             // 
             this.labelHoraEStaff.AutoSize = true;
-            this.labelHoraEStaff.Location = new System.Drawing.Point(36, 94);
+            this.labelHoraEStaff.Location = new System.Drawing.Point(37, 137);
             this.labelHoraEStaff.Name = "labelHoraEStaff";
             this.labelHoraEStaff.Size = new System.Drawing.Size(70, 13);
             this.labelHoraEStaff.TabIndex = 52;
@@ -199,15 +199,15 @@
             this.labelDataNascimento.Text = "Data Nascimento";
             this.labelDataNascimento.Visible = false;
             // 
-            // LabelNomeCliente
+            // labelNomeCliente
             // 
-            this.LabelNomeCliente.AutoSize = true;
-            this.LabelNomeCliente.Location = new System.Drawing.Point(36, 87);
-            this.LabelNomeCliente.Name = "LabelNomeCliente";
-            this.LabelNomeCliente.Size = new System.Drawing.Size(35, 13);
-            this.LabelNomeCliente.TabIndex = 37;
-            this.LabelNomeCliente.Text = "Nome";
-            this.LabelNomeCliente.Visible = false;
+            this.labelNomeCliente.AutoSize = true;
+            this.labelNomeCliente.Location = new System.Drawing.Point(36, 87);
+            this.labelNomeCliente.Name = "labelNomeCliente";
+            this.labelNomeCliente.Size = new System.Drawing.Size(35, 13);
+            this.labelNomeCliente.TabIndex = 37;
+            this.labelNomeCliente.Text = "Nome";
+            this.labelNomeCliente.Visible = false;
             // 
             // btnAlterar
             // 
@@ -271,9 +271,9 @@
             this.Controls.Add(this.textBoxClienteID);
             this.Controls.Add(this.textBoxHoraE);
             this.Controls.Add(this.textBoxNome);
-            this.Controls.Add(this.labelClienteID);
-            this.Controls.Add(this.LabelNomeCliente);
+            this.Controls.Add(this.labelNomeCliente);
             this.Controls.Add(this.btnAlterar);
+            this.Controls.Add(this.labelClienteID);
             this.Name = "Form2";
             this.Text = "Alterar";
             this.Load += new System.EventHandler(this.Form2_Load);
@@ -300,7 +300,7 @@
         private System.Windows.Forms.TextBox textBoxCartaoCidadao;
         private System.Windows.Forms.Label labelCartaoCidadao;
         private System.Windows.Forms.Label labelDataNascimento;
-        private System.Windows.Forms.Label LabelNomeCliente;
+        private System.Windows.Forms.Label labelNomeCliente;
         private System.Windows.Forms.Button btnAlterar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label labelCliente;

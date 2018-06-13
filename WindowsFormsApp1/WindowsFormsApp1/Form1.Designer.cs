@@ -544,9 +544,9 @@
             this.Controls.Add(this.btnCriarStaff);
             this.Controls.Add(this.btnAlterarStaff);
             this.Controls.Add(this.btnEliminarStaff);
+            this.Controls.Add(this.dgvReservas);
             this.Controls.Add(this.dgvStaff);
             this.Controls.Add(this.dgvClientes);
-            this.Controls.Add(this.dgvReservas);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form1";

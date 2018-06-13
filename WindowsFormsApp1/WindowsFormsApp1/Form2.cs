@@ -29,7 +29,6 @@ namespace WindowsFormsApp1
                 labelClienteID.Visible = true;
                 labelServicoID.Visible = true;
                 labelRececaoID.Visible = true;
-                //textBoxNomeStaff.Visible = true;
                 textBoxServicoID.Visible = true;
                 textBoxRececaoID.Visible = true;
 
@@ -40,7 +39,7 @@ namespace WindowsFormsApp1
             {
                 labelCliente.Visible = true;
                 btnAlterar.Visible = true;
-                LabelNomeCliente.Visible = true;
+                labelNomeCliente.Visible = true;
                 labelDataNascimento.Visible = true;
                 labelCartaoCidadao.Visible = true;
                 textBoxNome.Visible = true;
@@ -49,36 +48,27 @@ namespace WindowsFormsApp1
 
                 int clienteID = Form1.clienteID;
                 labelCliente.Text = "Informação do Cliente " + clienteID + "";
-
-                /*SqlConnection con = ConnectDataBase();
-                String query = "Select * from Cliente where ClienteID = " + clienteID + ";";
-
-                using (SqlCommand cmd = new SqlCommand(query, con))
-                {
-                    using (SqlDataReader reader = cmd.ExecuteReader())
-                    {
-                        labelClienteID.Text = clienteID.ToString();
-
-                        textBoxNome.Text = reader.GetString(reader.GetOrdinal("NomeCliente"));
-                        textBoxNome.AppendText(reader["CartaoCidadao"].ToString());
-                        //dateTimeData.Text = reader["DataNascimento"].ToString();
-                        textBoxCartaoCidadao.Text = reader["CartaoCidado"].ToString();
-                    }
-                }*/
+                textBoxNome.Text = Form1.clienteNome;
+                //dateTimeData.Text = Form1.clienteNasc;
+                textBoxCartaoCidadao.Text = Form1.clienteCC.ToString(); 
             }
             if (Form1.change == Form1.Change.Staff)
             {
                 labelStaff.Visible = true;
                 btnAlterar.Visible = true;
-                //labelNomeStaff.Visible = true;
+                labelNomeCliente.Visible = true;
                 labelHoraEStaff.Visible = true;
                 labelHoraSStaff.Visible = true;
-                //textBoxNomeStaff.Visible = true;
+                textBoxNome.Visible = true;
                 textBoxHoraE.Visible = true;
                 textBoxHoraS.Visible = true;
 
                 int trabalhadorID = Form1.staffSelecionado;
-                labelCliente.Text = "Informação do Trabalhador " + trabalhadorID + "";
+                labelStaff.Text = "Informação do Trabalhador " + trabalhadorID + "";
+                textBoxNome.Text = Form1.staffNome;
+                textBoxHoraE.Text = Form1.staffHoraE;
+                textBoxHoraS.Text = Form1.staffHoraS;
+
             }
         }
 
@@ -102,10 +92,10 @@ namespace WindowsFormsApp1
             {
                 int reservaID = Form1.reservaSelecionada;
 
-                String dateE = (dateTimeData.Text.ToString());
-                DateTime dateS = (dateTimeData.Value);
+                String dateE = (dateTimeData.Value.ToString("dd/MM/yyyy"));
+                String dateS = (dateTimeData.Value.ToString("dd/MM/yyyy"));
                 int recepID = int.Parse(textBoxRececaoID.Text.ToString());
-                String query = "Update Reserva set DataEntrada = " + dateE + ",  DataSaida = " + dateS + ", RececaoRecepID = " + recepID + " where ReservaID = " + reservaID + ";";
+                String query = "Update Reserva set DataEntrada = " + dateE + ",  DataSaida = " + dateS + ", RececaoID = " + recepID + " where ReservaID = " + reservaID + ";";
                 SqlCommand cmd = new SqlCommand(query, con);
                 cmd.ExecuteNonQuery();
             }
@@ -114,19 +104,19 @@ namespace WindowsFormsApp1
                 int clienteID = Form1.clienteID;
 
                 String nome = textBoxNome.Text.ToString();
-                String data = (dateTimeData.Text.ToString());
+                String data = (dateTimeData.Value.ToString("dd/MM/yyyy"));
                 int cc = int.Parse(textBoxCartaoCidadao.Text.ToString());
-                String query = "Update Cliente set NomeCliente = " + nome + ", DataNascimento = " + data + ", CartaoCidadao = " + cc + " where ClienteID = " + clienteID + ";";
+                String query = "Update Cliente set NomeCliente = '" + nome + "', DataNascimento = " + data + ", CartaoCidadao = " + cc + " where ClienteID = " + clienteID + ";";
                 SqlCommand cmd = new SqlCommand(query, con);
                 cmd.ExecuteNonQuery();
             }
             if (Form1.change == Form1.Change.Staff)
             {
                 int trabalhadorID = Form1.staffSelecionado;
-
+                String nomeT = textBoxNome.Text.ToString();
                 int horaE = int.Parse(textBoxHoraE.Text.ToString());
                 int horaS = int.Parse(textBoxHoraS.Text.ToString());
-                String query = "Update Trabalhador set HoraEntrada = " + horaE + ", HoraSaida = " + horaS + " where TrabalhadorID = " + trabalhadorID + ";";
+                String query = "Update Trabalhador set NomeTrabalhador = '" + nomeT + "', HoraEntrada = " + horaE + ", HoraSaida = " + horaS + " where TrabalhadorID = " + trabalhadorID + ";";
                 SqlCommand cmd = new SqlCommand(query, con);
                 cmd.ExecuteNonQuery();
             }

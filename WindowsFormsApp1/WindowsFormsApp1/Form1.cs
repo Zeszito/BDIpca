@@ -34,10 +34,14 @@ namespace WindowsFormsApp1
         //cliente
         public static int clienteID;
         public static string clienteNome;
-        public static int clienteNasc;
+        public static string clienteNasc;
         public static int clienteCC;
         //staff
         public static int staffSelecionado;
+        public static string staffNome;
+        public static string staffHoraE;
+        public static string staffHoraS;
+
         public string conString = "Data Source= TROLLSDUNGEON;Initial Catalog=Vinicultura;Integrated Security= True";
 
         public Form1()
@@ -201,7 +205,8 @@ namespace WindowsFormsApp1
             int RowIndex = dgvClientes.CurrentCell.RowIndex;
             clienteID = int.Parse(dgvClientes.Rows[RowIndex].Cells[0].FormattedValue.ToString());
             clienteNome = dgvClientes.Rows[RowIndex].Cells[1].FormattedValue.ToString();
-            clienteID = int.Parse(dgvClientes.Rows[RowIndex].Cells[0].FormattedValue.ToString());
+            clienteNasc = dgvClientes.Rows[RowIndex].Cells[2].FormattedValue.ToString();
+            clienteCC = int.Parse(dgvClientes.Rows[RowIndex].Cells[3].FormattedValue.ToString());
 
             change = Change.Cliente;
             Form2 f2 = new Form2();
@@ -263,7 +268,9 @@ namespace WindowsFormsApp1
         {
             int RowIndex = dgvStaff.CurrentCell.RowIndex;
             staffSelecionado = int.Parse(dgvStaff.Rows[RowIndex].Cells[0].FormattedValue.ToString());
-
+            staffNome = dgvStaff.Rows[RowIndex].Cells[1].FormattedValue.ToString();
+            staffHoraE = dgvStaff.Rows[RowIndex].Cells[2].FormattedValue.ToString();
+            staffHoraS = dgvStaff.Rows[RowIndex].Cells[3].FormattedValue.ToString();
             change = Change.Staff;
             Form2 f2 = new Form2();
             f2.ShowDialog();

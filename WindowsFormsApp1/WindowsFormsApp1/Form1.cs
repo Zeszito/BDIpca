@@ -266,6 +266,7 @@ namespace WindowsFormsApp1
             }
         }
 
+
         private void btnEliminarStaff_Click(object sender, EventArgs e)
         {
             int RowIndex = dgvClientes.CurrentCell.RowIndex;
